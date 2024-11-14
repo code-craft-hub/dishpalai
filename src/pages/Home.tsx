@@ -2,8 +2,6 @@ import SliderComponent from "@/components/SliderComponent";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -14,15 +12,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Footer } from "flowbite-react";
-import {
-  BsDribbble,
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitter,
-} from "react-icons/bs";
-import { ModeToggle } from "@/components/mode-toggle";
 import { useEffect } from "react";
 
 const founders = [
