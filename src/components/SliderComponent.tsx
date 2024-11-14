@@ -1,5 +1,4 @@
-//@ts-ignore
-import { Swiper, SwiperSlide } from "swiper/react";
+import  {Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import "swiper/css";
 //@ts-ignore
@@ -9,7 +8,6 @@ import "swiper/css/pagination";
 
 import "../styles.css";
 
-//@ts-ignore
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 const SliderComponent = () => {
