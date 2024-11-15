@@ -8,8 +8,9 @@ import { BrowserRouter } from "react-router-dom";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-    <div className="w-full h-full ">
-      <img src="/assets/website-under-construction.jpg" className="w-full object-cover" />
+    <div className="w-full h-screen ">
+      <img src="/assets/website-under-construction.jpg" className="w-full h-full object-cover" />
+      
     </div>
       {/* <App>
         <AppRoutes />
