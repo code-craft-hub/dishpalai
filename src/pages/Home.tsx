@@ -299,7 +299,7 @@ const Home = () => {
         <div className="flex items-center justify-center my-8 mt-16 p-4 ">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="https://www.dishpalinfo.com/" className="hover:underline">
               Dishpal Info Website
             </a>
             . All Rights Reserved.
