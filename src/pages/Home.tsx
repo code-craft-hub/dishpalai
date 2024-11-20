@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-import SwipeParagraphs from "@/components/SwipeParagraphs";
 import { Typewriter } from "react-simple-typewriter";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
@@ -16,8 +15,8 @@ import { FaWindows } from "react-icons/fa";
 import { MdOutlineFacebook } from "react-icons/md";
 import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa6";
-import ClientsLogo from "@/components/ClientsLogo";
 import NavbarComponent from "@/components/Navbar";
+import HomePageSlider from "@/components/HomePageSlider";
 const Home = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -66,7 +65,7 @@ const Home = () => {
       href: "https://build.or.at/en/",
     },
     {
-      img: "/assets/eu.png",
+      img: "/assets/eu.jpg",
       title: "",
       href: "https://european-union.europa.eu/index_en",
     },
@@ -102,7 +101,10 @@ const Home = () => {
     <>
       <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
-        <section
+        <section className="mb-32" id="home">
+          <HomePageSlider />
+        </section>
+        {/* <section
           className="mb-32 md:px-8 flex flex-col md:flex-row items-center justify-center lg:justify-start lg:items-start"
           id="home"
         >
@@ -114,10 +116,8 @@ const Home = () => {
             </Button>
             <div className="mt-2 text-4xl font-bold font-syne tracking-tight capitalize sm:text-5xl"></div>
           </div>
-          <div className="md:w-1/2">
-            <img alt="Product screenshot" src="/assets/ai.svg" className="" />
-          </div>
-        </section>
+         
+        </section> */}
 
         <section className="pb-32 md:px-8">
           <h1 className="text-lg font-bold font-syne text-center">
@@ -140,16 +140,16 @@ const Home = () => {
 
         <section className="pb-32 md:px-8 flex flex-col lg:flex-row items-center justify-center ">
           <div className="lg:w-1/2 p-4 sm:p-8">
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl sm:text-5xl">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
               Take A 60 Seconds
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl sm:text-5xl">
-              Survery To Help Shape
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
+              Survery To Help 
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl sm:text-5xl  min-h-24 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl  min-h-16 ">
               <Typewriter
-                words={["Dishpal's Feature"]}
-                loop={3}
+                words={["Shape Dishpal's Feature"]}
+                loop={10}
                 cursor
                 cursorStyle="_"
                 typeSpeed={70}
@@ -248,13 +248,11 @@ const Home = () => {
           </Accordion>
         </section>
         <section className="pb-32 md:px-8  w-full" id="about">
-          <h1 className="my-8 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize">
             About Us
           </h1>
-          <div className="flex flex-col lg:grid lg:grid-cols-3 items-center justify-center gap-8">
-            <div className="flex w-full items-center justify-center bg-yellow">
-              <img src="/assets/ROBOT.svg" alt="" />
-            </div>
+          <div className="flex flex-col lg:grid md:grid-cols-2 items-center justify-center gap-8">
+          
 
             {missionVision?.map(({ title, des }, index) => (
               <div
@@ -273,7 +271,13 @@ const Home = () => {
         </section>
       </main>
       <section className="pb-32">
-        <ClientsLogo clientImages={clientImages} />
+        <div className="bg-white py-4 flex overflow-hidden justify-evenly items-center">
+          {clientImages?.map(({ href, img }, index) => (
+            <a key={index} rel="noferer" target="_blank" href={href}>
+              <img src={img} className="h-auto" alt={href} />
+            </a>
+          ))}
+        </div>{" "}
       </section>
       <section className="max-w-screen-lg mx-auto ">
         <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">

@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 import "../styles.css";
 
-import { Autoplay } from "swiper/modules";
+import { Autoplay,EffectCoverflow } from "swiper/modules";
 
 const whyChooseUs = [
   {
@@ -38,16 +38,16 @@ const SliderComponent = () => {
     <div>
       <>
         <Swiper
-          // effect={"coverflow"}
-          // grabCursor={true}
+          effect={"coverflow"}
+          grabCursor={true}
           slidesPerView={"auto"}
-          // coverflowEffect={{
-          //   rotate: 50,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: true,
-          // }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
           spaceBetween={50}
           centeredSlides={true}
           autoplay={{
@@ -56,7 +56,7 @@ const SliderComponent = () => {
           }}
           modules={[
             Autoplay,
-            //  EffectCoverflow
+             EffectCoverflow
           ]}
         >
           {whyChooseUs.map(({ title, des }, index) => (

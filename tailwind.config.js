@@ -89,6 +89,7 @@ module.exports = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        
       },
     },
   },
