@@ -1,4 +1,5 @@
 import SliderComponent from "@/components/SliderComponent";
+
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +17,7 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa6";
 import ClientsLogo from "@/components/ClientsLogo";
+import NavbarComponent from "@/components/Navbar";
 const Home = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -98,6 +100,8 @@ const Home = () => {
 
   return (
     <>
+          <NavbarComponent />
+
       <main className="max-w-screen-xl mx-auto p-4">
         <section
           className="pb-32 md:px-8 flex flex-col md:flex-row items-center justify-center"
