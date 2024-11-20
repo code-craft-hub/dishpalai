@@ -12,7 +12,7 @@ export const InfiniteMovingLogos = ({
 }: {
   items: {
     img: string;
-    name: string;
+    href: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -85,10 +85,10 @@ export const InfiniteMovingLogos = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map(({ img }, idx) => (
-          <div key={idx} className="items-center justify-center flex gap-2  p-4 rounded-3xl">
+        {items.map(({ img, href }, idx) => (
+          <a rel="noreferer" target="_blank"  href={href} key={idx} className="items-center justify-center flex gap-2  p-4 rounded-3xl hover:cursor-pointer hover:scale-105 duration-500 transition-all">
             <img src={img} alt="logos" width={100} height={70} />
-          </div>
+          </a>
         ))}
       </ul>
     </div>

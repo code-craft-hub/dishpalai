@@ -53,22 +53,22 @@ const Home = () => {
     {
       img: "/assets/aau.png",
       title: "",
-      href: "",
+      href: "https://www.aau.at",
     },
     {
       img: "/assets/KWF_weiss.png",
       title: "",
-      href: "",
+      href: "https://kwf.at",
     },
     {
       img: "/assets/OIP.png",
       title: "",
-      href: "",
+      href: "https://build.or.at/en/",
     },
     {
       img: "/assets/eu.png",
       title: "",
-      href: "",
+      href: "https://european-union.europa.eu/index_en",
     },
   ];
 
@@ -100,17 +100,16 @@ const Home = () => {
 
   return (
     <>
-          <NavbarComponent />
-
+      <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
         <section
-          className="pb-32 md:px-8 flex flex-col md:flex-row items-center justify-center"
+          className="mb-32 md:px-8 flex flex-col md:flex-row items-center justify-center lg:justify-start lg:items-start"
           id="home"
         >
           <div className="md:w-1/2  w-full">
             <SwipeParagraphs />
 
-            <Button className="p-8 mt-8 w-full sm:w-fit  rounded-none sm:text-lg">
+            <Button className="p-8 mt-8 w-fit  rounded-none sm:text-lg">
               Have Access To Our Beta Version
             </Button>
             <div className="mt-2 text-4xl font-bold font-syne tracking-tight capitalize sm:text-5xl"></div>
@@ -171,7 +170,10 @@ const Home = () => {
             />
           </div>
         </section>
-        <section id="question" className="pb-32 md:px-8 max-w-screen-lg mx-auto">
+        <section
+          id="question"
+          className="pb-32 md:px-8 max-w-screen-lg mx-auto"
+        >
           <h1 className="my-16 text-3xl sm:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
             Frequently Asked Questions
           </h1>
@@ -253,17 +255,20 @@ const Home = () => {
             <div className="flex w-full items-center justify-center bg-yellow">
               <img src="/assets/ROBOT.svg" alt="" />
             </div>
-           
-              {missionVision?.map(({ title, des }, index) => (
-                <div key={index} className="bg-white max-lg:max-w-[500px] max-lg:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]">
-                  <div className="overflow-hidden">
-                    <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
-                      {title}
-                    </h1>
-                    <p className="text-black">{des}</p>
-                  </div>
+
+            {missionVision?.map(({ title, des }, index) => (
+              <div
+                key={index}
+                className="bg-white max-lg:max-w-[500px] max-lg:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]"
+              >
+                <div className="overflow-hidden">
+                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
+                    {title}
+                  </h1>
+                  <p className="text-black">{des}</p>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </section>
       </main>
@@ -279,7 +284,7 @@ const Home = () => {
             })}
           </div>
           <div className="flex flex-col gap-4 ">
-            <h1 className="text-center sm:text-start">Available On</h1>
+            <h1 className="text-center sm:text-start">Will be available On</h1>
             <div className="flex gap-4 p-4 invertinsetphism rounded-full ">
               {appDonwload?.map(({ icon, title }: any, index) => {
                 const Icon = icon;
