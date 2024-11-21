@@ -99,7 +99,7 @@ const Home = () => {
         <section className="" id="home">
           <HomePageSlider />
         </section>
-        <section className="pb-32 md:px-8">
+        <section className="my-32 md:px-8 ">
           <h1 className="text-lg font-bold font-syne text-[#4e4d4d] text-center">
             Web App is still under Development
           </h1>
