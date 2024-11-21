@@ -16,7 +16,7 @@ const landingPage = [
     h1Tag: (
       <>
         Dishpal AI: <br />
-        <span className="text-[#969696]">find</span>  localized <br />
+        <span className="text-[#969696]">find</span> localized <br />
         discounted deals
       </>
     ),
@@ -26,7 +26,7 @@ const landingPage = [
         ensuring you never miss an opportunity to save.
       </>
     ),
-    img: "/assets/phone.mp4",
+    gif: "/assets/phone.gif",
   },
   {
     h1Tag: (
@@ -41,37 +41,37 @@ const landingPage = [
         digital discounts.
       </>
     ),
-    img: "/assets/people.mp4",
+    gif: "/assets/people.svg",
   },
   {
     h1Tag: (
       <>
         Never miss an <br />
         opportunity to <br />
-       <span className="text-[#969696]">SAVE</span> 
+        <span className="text-[#969696]">SAVE</span>
       </>
     ),
     pTag: (
       <>Discover personalized deals tailored to your preference and location</>
     ),
-    img: "/assets/coinGrow.mp4",
+    gif: "/assets/coinGrow.gif",
   },
 
   {
     h1Tag: (
       <>
         Your AI-Powered <br />
-        <span className="text-[#969696]">Personal</span>  Shopper
+        <span className="text-[#969696]">Personal</span> Shopper
       </>
     ),
     pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
-    img: "/assets/laptopComputer.mp4",
+    gif: "/assets/thinking.gif",
   },
 ];
 
 const HomePageSlider = () => {
   return (
-    <div className="w-full flex !h-[700px]  lg:!h-[610px]">
+    <div className="w-full flex !h-[670px]  lg:!h-[610px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -82,32 +82,32 @@ const HomePageSlider = () => {
         modules={[Autoplay]}
         className="!p-0"
       >
-        {landingPage?.map(({ img, h1Tag, pTag }, index) => (
+        {landingPage?.map(({ h1Tag, pTag, gif }, index) => (
           <SwiperSlide key={index} className="">
-            <div className="flex flex-col gap-8 lg:flex-row  p-1">
-              <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 lg:w-1/2">
-                <div className="lg:w-full">
-                  <h1 className="font-bold font-syne text-start text-3xl lg:text-5xl lg:w-full">
+            <div className="flex flex-col gap-8 md:flex-row  p-1">
+              <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
+                <div className="md:w-full">
+                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full">
                     {h1Tag}
                   </h1>
-                  <p className="font-syne text-md text-start lg:w-full max-w-sm">
+                  <p className="font-syne text-md text-start md:w-full max-w-sm">
                     {pTag}
                   </p>
                   <Button className="mt-8 rounded-3xl">
-                    <a href="https://forms.gle/MKruJpmf2w1AM9ZUA" rel="noopener noreferer" target="_blank">
-                    Sign up for early access</a>
+                    <a
+                      href="https://forms.gle/MKruJpmf2w1AM9ZUA"
+                      rel="noopener noreferer"
+                      target="_blank"
+                    >
+                      Sign up for early access
+                    </a>
                   </Button>
                 </div>
               </div>
-              <div className=" w-full h-[500px] lg:h-fit overflow-hidden  flex items-start lg:items-center justify-center lg:w-1/2">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  className="lg:w-full lg:h-full lg:object-cover object-top h-[400px] w-auto "
-                >
-                  <source src={img} type="video/mp4" />
-                </video>
+              <div className="flex items-center justify-center md:w-1/2">
+                <div className="">
+                  <img src={gif} className="h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto " />
+                </div>
               </div>
             </div>
           </SwiperSlide>

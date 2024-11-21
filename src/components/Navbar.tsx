@@ -37,7 +37,7 @@ export default function Example() {
                     className={`
                      ${
                        item.current
-                         ? "bg-gray-900 text-white"
+                         ? " text-white"
                          : "text-gray-300 hover:bg-[#535252] hover:text-white"
                      } rounded-md px-3 py-2 text-sm font-medium`}
                   >

@@ -214,8 +214,8 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-screen-lg mx-auto ">
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-          <div className="flex gap-4 p-4 sm:p-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center p-4 sm:p-8">
+          <div className="flex gap-4 ">
             {socials?.map(({ icon }: any, index) => {
               const Icon = icon;
               return <Icon key={index} className="size-10" />;
