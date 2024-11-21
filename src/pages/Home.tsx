@@ -106,10 +106,10 @@ const Home = () => {
         </section>
 
         <section className="pb-32 md:px-8" id="why">
-          <h1 className="mt-2 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize ">
+          <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize ">
             Why Choose Dishpal.Ai?
           </h1>
-          <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-lg/8">
+          <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
             Experience a smarter and more sustainable way to shop with
             <span className="text-[#969696] mx-1">Dishpal.ai's</span> innovative
             features designed to enhance your savings and shopping convenience
@@ -120,13 +120,13 @@ const Home = () => {
 
         <section className="pb-32 flex flex-col lg:flex-row items-center justify-center ">
           <div className="lg:w-1/2 p-4 sm:p-8 w-full">
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl">
               Take A 60 Seconds
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl">
               Survery To Help
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl md:text-nowrap min-h-16 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl md:text-nowrap min-h-16 ">
               <Typewriter
                 words={["Shape Dishpal's Feature"]}
                 loop={10}
@@ -159,7 +159,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-3xl sm:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
             Frequently Asked Questions
           </h1>
           <Accordion />
@@ -167,7 +167,7 @@ const Home = () => {
         <section className="pb-32 md:px-8  w-full" id="about">
           <div className=" lg:pl-[10%] ">
 
-          <h1 className="my-16 text-3xl sm:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl lg:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize">
             About Us
           </h1>
           </div>
@@ -188,7 +188,7 @@ const Home = () => {
                 className="bg-white max-lg:max-w-[500px] max-lg:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]"
               >
                 <div className="overflow-hidden">
-                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
+                  <h1 className="text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
                     {title}
                   </h1>
                   <p className="text-black">{des}</p>
