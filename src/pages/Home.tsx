@@ -93,7 +93,7 @@ const Home = () => {
   ];
 
   return (
-    <>
+    <div className="bg-[#2d2d2d]">
       <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
         <section className="" id="home">
@@ -109,10 +109,10 @@ const Home = () => {
           <h1 className="mt-2 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize ">
             Why Choose Dishpal.Ai?
           </h1>
-          <p className="mt-6 font-syne leading-[18px] capitalize text-center max-w-xl mx-auto text-lg/8">
-            Experience A Smarter. More Sustainable Way To Shop With Dishpal.Ai's
-            Innovative Features Designed To Enhance Your Savings And Shopping
-            Convenience
+          <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-lg/8">
+            Experience a smarter and more sustainable way to shop with
+            <span className="text-[#969696] mx-1">Dishpal.ai's</span> innovative
+            features designed to enhance your savings and shopping convenience
           </p>
 
           <SliderComponent />
@@ -137,9 +137,14 @@ const Home = () => {
                 delaySpeed={1000}
               />
             </p>
-
-            <Button className="sm:p-8 max-sm:mx-auto sm:w-fit rounded-none sm:text-lg">
-              Help Us Improve
+            <Button className="mt-8 rounded-3xl">
+              <a
+                href="https://forms.gle/MKruJpmf2w1AM9ZUA"
+                rel="noopener noreferer"
+                target="_blank"
+              >
+                Help Us Improve
+              </a>
             </Button>
           </div>
           <div className="lg:w-1/2 max-lg:mt-16">
@@ -160,10 +165,23 @@ const Home = () => {
           <Accordion />
         </section>
         <section className="pb-32 md:px-8  w-full" id="about">
-          <h1 className="my-16 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize">
+          <div className=" lg:pl-[10%] ">
+
+          <h1 className="my-16 text-3xl sm:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize">
             About Us
           </h1>
-          <div className="flex flex-col lg:grid md:grid-cols-2 items-center justify-center gap-8">
+          </div>
+          <div className="flex flex-col lg:grid lg:grid-cols-3 items-center justify-center gap-8">
+            <div className="h-[500px] w-full flex items-center justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                className="object-cover object-top h-full w-auto "
+              >
+                <source src="/assets/robotThinking.mp4" type="video/mp4" />
+              </video>
+            </div>
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
@@ -231,7 +249,7 @@ const Home = () => {
           </span>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ const landingPage = [
     h1Tag: (
       <>
         Dishpal AI: <br />
-        find localized <br />
+        <span className="text-[#969696]">find</span>  localized <br />
         discounted deals
       </>
     ),
@@ -32,7 +32,7 @@ const landingPage = [
     h1Tag: (
       <>
         Become an <br />
-        Eco-Champion{" "}
+        <span className="text-[#969696]">Eco</span>-Champion{" "}
       </>
     ),
     pTag: (
@@ -48,7 +48,7 @@ const landingPage = [
       <>
         Never miss an <br />
         opportunity to <br />
-        SAVE
+       <span className="text-[#969696]">SAVE</span> 
       </>
     ),
     pTag: (
@@ -61,7 +61,7 @@ const landingPage = [
     h1Tag: (
       <>
         Your AI-Powered <br />
-        Personal Shopper
+        <span className="text-[#969696]">Personal</span>  Shopper
       </>
     ),
     pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
@@ -93,8 +93,9 @@ const HomePageSlider = () => {
                   <p className="font-syne text-md text-start lg:w-full max-w-sm">
                     {pTag}
                   </p>
-                  <Button className="sm:p-8 mt-8 w-fit rounded-none sm:text-lg">
-                    Have Access To Our Beta Version
+                  <Button className="mt-8 rounded-3xl">
+                    <a href="https://forms.gle/MKruJpmf2w1AM9ZUA" rel="noopener noreferer" target="_blank">
+                    Sign up for early access</a>
                   </Button>
                 </div>
               </div>
