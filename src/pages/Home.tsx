@@ -126,7 +126,7 @@ const Home = () => {
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
               Survery To Help
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl text-nowrap min-h-16 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl md:text-nowrap min-h-16 ">
               <Typewriter
                 words={["Shape Dishpal's Feature"]}
                 loop={10}
@@ -205,7 +205,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-4 ">
             <h1 className="text-center sm:text-start">Will be available On</h1>
-            <div className="flex gap-4 p-4 invertinsetphism rounded-full ">
+            <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
               {appDonwload?.map(({ icon, title }: any, index) => {
                 const Icon = icon;
                 return (

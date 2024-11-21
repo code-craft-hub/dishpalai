@@ -65,13 +65,13 @@ const landingPage = [
       </>
     ),
     pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
-    img: "/assets/robotThinking.mp4",
+    img: "/assets/laptopComputer.mp4",
   },
 ];
 
 const HomePageSlider = () => {
   return (
-    <div className="w-full flex !h-[700px] sm:!h-[1000px] lg:!h-[610px]">
+    <div className="w-full flex !h-[700px]  lg:!h-[610px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -84,8 +84,8 @@ const HomePageSlider = () => {
       >
         {landingPage?.map(({ img, h1Tag, pTag }, index) => (
           <SwiperSlide key={index} className="">
-            <div className="flex flex-col gap-8 lg:flex-row">
-              <div className="flex-1 flex flex-col items-center justify-center overflow-hidden p-4 md:p-8">
+            <div className="flex flex-col gap-8 lg:flex-row  p-1">
+              <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 lg:w-1/2">
                 <div className="lg:w-full">
                   <h1 className="font-bold font-syne text-start text-3xl lg:text-5xl lg:w-full">
                     {h1Tag}
@@ -98,12 +98,12 @@ const HomePageSlider = () => {
                   </Button>
                 </div>
               </div>
-              <div className="flex-1 w-full h-[500px] lg:h-fit overflow-hidden  flex items-center justify-center">
+              <div className=" w-full h-[500px] lg:h-fit overflow-hidden  flex items-start lg:items-center justify-center lg:w-1/2">
                 <video
                   autoPlay
                   loop
                   muted
-                  className="lg:w-full lg:h-full lg:object-cover lg:object-top w-[80vw] sm:w-[50vw] "
+                  className="lg:w-full lg:h-full lg:object-cover object-top h-[400px] w-auto "
                 >
                   <source src={img} type="video/mp4" />
                 </video>
