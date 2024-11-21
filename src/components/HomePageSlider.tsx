@@ -71,7 +71,7 @@ const landingPage = [
 
 const HomePageSlider = () => {
   return (
-    <div className="w-full flex !h-[670px]  lg:!h-[610px]">
+    <div className="w-full flex !h-[670px]  lg:!h-[410px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
