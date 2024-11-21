@@ -126,7 +126,7 @@ const Home = () => {
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl">
               Survery To Help
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl md:text-nowrap min-h-16 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl xl:text-nowrap min-h-16 ">
               <Typewriter
                 words={["Shape Dishpal's Feature"]}
                 loop={10}
