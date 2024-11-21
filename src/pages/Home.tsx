@@ -1,11 +1,5 @@
 import SliderComponent from "@/components/SliderComponent";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
@@ -17,6 +11,7 @@ import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa6";
 import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
+import Accordion from "@/components/Accordion";
 const Home = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -177,75 +172,7 @@ const Home = () => {
           <h1 className="my-16 text-3xl sm:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
             Frequently Asked Questions
           </h1>
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full border-2 rounded-3xl border-white px-4"
-          >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>What Does Dishpal Offer?</AccordionTrigger>
-              <AccordionContent>
-                Dishpal.ai is an innovative platform that delivers personalized,
-                real-time, location-based discounts tailored to your shopping
-                preferences. By leveraging advanced AI algorithms and
-                geolocation technology, we ensure you receive the most relevant
-                deals, enhancing your shopping experience and helping you save
-                money.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                What Types Of Products Can I Find Here?
-              </AccordionTrigger>
-              <AccordionContent>
-                Dishpal.ai is an innovative platform that delivers personalized,
-                real-time, location-based discounts tailored to your shopping
-                preferences. By leveraging advanced AI algorithms and
-                geolocation technology, we ensure you receive the most relevant
-                deals, enhancing your shopping experience and helping you save
-                money.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-                Is My Peronal Information Save Using This Website
-              </AccordionTrigger>
-              <AccordionContent>
-                Dishpal.ai is an innovative platform that delivers personalized,
-                real-time, location-based discounts tailored to your shopping
-                preferences. By leveraging advanced AI algorithms and
-                geolocation technology, we ensure you receive the most relevant
-                deals, enhancing your shopping experience and helping you save
-                money.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                Can Your AI Feature Help Me Compare Products?{" "}
-              </AccordionTrigger>
-              <AccordionContent>
-                Dishpal.ai is an innovative platform that delivers personalized,
-                real-time, location-based discounts tailored to your shopping
-                preferences. By leveraging advanced AI algorithms and
-                geolocation technology, we ensure you receive the most relevant
-                deals, enhancing your shopping experience and helping you save
-                money.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger>
-                When Will The Website Be Ready?{" "}
-              </AccordionTrigger>
-              <AccordionContent>
-                Dishpal.ai is an innovative platform that delivers personalized,
-                real-time, location-based discounts tailored to your shopping
-                preferences. By leveraging advanced AI algorithms and
-                geolocation technology, we ensure you receive the most relevant
-                deals, enhancing your shopping experience and helping you save
-                money.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <Accordion />
         </section>
         <section className="pb-32 md:px-8  w-full" id="about">
           <h1 className="my-16 text-3xl sm:text-5xl text-center font-bold font-syne tracking-tight capitalize">
