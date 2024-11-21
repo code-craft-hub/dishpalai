@@ -71,7 +71,7 @@ const landingPage = [
 
 const HomePageSlider = () => {
   return (
-    <div className="w-full flex !h-[600px] sm:!h-[700px] lg:!h-[610px]">
+    <div className="w-full flex !h-[700px] sm:!h-[1000px] lg:!h-[610px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -117,42 +117,3 @@ const HomePageSlider = () => {
 };
 
 export default HomePageSlider;
-{
-  /* <SwiperSlide>
-            <div>
-              <h1 className="">
-                Dishpal AI: <br />
-                Helping you <br />
-                find localized <br />
-                discounted deals
-              </h1>
-              <p className="">
-                Discover personalized deals tailored to your preferences and
-                location, ensuring you never miss an opportunity to save.
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <h1 className="">
-                Become an <br />
-                Eco-Champion
-              </h1>
-              <p className="">
-                Reduce paper discount by 15% and use the trackable and
-                reedemable digital discounts.
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div>
-              <h1 className="">
-                Your AI-Powered <br />
-                Personal Shopper
-              </h1>
-              <p className="">
-                Shopping can be hectic, let Dishpal find those deals for you.{" "}
-              </p>
-            </div>
-          </SwiperSlide> */
-}

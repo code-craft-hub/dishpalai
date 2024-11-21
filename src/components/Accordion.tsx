@@ -49,11 +49,11 @@ const Accordion = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto  flex flex-col text-white  shadow-lg gap-4">
+    <div className="max-w-screen-sm lg:max-w-screen-2xl mx-auto  flex flex-col text-white  shadow-lg gap-4">
       {accordionData.map(({ id, question, answer }) => (
         <div
           key={id}
-          className="bg-white text-black rounded-3xl border-dashed border-2  border-gray-700 px-4"
+          className="bg-white text-black rounded-3xl border-dashed border-2  border-gray-700 px-4 py-2"
         >
           <button
             onClick={() => toggleAccordion(id)}
@@ -64,7 +64,7 @@ const Accordion = () => {
               initial={{ rotate: 0 }}
               animate={{ rotate: openId === id ? 180 : 0 }}
               transition={{ duration: 0.3 }}
-              className="transform"
+              className="transform ml-4"
             >
               <FaChevronDown />
             </motion.span>

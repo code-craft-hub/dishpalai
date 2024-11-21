@@ -96,26 +96,11 @@ const Home = () => {
     <>
       <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
-        <section className="mb-32" id="home">
+        <section className="" id="home">
           <HomePageSlider />
         </section>
-        {/* <section
-          className="mb-32 md:px-8 flex flex-col md:flex-row items-center justify-center lg:justify-start lg:items-start"
-          id="home"
-        >
-          <div className="md:w-1/2  w-full">
-            <SwipeParagraphs />
-
-            <Button className="p-8 mt-8 w-fit  rounded-none sm:text-lg">
-              Have Access To Our Beta Version
-            </Button>
-            <div className="mt-2 text-4xl font-bold font-syne tracking-tight capitalize sm:text-5xl"></div>
-          </div>
-         
-        </section> */}
-
         <section className="pb-32 md:px-8">
-          <h1 className="text-lg font-bold font-syne text-center">
+          <h1 className="text-lg font-bold font-syne text-[#4e4d4d] text-center">
             Web App is still under Development
           </h1>
         </section>
@@ -133,15 +118,15 @@ const Home = () => {
           <SliderComponent />
         </section>
 
-        <section className="pb-32 md:px-8 flex flex-col lg:flex-row items-center justify-center ">
-          <div className="lg:w-1/2 p-4 sm:p-8">
+        <section className="pb-32 flex flex-col lg:flex-row items-center justify-center ">
+          <div className="lg:w-1/2 p-4 sm:p-8 w-full">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
               Take A 60 Seconds
             </p>
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl">
-              Survery To Help 
+              Survery To Help
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl  min-h-16 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-2xl sm:text-4xl text-nowrap min-h-16 ">
               <Typewriter
                 words={["Shape Dishpal's Feature"]}
                 loop={10}
@@ -153,7 +138,7 @@ const Home = () => {
               />
             </p>
 
-            <Button className="p-8 w-full sm:w-fit rounded-none sm:text-lg">
+            <Button className="sm:p-8 max-sm:mx-auto sm:w-fit rounded-none sm:text-lg">
               Help Us Improve
             </Button>
           </div>
@@ -179,8 +164,6 @@ const Home = () => {
             About Us
           </h1>
           <div className="flex flex-col lg:grid md:grid-cols-2 items-center justify-center gap-8">
-          
-
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
@@ -198,13 +181,19 @@ const Home = () => {
         </section>
       </main>
       <section className="pb-32">
-        <div className="bg-white py-4 flex overflow-hidden justify-evenly items-center">
+        <div className="bg-white pl-4  flex flex-wrap justify-center items-center">
           {clientImages?.map(({ href, img }, index) => (
-            <a key={index} rel="noferer" target="_blank" href={href}>
-              <img src={img} className="h-auto" alt={href} />
+            <a
+              key={index}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={href}
+              className="w-1/2 sm:w-1/2 md:w-1/5 flex justify-center items-center"
+            >
+              <img src={img} className="h-auto max-w-full" alt={href} />
             </a>
           ))}
-        </div>{" "}
+        </div>
       </section>
       <section className="max-w-screen-lg mx-auto ">
         <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
