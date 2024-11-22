@@ -1,5 +1,6 @@
 import * as React from "react";
 import { IoLanguage } from "react-icons/io5";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -11,30 +12,28 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-// const lngs = {
-//   en: { nativeName: "English" },
-//   de: { nativeName: "Deutsch" },
-// };
 export function LanguageSelect() {
-  // const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [position, setPosition] = React.useState("en");
-  // const changeLang = () => {
-
-  // }
+  const changeLang = (value: any) => {
+    console.log(value);
+    setPosition(value);
+    i18n.changeLanguage(value);
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
-          <IoLanguage />
+        <Button variant="outline" className=" border-accent border-[1px]">
+          <IoLanguage className="!w-6 !h-6 " />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-24 bg-[#535252]">
+      <DropdownMenuContent className="!w-16">
         <DropdownMenuLabel>Language</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+        <DropdownMenuRadioGroup value={position} onValueChange={changeLang}>
           <DropdownMenuRadioItem value="en">EN</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="de">DE</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="de">DE</DropdownMenuRadioItem>{" "}
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

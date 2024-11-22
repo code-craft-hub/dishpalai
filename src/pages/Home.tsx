@@ -1,7 +1,6 @@
 import SliderComponent from "@/components/SliderComponent";
 
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
@@ -12,34 +11,18 @@ import { FaUbuntu } from "react-icons/fa6";
 import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
+import { useTranslation } from "react-i18next";
 const Home = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const { t } = useTranslation();
 
   const missionVision = [
     {
-      title: "Vision",
-      des: "To create a smarter and efficient discount shopping and shopping experience generally that allows consumers to access personalized, real-time, and location-based discounts, while fostering eco-friendly shopping habits and supporting local businesses.",
+      title: t("visionT"),
+      des:t("visionD"),
     },
     {
-      title: "Mission",
-      des: `Dishpal.ai is committed to optimize the way people shop and save 
-                money by leveraging advanced AI technology for tailored discount
-                shopping. We strive to provide timely, relevant offers that
-                match individual preferences, promote eco-friendly practices by
-                reducing the need for paper-based discounts, and strengthen
-                local communities by connecting shoppers with nearby retailers.
-                Our focus on innovation and sustainability ensures that we
-                deliver continuous value to both consumers and our retail
-                partners.`,
+      title: t("missionT"),
+      des:t("missionD"),
     },
   ];
 
@@ -93,13 +76,13 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-[#2d2d2d]">
+    <div className="">
       <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
         <section className="" id="home">
           <HomePageSlider />
         </section>
-        <section className="my-32 md:px-8 ">
+        <section className="my-16 md:px-8 ">
           <h1 className="text-lg font-bold font-syne text-[#4e4d4d] text-center">
             Web App is still under Development
           </h1>
@@ -107,12 +90,11 @@ const Home = () => {
 
         <section className="pb-32 md:px-8" id="why">
           <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize ">
-            Why Choose Dishpal.Ai?
+          {t("whyChooseT")}
           </h1>
           <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
-            Experience a smarter and more sustainable way to shop with
-            <span className="text-[#969696] mx-1">Dishpal.ai's</span> innovative
-            features designed to enhance your savings and shopping convenience
+          {t("whyChooseD1")}
+            <span className="text-[#969696] mx-1">Dishpal.ai's</span>{t("whyChooseD2")}
           </p>
 
           <SliderComponent />
@@ -121,14 +103,14 @@ const Home = () => {
         <section className="pb-32 flex flex-col md:flex-row items-center justify-center ">
           <div className="md:w-1/2 p-4 sm:p-8 w-full">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
-              Take A 60 Seconds
+              {t("take6")}
             </p>
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
-              Survery To Help
+              {t("0Seconds")}
             </p>
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl xl:text-nowrap min-h-16 ">
               <Typewriter
-                words={["Shape Dishpal's Feature"]}
+                words={[t("SurveyT")]}
                 loop={10}
                 cursor
                 cursorStyle="_"
@@ -143,7 +125,7 @@ const Home = () => {
                 rel="noopener noreferer"
                 target="_blank"
               >
-                Help Us Improve
+                {t("helpusImproveT")}
               </a>
             </Button>
           </div>
@@ -160,7 +142,7 @@ const Home = () => {
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
           <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
-            Frequently Asked Questions
+          {t("faqT")}
           </h1>
           <Accordion />
         </section>
@@ -168,7 +150,7 @@ const Home = () => {
           <div className=" md:pl-[5%] ">
 
           <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize">
-            About Us
+          {t("aboutUs")}
           </h1>
           </div>
           <div className="flex flex-col md:grid md:grid-cols-3 items-center justify-center gap-8">
@@ -223,7 +205,7 @@ const Home = () => {
             })}
           </div>
           <div className="flex flex-col gap-4 ">
-            <h1 className="text-center sm:text-start">Will be available On</h1>
+            <h1 className="text-center sm:text-start">{t("available")}</h1>
             <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
               {appDonwload?.map(({ icon, title }: any, index) => {
                 const Icon = icon;

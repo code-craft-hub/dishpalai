@@ -6,12 +6,16 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
-const navigation = [
-  { name: "Home", href: "why", current: true },
-  { name: "About Us", href: "about", current: false },
-  { name: "Our Services", href: "question", current: false },
-];
+import { useTranslation } from "react-i18next";
+
 export default function Example() {
+  const { t } = useTranslation();
+
+  const navigation = [
+    { name: t("home"), href: "why", current: true },
+    { name: t("aboutUs"), href: "about", current: false },
+    { name: t("services"), href: "question", current: false },
+  ];
   return (
     <Disclosure as="nav" className="">
       <div className="flex relative justify-between items-center px-4 max-w-screen-xl mx-auto">
@@ -22,17 +26,13 @@ export default function Example() {
             className="h-20 w-auto"
           />
         </div>
-        <div className="max-md:hidden">
+        <div className="max-md:hidden gap-8 flex">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className={`
-                     ${
-                       item.current
-                         ? " text-white"
-                         : "text-gray-300 hover:bg-[#535252] hover:text-white"
-                     } rounded-md px-3 py-2 text-sm font-medium`}
+              className={`text-gray-300 hover:border-accent hover:border-b-2 hover:text-white
+                      px-3 py-2 text-sm font-medium hover:font-bold hover:cursor-pointer`}
             >
               {item.name}
             </Link>
@@ -62,7 +62,7 @@ export default function Example() {
                      ${
                        item.current
                          ? " text-white"
-                         : "text-gray-300 hover:bg-[#535252] hover:text-white"
+                         : "text-gray-300 hover:bg-accent hover:text-white"
                      } rounded-md px-3 py-2 text-sm font-medium`}
           >
             {item.name}

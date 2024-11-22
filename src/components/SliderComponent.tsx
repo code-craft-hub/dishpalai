@@ -7,37 +7,40 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import "../styles.css";
+import { useTranslation } from "react-i18next";
 
 import { Autoplay,EffectCoverflow } from "swiper/modules";
 
-const whyChooseUs = [
-  {
-    title: "Location Based Alerts",
-    des: "Receive real-time notifications about nearby deals, ensuring you capitalize on offers wherever you are. Our geolocation technology keeps you informed of discounts in your vicinity, so you never miss an opportunity to save.",
-  },
-  {
-    title: "Save money",
-    des: "Dishpal.ai aggregates the best deals from various retailers, providing you with a centralized platform to maximize your savings. We would also calculate how much money you have saved by the end of the month from using Dishpal.ai",
-  },
-  {
-    title: "Never miss a discount (Buy now Pay Later)",
-    des: "Utilize our 'Buy Now, Pay Later' feature to take advantage of timely discounts, even when immediate funds are unavailable, ensuring you don't miss out on valuable deals. This flexible payment option empowers you to seize limited-time offers without financial strain.",
-  },
-  {
-    title: "Reduce Food Waste",
-    des: "By connecting consumers with discounts on items nearing their expiration dates, Dishpal.ai helps reduce food waste, benefiting both the environment and your wallet. This initiative supports responsible consumption and helps retailers minimize waste.",
-  },
-  {
-    title: "Personalized Recommendation",
-    des: "Our AI-driven platform analyzes your preferences to suggest discounts tailored specifically to your interests. By understanding your shopping habits, Dishpal.ai curates offers that align with your tastes, making your shopping experience more relevant and enjoyable.",
-  },
-  {
-    title: "Sustainable Shopping",
-    des: "By gradually transitioning from traditional paper-based methods to a fully digital platform, Dishpal.ai promotes eco-friendly practices, aligning with your commitment to sustainability. Our digital approach reduces paper waste and supports a greener environment.",
-  },
-];
 
 const SliderComponent = () => {
+  const { t } = useTranslation();
+
+  const whyChooseUs = [
+    {
+      title: t("locationBasedT"),
+      des: t("locationBasedD"),
+    },
+    {
+      title: t("personRecommendationT"),
+      des: t("personRecommendationD"),
+    },
+    {
+      title: t("neverMissDiscountT"),
+      des: t("neverMissDiscountD"),
+    },
+    {
+      title: t("saveMoneyT"),
+      des: t("saveMoneyD"),
+    },
+    {
+      title: t("sustainableShoppingT"),
+      des: t("sustainableShoppingD"),
+    },
+    {
+      title: t("reduceFoodWasteT"),
+      des: t("reduceFoodWasteD"),
+    },
+  ];
   return (
     <div>
       <>
@@ -69,10 +72,10 @@ const SliderComponent = () => {
               key={index}
             >
               <div className="w-full">
-                <h1 className="font-syne text-black font-bold text-center text-2xl md:text-3xl text-balance">
+                <h1 className="font-syne text-black font-bold text-center text-2xl md:text-3xl text-balance break-all">
                   {title}
                 </h1>
-                <p className="mt-4 text-lg text-black">{des}</p>
+                <p className="mt-4 text-lg text-black break-all">{des}</p>
               </div>
             </SwiperSlide>
           ))}

@@ -1,47 +1,46 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {   FaChevronDown} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+
 type AccordionItem = {
   id: number;
   question: string;
   answer: string;
 };
 
-const accordionData: AccordionItem[] = [
-    {
-      id: 1,
-      question: "What Does Dishpal Offer?",
-      answer:
-        "Dishpal.AI is an innovative platform that delivers personalized, real-time, location-based discounts tailored to your shopping preferences. By leveraging advanced AI algorithms and geolocation technology, we ensure you receive the most relevant deals, enhancing your shopping experience and helping you save money.",
-    },
-    {
-      id: 2,
-      question: "What Types Of Products Can I Find Here?",
-      answer:
-        "Dishpal offers a wide variety of products to suit your needs. From daily essentials to specialty items, our platform connects you to an extensive range of categories, including groceries, electronics, clothing, and more. Additionally, our intelligent filtering ensures that you discover products that align with your preferences and budget, making shopping more personalized and convenient.",
-    },
-    {
-      id: 3,
-      question: "Is My Personal Information Safe Using This Website?",
-      answer:
-        "Yes, your personal information is a top priority for us. We implement advanced security measures, such as end-to-end encryption and regular security audits, to ensure that your data remains private and protected at all times. Our platform is compliant with global data protection standards to give you peace of mind while using our services.",
-    },
-    {
-      id: 4,
-      question: "Can Your AI Feature Help Me Compare Products?",
-      answer:
-        "Absolutely! Our AI-powered comparison tool is designed to simplify your decision-making process. By analyzing multiple factors like price, quality, and user reviews, our AI helps you evaluate different products quickly and efficiently. This feature ensures that you make informed choices, saving both time and money during your shopping journey.",
-    },
-    {
-      id: 5,
-      question: "When Will The Website Be Ready?",
-      answer:
-        "Our team is working tirelessly to bring you an exceptional user experience. The website is currently in the final stages of development, with extensive testing being conducted to ensure optimal performance. We anticipate launching very soon, and we can't wait to have you explore the platform when it's ready. Stay tuned for updates!",
-    },
-  ];
-  
+
 
 const Accordion = () => {
+  const { t } = useTranslation();
+
+  const accordionData: AccordionItem[] = [
+      {
+        id: 1,
+        question: t("whatDoesDishpalT"),
+        answer:t("whatDoesDishpalD"),
+      },
+      {
+        id: 2,
+        question: t("whatTypesofProcutsT"),
+        answer:t("whatTypesofProcutsD"),
+      },
+      {
+        id: 3,
+        question: t("isMyPersonalInfoT"),
+        answer:t("isMyPersonalInfoD"),
+      },
+      {
+        id: 4,
+        question: t("canYourAIFeaturT"),
+        answer:t("canYourAIFeaturD"),
+      },
+      {
+        id: 5,
+        question: t("readyTimeT"),
+        answer:t("readyTimeD"),
+      },
+    ];
   const [openId, setOpenId] = useState<number | null>(null);
 
   const toggleAccordion = (id: number) => {

@@ -1,78 +1,73 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-//@ts-ignore
-// import "swiper/css";
-//@ts-ignore
-// import "swiper/css/effect-coverflow";
-//@ts-ignore
-// import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
+ 
 
 import "../styles.css";
 import { Button } from "@/components/ui/button";
 
 import { Autoplay } from "swiper/modules";
 
-const landingPage = [
-  {
-    h1Tag: (
-      <>
-        Dishpal AI: <br />
-        <span className="text-[#fe9545]">find</span> localized <br />
-        discounted deals
-      </>
-    ),
-    pTag: (
-      <>
-        Discover personalized deals tailored to your preferences and location,
-        ensuring you never miss an opportunity to save.
-      </>
-    ),
-    gif: "/assets/phone.gif",
-  },
-  {
-    h1Tag: (
-      <>
-        Become an <br />
-        <span className="text-[#fe9545]">Eco</span>-Champion{" "}
-      </>
-    ),
-    pTag: (
-      <>
-        Reduce paper discount by 15% and use the trackable and reedemable
-        digital discounts.
-      </>
-    ),
-    gif: "/assets/people.svg",
-  },
-  {
-    h1Tag: (
-      <>
-        Never miss an <br />
-        opportunity to <br />
-        <span className="text-[#fe9545]">SAVE</span>
-      </>
-    ),
-    pTag: (
-      <>Discover personalized deals tailored to your preference and location</>
-    ),
-    gif: "/assets/coinGrow.gif",
-  },
-
-  {
-    h1Tag: (
-      <>
-        Your AI-Powered <br />
-        <span className="text-[#fe9545]">Personal</span> Shopper
-        {/* text-[#fe9545] */}
-      </>
-    ),
-    pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
-    gif: "/assets/computerR.gif",
-  },
-];
 
 const HomePageSlider = () => {
+  const { t } = useTranslation();
+
+  const landingPage = [
+    {
+      h1Tag: (
+        <>
+          Dishpal AI: <br />
+          <span className="text-[#fe9545]">{t("find")}</span> {t("localized")} <br />
+          {t("discounted")}
+        </>
+      ),
+      pTag: (
+        <>
+          {t("helpingYouD")}
+        </>
+      ),
+      gif: "/assets/phone.gif",
+    },
+    {
+      h1Tag: (
+        <>
+          {t("ecoChampionT")} <br />
+          <span className="text-[#fe9545]">Eco</span>-Champion{" "}
+        </>
+      ),
+      pTag: (
+        <>
+          {t("ecoChampionD")}
+        </>
+      ),
+      gif: "/assets/people.svg",
+    },
+    {
+      h1Tag: (
+        <>
+         {t("opportunityT")}
+          <span className="text-[#fe9545]">{t("saved")}</span>
+        </>
+      ),
+      pTag: (
+        <>{t("opportunityD")}</>
+      ),
+      gif: "/assets/coinGrow.gif",
+    },
+  
+    {
+      h1Tag: (
+        <>
+          {t("personalShopperT")} <br />
+          <span className="text-[#fe9545]">Personal</span> Shopper
+          {/* text-[#fe9545] */}
+        </>
+      ),
+      pTag: <>{t("personalShopperD")}</>,
+      gif: "/assets/computerR.gif",
+    },
+  ];
   return (
-    <div className="w-full flex !h-[670px] md:!h-[410px]">
+    <div className="w-full flex !h-[670px] md:!h-[450px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -100,7 +95,7 @@ const HomePageSlider = () => {
                       rel="noopener noreferer"
                       target="_blank"
                     >
-                      Sign up for early access
+                     {t("signUp")}
                     </a>
                   </Button>
                 </div>
