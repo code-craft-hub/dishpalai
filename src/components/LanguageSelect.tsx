@@ -1,6 +1,6 @@
 import * as React from "react";
 import { IoLanguage } from "react-icons/io5";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 export function LanguageSelect() {
-  const { t, i18n } = useTranslation();
+  const {i18n } = useTranslation();
   const [position, setPosition] = React.useState("en");
   const changeLang = (value: any) => {
     console.log(value);
