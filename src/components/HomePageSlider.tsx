@@ -1,12 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
- 
 
 import "../styles.css";
 import { Button } from "@/components/ui/button";
 
 import { Autoplay } from "swiper/modules";
-
 
 const HomePageSlider = () => {
   const { t } = useTranslation();
@@ -16,15 +14,12 @@ const HomePageSlider = () => {
       h1Tag: (
         <>
           Dishpal AI: <br />
-          <span className="text-[#fe9545]">{t("find")}</span> {t("localized")} <br />
+          <span className="text-[#fe9545]">{t("find")}</span> {t("localized")}{" "}
+          <br />
           {t("discounted")}
         </>
       ),
-      pTag: (
-        <>
-          {t("helpingYouD")}
-        </>
-      ),
+      pTag: <>{t("helpingYouD")}</>,
       gif: "/assets/phone.gif",
     },
     {
@@ -34,26 +29,20 @@ const HomePageSlider = () => {
           <span className="text-[#fe9545]">Eco</span>-Champion{" "}
         </>
       ),
-      pTag: (
-        <>
-          {t("ecoChampionD")}
-        </>
-      ),
+      pTag: <>{t("ecoChampionD")}</>,
       gif: "/assets/people.svg",
     },
     {
       h1Tag: (
         <>
-         {t("opportunityT")}
-          <span className="text-[#fe9545]">{t("saved")}</span>
+          {t("opportunityT")}
+          <span className="text-[#fe9545]"> {t("saved")}</span>
         </>
       ),
-      pTag: (
-        <>{t("opportunityD")}</>
-      ),
+      pTag: <>{t("opportunityD")}</>,
       gif: "/assets/coinGrow.gif",
     },
-  
+
     {
       h1Tag: (
         <>
@@ -83,10 +72,10 @@ const HomePageSlider = () => {
             <div className="flex flex-col gap-8 md:flex-row  p-1">
               <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
                 <div className="md:w-full">
-                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full">
+                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full break-all text-wrap">
                     {h1Tag}
                   </h1>
-                  <p className="font-syne text-md text-start md:w-full max-w-sm">
+                  <p className="font-syne text-md text-start md:w-full max-w-sm break-all text-wrap">
                     {pTag}
                   </p>
                   <Button className="mt-8 rounded-3xl">
@@ -95,14 +84,17 @@ const HomePageSlider = () => {
                       rel="noopener noreferer"
                       target="_blank"
                     >
-                     {t("signUp")}
+                      {t("signUp")}
                     </a>
                   </Button>
                 </div>
               </div>
               <div className="flex items-center justify-center md:w-1/2">
                 <div className="">
-                  <img src={gif} className="h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto " />
+                  <img
+                    src={gif}
+                    className="h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto "
+                  />
                 </div>
               </div>
             </div>

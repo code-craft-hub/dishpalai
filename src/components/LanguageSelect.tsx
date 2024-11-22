@@ -16,7 +16,6 @@ export function LanguageSelect() {
   const {i18n } = useTranslation();
   const [position, setPosition] = React.useState("en");
   const changeLang = (value: any) => {
-    console.log(value);
     setPosition(value);
     i18n.changeLanguage(value);
   };
@@ -28,7 +27,7 @@ export function LanguageSelect() {
           <IoLanguage className="!w-6 !h-6 " />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="!w-16">
+      <DropdownMenuContent className="!w-16 shadow-2xl z-50">
         <DropdownMenuLabel>Language</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={changeLang}>
