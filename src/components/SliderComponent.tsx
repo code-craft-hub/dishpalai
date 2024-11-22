@@ -31,6 +31,10 @@ const whyChooseUs = [
     title: "Personalized Recommendation",
     des: "Our AI-driven platform analyzes your preferences to suggest discounts tailored specifically to your interests. By understanding your shopping habits, Dishpal.ai curates offers that align with your tastes, making your shopping experience more relevant and enjoyable.",
   },
+  {
+    title: "Sustainable Shopping",
+    des: "By gradually transitioning from traditional paper-based methods to a fully digital platform, Dishpal.ai promotes eco-friendly practices, aligning with your commitment to sustainability. Our digital approach reduces paper waste and supports a greener environment.",
+  },
 ];
 
 const SliderComponent = () => {

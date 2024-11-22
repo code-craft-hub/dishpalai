@@ -16,7 +16,7 @@ const landingPage = [
     h1Tag: (
       <>
         Dishpal AI: <br />
-        <span className="text-[#969696]">find</span> localized <br />
+        <span className="text-[#fe9545]">find</span> localized <br />
         discounted deals
       </>
     ),
@@ -32,7 +32,7 @@ const landingPage = [
     h1Tag: (
       <>
         Become an <br />
-        <span className="text-[#969696]">Eco</span>-Champion{" "}
+        <span className="text-[#fe9545]">Eco</span>-Champion{" "}
       </>
     ),
     pTag: (
@@ -48,7 +48,7 @@ const landingPage = [
       <>
         Never miss an <br />
         opportunity to <br />
-        <span className="text-[#969696]">SAVE</span>
+        <span className="text-[#fe9545]">SAVE</span>
       </>
     ),
     pTag: (
@@ -61,17 +61,18 @@ const landingPage = [
     h1Tag: (
       <>
         Your AI-Powered <br />
-        <span className="text-[#969696]">Personal</span> Shopper
+        <span className="text-[#fe9545]">Personal</span> Shopper
+        {/* text-[#fe9545] */}
       </>
     ),
     pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
-    gif: "/assets/thinking.gif",
+    gif: "/assets/robotcomputer.gif",
   },
 ];
 
 const HomePageSlider = () => {
   return (
-    <div className="w-full flex !h-[670px]  lg:!h-[410px]">
+    <div className="w-full flex !h-[670px] md:!h-[410px]">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}

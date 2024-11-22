@@ -118,15 +118,15 @@ const Home = () => {
           <SliderComponent />
         </section>
 
-        <section className="pb-32 flex flex-col lg:flex-row items-center justify-center ">
-          <div className="lg:w-1/2 p-4 sm:p-8 w-full">
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl">
+        <section className="pb-32 flex flex-col md:flex-row items-center justify-center ">
+          <div className="md:w-1/2 p-4 sm:p-8 w-full">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               Take A 60 Seconds
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               Survery To Help
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl lg:text-5xl xl:text-nowrap min-h-16 ">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl xl:text-nowrap min-h-16 ">
               <Typewriter
                 words={["Shape Dishpal's Feature"]}
                 loop={10}
@@ -147,7 +147,7 @@ const Home = () => {
               </a>
             </Button>
           </div>
-          <div className="lg:w-1/2 max-lg:mt-16">
+          <div className="md:w-1/2 max-md:mt-16">
             <img
               alt="ladyHoldingPhone"
               src="/assets/ladyHoldingPhone.svg"
@@ -165,30 +165,31 @@ const Home = () => {
           <Accordion />
         </section>
         <section className="pb-32 md:px-8  w-full" id="about">
-          <div className=" lg:pl-[10%] ">
+          <div className=" md:pl-[5%] ">
 
-          <h1 className="my-16 text-3xl lg:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize">
             About Us
           </h1>
           </div>
-          <div className="flex flex-col lg:grid lg:grid-cols-3 items-center justify-center gap-8">
+          <div className="flex flex-col md:grid md:grid-cols-3 items-center justify-center gap-8">
             <div className="h-[500px] w-full flex items-center justify-center">
-              <video
+              <img src="/assets/robotThinking.gif" alt="" className="object-cover object-top h-full w-auto " />
+              {/* <video
                 autoPlay
                 loop
                 muted
                 className="object-cover object-top h-full w-auto "
               >
                 <source src="/assets/robotThinking.mp4" type="video/mp4" />
-              </video>
+              </video> */}
             </div>
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-white max-lg:max-w-[500px] max-lg:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]"
+                className="bg-white max-md:max-w-[500px] max-md:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]"
               >
                 <div className="overflow-hidden">
-                  <h1 className="text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
+                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
                     {title}
                   </h1>
                   <p className="text-black">{des}</p>
