@@ -66,7 +66,7 @@ const landingPage = [
       </>
     ),
     pTag: <>Shopping can be hectic, let Dishpal find those deals for you.</>,
-    gif: "/assets/robotcomputer.gif",
+    gif: "/assets/computerR.gif",
   },
 ];
 

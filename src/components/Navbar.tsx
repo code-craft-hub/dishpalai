@@ -5,20 +5,75 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
+import { LanguageSelect } from "./LanguageSelect";
 const navigation = [
   { name: "Home", href: "why", current: true },
   { name: "About Us", href: "about", current: false },
   { name: "Our Services", href: "question", current: false },
 ];
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(" ");
-// }
-// 
-
 export default function Example() {
   return (
     <Disclosure as="nav" className="">
+      <div className="flex relative justify-between items-center px-4 max-w-screen-xl mx-auto">
+        <div className="">
+          <img
+            alt="Your Company"
+            src="/assets/logo.png"
+            className="h-20 w-auto"
+          />
+        </div>
+        <div className="max-md:hidden">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`
+                     ${
+                       item.current
+                         ? " text-white"
+                         : "text-gray-300 hover:bg-[#535252] hover:text-white"
+                     } rounded-md px-3 py-2 text-sm font-medium`}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <LanguageSelect />
+          <DisclosureButton className="md:hidden">
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon
+              aria-hidden="true"
+              className="block size-6 group-data-[open]:hidden"
+            />
+            <XMarkIcon
+              aria-hidden="true"
+              className="hidden size-6 group-data-[open]:block"
+            />
+          </DisclosureButton>
+        </div>
+      </div>
+      <DisclosurePanel className="flex flex-col">
+        {navigation.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className={`
+                     ${
+                       item.current
+                         ? " text-white"
+                         : "text-gray-300 hover:bg-[#535252] hover:text-white"
+                     } rounded-md px-3 py-2 text-sm font-medium`}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </DisclosurePanel>
+    </Disclosure>
+  );
+}
+{
+  /* <Disclosure as="nav" className="">
       <div className="mx-auto max-w-7xl p-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -85,6 +140,5 @@ export default function Example() {
           ))}
         </div>
       </DisclosurePanel>
-    </Disclosure>
-  );
+    </Disclosure> */
 }

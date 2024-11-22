@@ -173,7 +173,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col md:grid md:grid-cols-3 items-center justify-center gap-8">
             <div className="h-[500px] w-full flex items-center justify-center">
-              <img src="/assets/robotThinking.gif" alt="" className="object-cover object-top h-full w-auto " />
+              <img src="/assets/thinkingR.gif" alt="" className="object-cover object-top h-full w-auto " />
               {/* <video
                 autoPlay
                 loop

@@ -11,7 +11,7 @@ const AppRoutes = () => (
       element={
         <Link to="/review" className="w-full h-[100svh] flex ">
           <div className="mx-auto flex items-center justify-center flex-col">
-            <div className="flex justify-center items-center h-auto w-full flex-">
+            <div className="flex justify-center items-center flex-">
               {/* <video
                 autoPlay
                 loop
@@ -20,13 +20,13 @@ const AppRoutes = () => (
               >
                 <source src="/assets/robotConstruct.mp4" type="video/mp4" />
               </video> */}
-              <img src="/assets/workingRobot.gif" alt="" />
+              <img src="/assets/constructionR.gif" className="h-[300px] w-auto" alt="" />
             </div>
 
             <h1 className="font-bold text-center px-4 fong-syne text-xl md:text-5xl">
               Dishpal AI is under construction. 
             </h1>
-            <p className="text-lg mt-2">Click any where on the screen to go to the review website</p>
+            <p className="text-lg mt-2 text-center">Click any where on the screen to go to the review website</p>
           </div>
         </Link>
       }
