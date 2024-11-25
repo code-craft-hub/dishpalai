@@ -20,7 +20,7 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
-      gif: "/assets/phone.gif",
+      gif: "/assets/phone.png",
     },
     {
       h1Tag: (
@@ -30,7 +30,7 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("ecoChampionD")}</>,
-      gif: "/assets/people.svg",
+      gif: "/assets/newspaper.svg",
     },
     {
       h1Tag: (
@@ -40,7 +40,7 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("opportunityD")}</>,
-      gif: "/assets/coinGrow.gif",
+      gif: "/assets/sale.svg",
     },
 
     {
@@ -93,7 +93,7 @@ const HomePageSlider = () => {
                 <div className="">
                   <img
                     src={gif}
-                    className="h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto "
+                    className={` ${index == 1 && "animate-spin"} h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
                   />
                 </div>
               </div>
