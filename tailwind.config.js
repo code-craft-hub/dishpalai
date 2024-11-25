@@ -72,6 +72,8 @@ backgroundImage:{
           5: "hsl(var(--chart-5))",
         },
       },
+
+      
       keyframes: {
         "accordion-down": {
           from: {
