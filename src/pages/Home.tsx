@@ -89,12 +89,12 @@ const Home = () => {
         </section>
 
         <section className="pb-32 md:px-8" id="why">
-          <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize ">
+          <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize text-[#fe9545]">
           {t("whyChooseT")}
           </h1>
           <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
           {t("whyChooseD1")}
-            <span className="text-[#969696] mx-1">Dishpal.ai's</span>{t("whyChooseD2")}
+            <span className="text-[#fe9545] mx-1">Dishpal.ai's</span>{t("whyChooseD2")}
           </p>
 
           <SliderComponent />
@@ -119,9 +119,9 @@ const Home = () => {
                 delaySpeed={1000}
               />
             </p>
-            <Button className="mt-8 rounded-3xl">
+            <Button className="mt-8">
               <a
-                href="https://forms.gle/MKruJpmf2w1AM9ZUA"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
                 rel="noopener noreferer"
                 target="_blank"
               >
@@ -141,7 +141,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
           {t("faqT")}
           </h1>
           <Accordion />
@@ -149,7 +149,7 @@ const Home = () => {
         <section className="pb-32 md:px-8  w-full" id="about">
           <div className=" md:pl-[5%] ">
 
-          <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize">
+          <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
           {t("aboutUs")}
           </h1>
           </div>
@@ -205,7 +205,7 @@ const Home = () => {
             })}
           </div>
           <div className="flex flex-col gap-4 ">
-            <h1 className="text-center sm:text-start">{t("available")}</h1>
+            <h1 className="text-center sm:text-start text-[#fe9545]">{t("available")}</h1>
             <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
               {appDonwload?.map(({ icon, title }: any, index) => {
                 const Icon = icon;

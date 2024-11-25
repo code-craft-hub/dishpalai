@@ -58,6 +58,7 @@ const HomePageSlider = () => {
   return (
     <div className="w-full flex !h-[670px] md:!h-[450px]">
       <Swiper
+        loop
         slidesPerView={1}
         centeredSlides={true}
         autoplay={{
@@ -72,13 +73,13 @@ const HomePageSlider = () => {
             <div className="flex flex-col gap-8 md:flex-row  p-1">
               <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
                 <div className="md:w-full">
-                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full break-all text-wrap">
+                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap">
                     {h1Tag}
                   </h1>
-                  <p className="font-syne text-md text-start md:w-full max-w-sm break-all text-wrap">
+                  <p className="font-syne text-md text-start md:w-full max-w-sm  text-wrap">
                     {pTag}
                   </p>
-                  <Button className="mt-8 rounded-3xl">
+                  <Button className="mt-8 ">
                     <a
                       href="https://forms.gle/MKruJpmf2w1AM9ZUA"
                       rel="noopener noreferer"
@@ -93,7 +94,9 @@ const HomePageSlider = () => {
                 <div className="">
                   <img
                     src={gif}
-                    className={` ${index == 1 && "animate-spin"} h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
+                    className={` ${
+                      index == 1 && "animate-mySpin"
+                    } h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
                   />
                 </div>
               </div>

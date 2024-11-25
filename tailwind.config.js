@@ -11,16 +11,15 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     extend: {
-backgroundImage:{
-  'bg': "url('/assets/bg.svg')"
-}
-      ,
+      backgroundImage: {
+        bg: "url('/assets/bg.svg')",
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-        myS
+        mySpin: "mySpin 50s linear infinite",
       },
       fontFamily: {
         syne: '"Syne", serif',
@@ -72,8 +71,6 @@ backgroundImage:{
           5: "hsl(var(--chart-5))",
         },
       },
-
-      
       keyframes: {
         "accordion-down": {
           from: {
@@ -96,15 +93,14 @@ backgroundImage:{
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
-        // mySpin: {
-        //   from {
-        //     transform: rotate(0deg);
-        //   }
-        //   to {
-        //     transform: rotate(360deg);
-        //   }
-        // }
-        
+        mySpin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
       },
     },
   },
