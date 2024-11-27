@@ -1,77 +1,23 @@
 import SliderComponent from "@/components/SliderComponent";
-
+import { clientImages, socials, appDonwload } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
-import { FaXTwitter } from "react-icons/fa6";
-import { LuInstagram } from "react-icons/lu";
-import { FaWindows } from "react-icons/fa";
-import { MdOutlineFacebook } from "react-icons/md";
-import { FaApple } from "react-icons/fa";
-import { FaUbuntu } from "react-icons/fa6";
 import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
+
 const Home = () => {
   const { t } = useTranslation();
 
   const missionVision = [
     {
       title: t("visionT"),
-      des:t("visionD"),
+      des: t("visionD"),
     },
     {
       title: t("missionT"),
-      des:t("missionD"),
-    },
-  ];
-
-  const clientImages = [
-    {
-      img: "/assets/aau.png",
-      title: "",
-      href: "https://www.aau.at",
-    },
-    {
-      img: "/assets/KWF_weiss.png",
-      title: "",
-      href: "https://kwf.at",
-    },
-    {
-      img: "/assets/OIP.png",
-      title: "",
-      href: "https://build.or.at/en/",
-    },
-    {
-      img: "/assets/eu.jpg",
-      title: "",
-      href: "https://european-union.europa.eu/index_en",
-    },
-  ];
-
-  const socials = [
-    {
-      icon: FaXTwitter,
-    },
-    {
-      icon: MdOutlineFacebook,
-    },
-    {
-      icon: LuInstagram,
-    },
-  ];
-  const appDonwload = [
-    {
-      icon: FaWindows,
-      title: "Windows",
-    },
-    {
-      icon: FaApple,
-      title: "Mac",
-    },
-    {
-      icon: FaUbuntu,
-      title: "Linux",
+      des: t("missionD"),
     },
   ];
 
@@ -90,17 +36,19 @@ const Home = () => {
 
         <section className="pb-32 md:px-8" id="why">
           <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize text-[#fe9545]">
-          {t("whyChooseT")}
+            {t("whyChooseT")}
           </h1>
           <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
-          {t("whyChooseD1")}
-            <span className="text-[#fe9545] mx-1">Dishpal.ai's</span>{t("whyChooseD2")}
+            {t("whyChooseD1")}
+            <span className="text-[#fe9545] mx-1">Dishpal.ai's</span>
+            {t("whyChooseD2")}
           </p>
 
           <SliderComponent />
         </section>
 
-        <section className="pb-32 flex flex-col md:flex-row items-center justify-center ">
+        {/* Desktop */}
+        <section className="pb-32 hidden lg:flex flex-col md:flex-row items-center justify-center ">
           <div className="md:w-1/2 p-4 sm:p-8 w-full">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               {t("take6")}
@@ -129,33 +77,67 @@ const Home = () => {
               </a>
             </Button>
           </div>
+          {/* bigPhoneWithPeople.png */}
+          {/* ladyHoldingPhone.svg */}
           <div className="md:w-1/2 max-md:mt-16">
             <img
               alt="ladyHoldingPhone"
               src="/assets/ladyHoldingPhone.svg"
-              className=""
+              className="w-full h-full "
             />
           </div>
+        </section>
+
+        {/* Mobile */}
+        <section className="mb-32 flex flex-col lg:hidden items-center justify-center p-4 sm:p-8">
+          <p className="font-syne font-bold text-5xl py-8 text-[#fe9545] text-center">{t("quickSurvey")}</p>
+          <div className="flex items-center flex-col sm:flex-row">
+            <p className="mt-2 sm:w-1/2  font-syne">{t("surveyMobile")}</p>
+
+            <div className=" sm:w-1/2 justify-center flex ">
+            <img
+              alt="ladyHoldingPhone"
+              src="/assets/bigPhoneWithPeople.png"
+              className="w-full h-full"
+            />
+          </div>
+          </div>
+          {/* bigPhoneWithPeople.png */}
+          {/* ladyHoldingPhone.svg */}
+          
+          <Button className="mt-8 w-full max-w-sm">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
+                rel="noopener noreferer"
+                target="_blank"
+              >
+                {t("helpusImproveT")}
+              </a>
+            </Button>
         </section>
         <section
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
           <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
-          {t("faqT")}
+            {t("faqT")}
           </h1>
+          {/* Accordion Component */}
           <Accordion />
         </section>
         <section className="pb-32 md:px-8  w-full" id="about">
           <div className=" md:pl-[5%] ">
-
-          <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
-          {t("aboutUs")}
-          </h1>
+            <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+              {t("aboutUs")}
+            </h1>
           </div>
-          <div className="flex flex-col md:grid md:grid-cols-3 items-center justify-center gap-8">
+          <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8">
             <div className="h-[500px] w-full flex items-center justify-center">
-              <img src="/assets/thinkingR.gif" alt="" className="object-cover object-top h-full w-auto " />
+              <img
+                src="/assets/thinkingR.gif"
+                alt=""
+                className="object-cover object-top h-full w-auto "
+              />
               {/* <video
                 autoPlay
                 loop
@@ -205,7 +187,9 @@ const Home = () => {
             })}
           </div>
           <div className="flex flex-col gap-4 ">
-            <h1 className="text-center sm:text-start text-[#fe9545]">{t("available")}</h1>
+            <h1 className="text-center text-[#fe9545] font-bold font-syne">
+              {t("available")}
+            </h1>
             <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
               {appDonwload?.map(({ icon, title }: any, index) => {
                 const Icon = icon;
@@ -215,7 +199,7 @@ const Home = () => {
                     className="items-center justify-center flex gap-2"
                   >
                     <Icon className="size-6" />
-                    <p className="">{title}</p>
+                    <p className="font-syne">{title}</p>
                   </div>
                 );
               })}
@@ -223,9 +207,12 @@ const Home = () => {
           </div>
         </div>
         <div className="flex items-center justify-center my-8 mt-16 p-4 ">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-syne">
             © 2024{" "}
-            <a href="https://www.dishpalinfo.com/" className="hover:underline">
+            <a
+              href="https://www.dishpalinfo.com/"
+              className="hover:underline font-syne"
+            >
               Dishpal Info Website
             </a>
             . All Rights Reserved.

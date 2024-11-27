@@ -20,7 +20,7 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
-      gif: "/assets/phone.png",
+      gif: "/assets/phone.gif",
     },
     {
       h1Tag: (
@@ -70,7 +70,7 @@ const HomePageSlider = () => {
       >
         {landingPage?.map(({ h1Tag, pTag, gif }, index) => (
           <SwiperSlide key={index} className="">
-            <div className="flex flex-col gap-8 md:flex-row  p-1">
+            <div className="flex flex-col gap-12 md:gap-8 md:flex-row  p-1">
               <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
                 <div className="md:w-full">
                   <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap">
@@ -94,9 +94,9 @@ const HomePageSlider = () => {
                 <div className="">
                   <img
                     src={gif}
-                    className={` ${
-                      index == 1 && "animate-mySpin"
-                    } h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
+                    //${ index == 1 && "animate-mySpin"}
+                    className={` 
+                     h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
                   />
                 </div>
               </div>

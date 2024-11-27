@@ -52,5 +52,8 @@
   "home": "Startseite",
   "aboutUs": "Über uns",
   "services": "Dienstleistungen",
-  "development":"Die Web-App befindet sich noch in der Entwicklung"
+  "development":"Die Web-App befindet sich noch in der Entwicklung",
+  "surveyMobile": "Dishpal.ai fasst die besten Angebote verschiedener Einzelhändler zusammen und bietet Ihnen eine zentrale Plattform, mit der Sie Ihre Ersparnisse maximieren können. Wir würden auch berechnen, wie viel Geld Sie bis zum Monatsende durch die Nutzung von Dishpal.ai gespart haben",
+  "quickSurvey": "Machen Sie eine kurze Umfrage"
+
 }
