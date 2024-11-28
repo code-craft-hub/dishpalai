@@ -73,10 +73,10 @@ const SliderComponent = () => {
               key={index}
             >
               <div className="w-full">
-                <h1 className="font-syne text-black font-bold text-center text-2xl md:text-3xl text-wrap">
+                <h1 className="font-syne text-black font-bold text-center text-2xl md:text-3xl text-wrap overflow-hidden">
                   {title}
                 </h1>
-                <p className="mt-4 text-lg text-black text-wrap">{des}</p>
+                <p className="mt-4 text-lg text-black text-wrap overflow-hidden">{des}</p>
               </div>
             </SwiperSlide>
           ))}
