@@ -14,9 +14,8 @@ const HomePageSlider = () => {
       h1Tag: (
         <>
           Dishpal AI: <br />
-          <span className="text-[#fe9545]">{t("find")}</span> {t("localized")}{" "}
-          <br />
-          {t("discounted")}
+          {t("discounted")}{" "}
+          <span className="text-[#fe9545] ml-1">{t("finder")}</span> 
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
@@ -76,7 +75,7 @@ const HomePageSlider = () => {
                   <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap">
                     {h1Tag}
                   </h1>
-                  <p className="font-syne text-md text-start md:w-full max-w-sm  text-wrap">
+                  <p className="font-syne text-md text-start md:w-full max-w-sm  text-wrap mt-4">
                     {pTag}
                   </p>
                   <Button className="mt-8 ">

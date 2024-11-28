@@ -40,8 +40,7 @@ const Home = () => {
           </h1>
           <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
             {t("whyChooseD1")}
-            <span className="text-[#fe9545] mx-1">Dishpal.ai's</span>
-            {t("whyChooseD2")}
+            {/* <span className="text-[#fe9545] mx-1">Dishpal.ai's</span> */}
           </p>
 
           <SliderComponent />
@@ -53,13 +52,13 @@ const Home = () => {
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               {t("take6")}
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
+            {/* <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               {t("0Seconds")}
-            </p>
+            </p> */}
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl xl:text-nowrap min-h-16 ">
               <Typewriter
-                words={[t("SurveyT")]}
-                loop={10}
+                words={[t("0Seconds")]}
+                loop={2}
                 cursor
                 cursorStyle="_"
                 typeSpeed={70}
