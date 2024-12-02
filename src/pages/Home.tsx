@@ -149,7 +149,7 @@ const Home = () => {
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-white max-md:max-w-[500px] max-md:min-h-[300px] rounded-3xl p-4 md:p-8 h-[100%]"
+                className="bg-white max-md:max-w-[500px] rounded-3xl h-64 sm:h-60  p-6 md:p-8"
               >
                 <div className="overflow-hidden">
                   <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
