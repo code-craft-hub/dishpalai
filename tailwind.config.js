@@ -11,6 +11,17 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     extend: {
+      screens: {
+        xx: "320px",
+        xxx:"369px",
+        xxxx:"415px",
+        ss:"470px",
+        sx:"530px",
+        sxx:"534px",
+        xss:"601px",
+        mx:"872px",
+        mdx:"970px",
+      },
       backgroundImage: {
         bg: "url('/assets/bg.svg')",
       },

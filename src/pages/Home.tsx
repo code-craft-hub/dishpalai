@@ -35,7 +35,7 @@ const Home = () => {
         </section>
 
         <section className="pb-32 md:px-8" id="why">
-          <h1 className="mt-2 text-3xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="mt-2 text-xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
           <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
@@ -47,7 +47,7 @@ const Home = () => {
         </section>
 
         {/* Desktop */}
-        <section className="pb-32 hidden lg:flex flex-col md:flex-row items-center justify-center ">
+        <section className="pb-32 hidden md:flex flex-col md:flex-row items-center justify-center ">
           <div className="md:w-1/2 p-4 sm:p-8 w-full">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
               {t("take6")}
@@ -88,43 +88,45 @@ const Home = () => {
         </section>
 
         {/* Mobile */}
-        <section className="mb-32 flex flex-col lg:hidden items-center justify-center p-4 sm:p-8">
-          <p className="font-syne font-bold text-5xl py-8 text-[#fe9545] text-center">{t("quickSurvey")}</p>
+        <section className="mb-32 flex flex-col md:hidden items-center justify-center p-4 sm:p-8">
+          <p className="font-syne font-bold text-xl sm:text-5xl py-8 text-[#fe9545] text-center">
+            {t("quickSurvey")}
+          </p>
           <div className="flex items-center flex-col sm:flex-row">
             <p className="mt-2 sm:w-1/2  font-syne">{t("surveyMobile")}</p>
 
             <div className=" sm:w-1/2 justify-center flex ">
-            <img
-              alt="ladyHoldingPhone"
-              src="/assets/bigPhoneWithPeople.png"
-              className="w-full h-full"
-            />
-          </div>
+              <img
+                alt="ladyHoldingPhone"
+                src="/assets/bigPhoneWithPeople.png"
+                className="w-full h-full"
+              />
+            </div>
           </div>
           {/* bigPhoneWithPeople.png */}
           {/* ladyHoldingPhone.svg */}
-          
+
           <Button className="mt-8 w-full max-w-sm">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
-                rel="noopener noreferer"
-                target="_blank"
-              >
-                {t("helpusImproveT")}
-              </a>
-            </Button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
+              rel="noopener noreferer"
+              target="_blank"
+            >
+              {t("helpusImproveT")}
+            </a>
+          </Button>
         </section>
         <section
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-3xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="my-16 text-xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
           <Accordion />
         </section>
-        <section className="pb-32 md:px-8  w-full" id="about">
+        <section className="pb-32 md:px-8  w-full hidden lg:block" id="about">
           <div className=" md:pl-[5%] ">
             <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
@@ -149,7 +151,7 @@ const Home = () => {
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-white max-md:max-w-[500px] rounded-3xl h-60   p-4 justify-center items-center flex"
+                className="bg-white max-md:max-w-[500px] rounded-3xl h-80 p-8 justify-center items-center flex"
               >
                 <div className="overflow-hidden">
                   <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
@@ -161,9 +163,46 @@ const Home = () => {
             ))}
           </div>
         </section>
+        <section
+          className="pb-32 md:px-8  w-full lg:hidden"
+          id="about"
+        >
+          <div className=" md:pl-[5%] ">
+            <h1 className="my-16 text-3xl md:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+              {t("aboutUs")}
+            </h1>
+          </div>
+          <div className="relative max-xx:flex max-xx:flex-col max-xx:gap-8">
+            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl border border-orange-200 max-xx:w-full xx:max-w-[220px]  sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
+              <div className="overflow-hidden">
+                <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
+                  {t("visionT")}
+                </h1>
+                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl">{t("visionD")}</p>
+              </div>
+            </div>
+            <div className="flex flex-col xx:grid xx:grid-cols-2 ">
+              <div className="order-2 xx:order-1 h-full flex items-center justify-center">
+                <img
+                  src="/assets/thinkingR.gif"
+                  alt=""
+                  className="object-cover object-top h-full w-full"
+                />
+              </div>
+              <div className="order-1 xx:order-2 bg-white rounded-3xl sm:p-8 p-4 justify-center items-center flex xx:-mt-6 xxx:h-[280px] xxxx:h-60 sx:h-[250px] sxx:h-[240px] xss:h-[210px]  sm:h-[380px] mx:h-[330px] mdx:h-[280px] sx:-mt-[17px] xss:-mt-10 sm:-mt-16 shadow-xl border border-orange-200">
+                <div className="overflow-hidden">
+                  <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
+                    {t("missionT")}
+                  </h1>
+                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg">{t("missionD")}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <section className="pb-32">
-        <div className="bg-white pl-4  flex flex-wrap justify-center items-center">
+      <section className="pb-32 xx:pt-16">
+        <div className="bg-white p-8 pl-4  flex flex-wrap justify-center items-center">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
