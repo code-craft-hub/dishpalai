@@ -94,3 +94,9 @@
   background-color: #fe9545 !important;
   color: transparent !important;
 }
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+{
+  position: absolute;
+  bottom: 0;
+}

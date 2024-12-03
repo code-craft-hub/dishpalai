@@ -66,7 +66,7 @@ const HomePageSlider = () => {
     },
   };
   return (
-    <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[450px]">
+    <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[450px] relative">
       <Swiper
         loop
         slidesPerView={1}
