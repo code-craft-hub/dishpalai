@@ -217,15 +217,21 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-screen-lg mx-auto ">
+          
         <div className="flex flex-col sm:flex-row gap-8 justify-between items-center p-4 sm:p-8">
+          <div className="">
+<h1 className="text-center text-[#fe9545] font-bold sm:text-3xl font-syne py-6">
+              {t("socials")}
+            </h1>
           <div className="flex gap-4 ">
             {socials?.map(({ icon }: any, index) => {
               const Icon = icon;
               return <Icon key={index} className="size-10" />;
             })}
+            </div>
           </div>
           <div className="flex flex-col gap-4 ">
-            <h1 className="text-center text-[#fe9545] font-bold font-syne">
+            <h1 className="text-center text-[#fe9545] sm:text-xl font-bold font-syne">
               {t("available")}
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">

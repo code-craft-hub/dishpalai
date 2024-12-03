@@ -1,6 +1,6 @@
 {
   "finder": "Rabatt-Finder",
-  "discounted":"Dein lokaler",
+  "discounted": "Dein lokaler",
   "helpingYouD": "Entdecke personalisierte, standortbasierte Angebote, die perfekt zu deinen Vorlieben passen - spare Zeit und Geld ganz mühelos.",
   "signUp": "Jetzt vorab anmelden",
   "ecoChampionT": "Werde ein",
@@ -27,9 +27,9 @@
   "take6": "Nehmen Sie an unserer ",
   "0Seconds": "60-Sekunden-Umfrage",
   "helpusImproveT": "Helfen Sie uns zu verbessern",
-  
+
   "faqT": "Häufig gestellte Fragen (FAQ)",
-  
+
   "whatDoesDishpalT": "1. Was bietet Dishpal.ai an?",
   "whatDoesDishpalD": "Dishpal.ai ist eine innovative Plattform, die personalisierte, standortbasierte Echtzeit-Rabatte entsprechend Ihren Einkaufspräferenzen liefert. Durch den Einsatz fortschrittlicher KI-Algorithmen und Geolocation-Technologie stellen wir sicher, dass Sie die relevantesten Angebote erhalten, Ihr Einkaufserlebnis verbessern und Geld sparen.",
   "whatTypesofProcutsT": "2. Welche Produktkategorien finde ich hier?",
@@ -49,8 +49,8 @@
   "home": "Startseite",
   "aboutUs": "Über uns",
   "services": "Dienstleistungen",
-  "development":"Die Web-App befindet sich noch in der Entwicklung",
+  "development": "Die Web-App befindet sich noch in der Entwicklung",
   "surveyMobile": "Dishpal.ai fasst die besten Angebote verschiedener Einzelhändler zusammen und bietet Ihnen eine zentrale Plattform, mit der Sie Ihre Ersparnisse maximieren können. Wir würden auch berechnen, wie viel Geld Sie bis zum Monatsende durch die Nutzung von Dishpal.ai gespart haben",
-  "quickSurvey": "Machen Sie eine kurze Umfrage"
-
+  "quickSurvey": "Machen Sie eine kurze Umfrage",
+  "socials": "Soziale Netzwerke"
 }

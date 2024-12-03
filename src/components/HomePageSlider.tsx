@@ -61,7 +61,7 @@ const HomePageSlider = () => {
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index,className:any) {
+    renderBullet: function (index:number,className:any) {
       return '<span class="' + className + '">'+ index +'</span>';
     },
   };
