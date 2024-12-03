@@ -82,3 +82,19 @@
 }
 
 
+.swiper-pagination-bullet {
+  width: 40px !important;
+  height: 10px !important;
+  background-color: white !important;
+  color: white !important;
+  border-radius: 10px !important;
+  transition: background-color 0.3s ease;
+  cursor: pointer; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fe9545 !important;
+
+}
+
+

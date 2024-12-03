@@ -2,9 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
 
 import "../styles.css";
+
 import { Button } from "@/components/ui/button";
 
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const HomePageSlider = () => {
   const { t } = useTranslation();
@@ -54,6 +55,13 @@ const HomePageSlider = () => {
       gif: "/assets/computerR.gif",
     },
   ];
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (className:any) {
+      return '<span class="' + className + '"></span>';
+    },
+  };
   return (
     <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[450px]">
       <Swiper
@@ -64,7 +72,8 @@ const HomePageSlider = () => {
           delay: 5500,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay]}
+        pagination={pagination}
+        modules={[Autoplay, Pagination]}
         className="!p-0"
       >
         {landingPage?.map(({ h1Tag, pTag, gif }, index) => (
