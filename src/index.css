@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -30,7 +30,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
     --background: 0, 0%, 18%;
@@ -58,18 +58,17 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 @layer base {
   * {
-    @apply border-border ;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground h-full bg-bg font-syne 2xl:bg-no-repeat 2xl:bg-cover;
   }
 }
-
 
 .invertinsetphism {
   box-shadow: 0.3rem 0.3rem 0.6rem #1d1c1c, -0.2rem -0.2rem 0.5rem #313232;
@@ -81,20 +80,17 @@
     inset -0.3rem -0.3rem 0.4rem #161414;
 }
 
-
 .swiper-pagination-bullet {
   width: 40px !important;
   height: 10px !important;
   background-color: white !important;
-  color: white !important;
+  color: transparent !important;
   border-radius: 10px !important;
   transition: background-color 0.3s ease;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #fe9545 !important;
-
+  color: transparent !important;
 }
-
-
