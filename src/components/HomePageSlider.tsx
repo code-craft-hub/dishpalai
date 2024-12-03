@@ -1,6 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
-
+//@ts-ignore
+import 'swiper/css';
+//@ts-ignore
+import 'swiper/css/pagination';
 import "../styles.css";
 
 import { Button } from "@/components/ui/button";
