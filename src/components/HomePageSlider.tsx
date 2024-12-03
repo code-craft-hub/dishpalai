@@ -55,7 +55,7 @@ const HomePageSlider = () => {
     },
   ];
   return (
-    <div className="w-full flex !h-[670px] md:!h-[450px]">
+    <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[450px]">
       <Swiper
         loop
         slidesPerView={1}
@@ -95,7 +95,7 @@ const HomePageSlider = () => {
                     src={gif}
                     //${ index == 1 && "animate-mySpin"}
                     className={` 
-                     h-[220px] sm:h-[310px] md:h-[400px] w-[50px] md:w-auto `}
+                     h-[360px] sm:h-[420px] w-[50px] md:w-auto`}
                   />
                 </div>
               </div>

@@ -29,7 +29,7 @@ const Home = () => {
           <HomePageSlider />
         </section>
         <section className="my-16 md:px-8 ">
-          <h1 className="text-lg font-bold font-syne text-[#4e4d4d] text-center">
+          <h1 className="text-lg font-bold font-syne text-white/5 text-center">
             Web App is still under Development
           </h1>
         </section>
@@ -202,7 +202,7 @@ const Home = () => {
         </section>
       </main>
       <section className="pb-32 xx:pt-16">
-        <div className="bg-white p-8 pl-4  flex flex-wrap justify-center items-center">
+        <div className="bg-white/20 p-8 pl-4  flex flex-wrap justify-center items-center">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
@@ -217,7 +217,7 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-screen-lg mx-auto ">
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center p-4 sm:p-8">
+        <div className="flex flex-col sm:flex-row gap-8 justify-between items-center p-4 sm:p-8">
           <div className="flex gap-4 ">
             {socials?.map(({ icon }: any, index) => {
               const Icon = icon;

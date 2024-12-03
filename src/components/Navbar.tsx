@@ -18,7 +18,7 @@ export default function Example() {
   ];
   return (
     <Disclosure as="nav" className="">
-      <div className="flex relative justify-between items-center px-4 max-w-screen-xl mx-auto">
+      <div className="flex relative justify-between items-center p-4 max-w-screen-xl mx-auto">
         <div className="">
           <img
             alt="Your Company"

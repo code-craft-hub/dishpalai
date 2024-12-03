@@ -1,5 +1,4 @@
 import * as React from "react";
-import { IoLanguage } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
@@ -23,8 +22,8 @@ export function LanguageSelect() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className=" border-accent border-[1px]">
-          <IoLanguage className="!w-6 !h-6 " />
+        <Button variant="outline" className=" border-accent border-[1px] uppercase !w-8">
+          {position}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="!w-16 shadow-2xl z-50">
