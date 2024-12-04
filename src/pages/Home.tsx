@@ -219,7 +219,7 @@ const Home = () => {
       </section>
       <main className="bg-[#212529]">
         <section className="max-w-screen-lg mx-auto ">
-          <div className="flex flex-col sm:flex-row gap-8 justify-between items-center p-4 sm:p-8 sm:py-16">
+          <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
             <div className="flex gap-4 ">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
@@ -246,7 +246,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center py-8 p-4 ">
+          <div className="flex items-center justify-center py-8">
             <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
               <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" /> {" "}
               <a
