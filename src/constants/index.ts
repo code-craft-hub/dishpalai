@@ -1,5 +1,5 @@
 import { FaXTwitter } from "react-icons/fa6";
-import { LuInstagram } from "react-icons/lu";
+import { RiInstagramFill } from "react-icons/ri";
 import { MdOutlineFacebook } from "react-icons/md";
 import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
@@ -22,7 +22,7 @@ export const clientImages = [
       href: "https://build.or.at/en/",
     },
     {
-      img: "/assets/eu.jpg",
+      img: "/assets/eu.png",
       title: "",
       href: "https://european-union.europa.eu/index_en",
     },
@@ -36,7 +36,7 @@ export const clientImages = [
       icon: MdOutlineFacebook,
     },
     {
-      icon: LuInstagram,
+      icon: RiInstagramFill,
     },
   ];
 

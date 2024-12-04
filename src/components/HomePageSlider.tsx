@@ -66,7 +66,7 @@ const HomePageSlider = () => {
     },
   };
   return (
-    <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[450px] relative">
+    <div className="w-full flex !h-[700px] sm:!h-[740px] md:!h-[550px] relative">
       <Swiper
         loop
         slidesPerView={1}
@@ -81,7 +81,7 @@ const HomePageSlider = () => {
       >
         {landingPage?.map(({ h1Tag, pTag, gif }, index) => (
           <SwiperSlide key={index} className="">
-            <div className="flex flex-col gap-12 md:gap-8 md:flex-row  p-1">
+            <div className="flex flex-col gap-12 md:gap-8 md:flex-row p-1">
               <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
                 <div className="md:w-full">
                   <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap">

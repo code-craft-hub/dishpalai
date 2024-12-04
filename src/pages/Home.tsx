@@ -29,7 +29,7 @@ const Home = () => {
           <HomePageSlider />
         </section>
         <section className="my-16 md:px-8 ">
-          <h1 className="text-lg font-bold font-syne text-white/5 text-center">
+          <h1 className="text-lg font-bold font-syne text-white/50 text-center">
             Web App is still under Development
           </h1>
         </section>
@@ -120,7 +120,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-xl lg:text-5xl text-center  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="my-16 text-xl lg:text-5xl  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
@@ -163,10 +163,7 @@ const Home = () => {
             ))}
           </div>
         </section>
-        <section
-          className="pb-32 md:px-8  w-full lg:hidden"
-          id="about"
-        >
+        <section className="pb-32 md:px-8  w-full lg:hidden" id="about">
           <div className=" md:pl-[5%] ">
             <h1 className="my-16 text-3xl md:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
@@ -178,7 +175,9 @@ const Home = () => {
                 <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                   {t("visionT")}
                 </h1>
-                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl">{t("visionD")}</p>
+                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl">
+                  {t("visionD")}
+                </p>
               </div>
             </div>
             <div className="flex flex-col xx:grid xx:grid-cols-2 ">
@@ -194,15 +193,17 @@ const Home = () => {
                   <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                     {t("missionT")}
                   </h1>
-                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg">{t("missionD")}</p>
+                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg">
+                    {t("missionD")}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <section className="pb-32 xx:pt-16">
-        <div className="bg-white/20 p-8 pl-4  flex flex-wrap justify-center items-center">
+      <section className="xx:pt-16">
+        <div className="bg-white/30 max-md:py-4 flex flex-wrap justify-center items-center md:h-[138px]">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
@@ -211,58 +212,54 @@ const Home = () => {
               href={href}
               className="w-1/2 sm:w-1/2 md:w-1/5 flex justify-center items-center"
             >
-              <img src={img} className="h-auto max-w-full" alt={href} />
+              <img src={img} className="" alt={href} />
             </a>
           ))}
         </div>
       </section>
-      <section className="max-w-screen-lg mx-auto ">
-          
-        <div className="flex flex-col sm:flex-row gap-8 justify-between items-center p-4 sm:p-8">
-          <div className="">
-<h1 className="text-center text-[#fe9545] font-bold sm:text-3xl font-syne py-6">
-              {t("socials")}
-            </h1>
-          <div className="flex gap-4 ">
-            {socials?.map(({ icon }: any, index) => {
-              const Icon = icon;
-              return <Icon key={index} className="size-10" />;
-            })}
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 ">
-            <h1 className="text-center text-[#fe9545] sm:text-xl font-bold font-syne">
-              {t("available")}
-            </h1>
-            <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
-              {appDonwload?.map(({ icon, title }: any, index) => {
+      <main className="bg-[#212529]">
+        <section className="max-w-screen-lg mx-auto ">
+          <div className="flex flex-col sm:flex-row gap-8 justify-between items-center p-4 sm:p-8 sm:py-16">
+            <div className="flex gap-4 ">
+              {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
-                return (
-                  <div
-                    key={index}
-                    className="items-center justify-center flex gap-2"
-                  >
-                    <Icon className="size-6" />
-                    <p className="font-syne">{title}</p>
-                  </div>
-                );
+                return <Icon key={index} className="size-10" />;
               })}
             </div>
+            <div className="flex flex-col gap-4 ">
+              <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne">
+                {t("available")}
+              </h1>
+              <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
+                {appDonwload?.map(({ icon, title }: any, index) => {
+                  const Icon = icon;
+                  return (
+                    <div
+                      key={index}
+                      className="items-center justify-center flex gap-2"
+                    >
+                      <Icon className="size-6" />
+                      <p className="font-syne">{title}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="flex items-center justify-center my-8 mt-16 p-4 ">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-syne">
-            © 2024{" "}
-            <a
-              href="https://www.dishpalinfo.com/"
-              className="hover:underline font-syne"
-            >
-              Dishpal Info Website
-            </a>
-            . All Rights Reserved.
-          </span>
-        </div>
-      </section>
+          <div className="flex items-center justify-center py-8 p-4 ">
+            <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
+              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" /> {" "}
+              <a
+                href="https://www.dishpalinfo.com/"
+                className="hover:underline font-syne"
+              >
+              2024  Dishpal Info Website. All Rights Reserved.
+              </a>
+              
+            </span>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
