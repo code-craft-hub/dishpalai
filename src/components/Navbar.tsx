@@ -23,7 +23,12 @@ export default function Example() {
           <img
             alt="Your Company"
             src="/assets/logo.png"
-            className="h-20 w-auto"
+            className="h-20 w-auto md:hidden"
+          />
+          <img
+            alt="Your Company"
+            src="/assets/desktopLogo.png"
+            className="h-20 w-auto hidden md:block"
           />
         </div>
         <div className="max-md:hidden gap-8 flex">
