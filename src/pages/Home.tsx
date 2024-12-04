@@ -128,7 +128,7 @@ const Home = () => {
         </section>
         <section className="pb-32 md:px-8  w-full hidden lg:block" id="about">
           <div className=" md:pl-[5%] ">
-            <h1 className="my-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+            <h1 className="mt-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
             </h1>
           </div>
@@ -154,7 +154,7 @@ const Home = () => {
                 className="bg-white max-md:max-w-[500px] rounded-3xl h-80 p-8 justify-center items-center flex"
               >
                 <div className="overflow-hidden">
-                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize">
+                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6">
                     {title}
                   </h1>
                   <p className="text-black">{des}</p>
@@ -223,20 +223,20 @@ const Home = () => {
             <div className="flex gap-4 ">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
-                return <Icon key={index} className="size-10" />;
+                return <Icon key={index} className="size-10 hover:cursor-pointer" />;
               })}
             </div>
             <div className="flex flex-col gap-4 ">
               <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne">
                 {t("available")}
               </h1>
-              <div className="flex flex-wrap items-center justify-center gap-4 p-4 invertinsetphism rounded-full ">
+              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 p-4 invertinsetphism rounded-full ">
                 {appDonwload?.map(({ icon, title }: any, index) => {
                   const Icon = icon;
                   return (
                     <div
                       key={index}
-                      className="items-center justify-center flex gap-2"
+                      className="items-center justify-center flex gap-2  hover:cursor-pointer"
                     >
                       <Icon className="size-6" />
                       <p className="font-syne">{title}</p>

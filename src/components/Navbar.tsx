@@ -7,17 +7,35 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
+import React, { useState, useEffect } from 'react';
 
 export default function Example() {
   const { t } = useTranslation();
+  const [isFixed, setIsFixed] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 100;
+      setIsFixed(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const navigation = [
     { name: t("home"), href: "why", current: true },
     { name: t("aboutUs"), href: "about", current: false },
     { name: t("services"), href: "question", current: false },
   ];
   return (
-    <Disclosure as="nav" className="">
+    <Disclosure as="nav"  className={`transition-all duration-300 ${
+      isFixed
+        ? 'fixed top-0 left-0 w-full shadow-2xl backdrop-blur-3xl z-50'
+        : 'sticky top-0 '
+    }`}>
       <div className="flex relative justify-between items-center p-4 max-w-screen-xl mx-auto">
         <div className="">
           <img
