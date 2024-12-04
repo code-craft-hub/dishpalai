@@ -7,35 +7,38 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export default function Example() {
   const { t } = useTranslation();
-  const [isFixed, setIsFixed] = useState(false);
+  // const [isFixed, setIsFixed] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 100;
-      setIsFixed(window.scrollY > scrollThreshold);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollThreshold = 850;
+  //     setIsFixed(window.scrollY > scrollThreshold);
+  //     console.log(window.scrollY > scrollThreshold, window.scrollY , {scrollThreshold})
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   const navigation = [
     { name: t("home"), href: "why", current: true },
     { name: t("aboutUs"), href: "about", current: false },
     { name: t("services"), href: "question", current: false },
   ];
   return (
-    <Disclosure as="nav"  className={`transition-all duration-300 ${
-      isFixed
-        ? 'fixed top-0 left-0 w-full shadow-2xl backdrop-blur-3xl z-50'
-        : 'sticky top-0 '
-    }`}>
+    <Disclosure as="nav"  
+    // className={`transition-all duration-300 ${
+    //   isFixed
+    //     ? 'fixed top-0 left-0 w-full shadow-2xl backdrop-blur-3xl z-50'
+    //     : ''
+    // }`}
+    >
       <div className="flex relative justify-between items-center p-4 max-w-screen-xl mx-auto">
         <div className="">
           <img
@@ -76,7 +79,7 @@ export default function Example() {
           </DisclosureButton>
         </div>
       </div>
-      <DisclosurePanel className="flex flex-col">
+      <DisclosurePanel className="flex flex-col py-4">
         {navigation.map((item) => (
           <Link
             key={item.name}

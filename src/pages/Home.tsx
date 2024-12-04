@@ -92,7 +92,7 @@ const Home = () => {
           <p className="font-syne font-bold text-xl sm:text-5xl py-8 text-[#fe9545] text-center">
             {t("quickSurvey")}
           </p>
-          <div className="flex items-center flex-col sm:flex-row">
+          <div className="flex items-center flex-col sm:flex-row gap-16">
             <p className="mt-2 sm:w-1/2  font-syne">{t("surveyMobile")}</p>
 
             <div className=" sm:w-1/2 justify-center flex ">
@@ -120,7 +120,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-xl lg:text-5xl  font-bold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="my-16 text-xl lg:text-5xl  font-bold font-syne tracking-tight capitalize text-[#fe9545] text-center sm:text-start">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
@@ -170,7 +170,7 @@ const Home = () => {
             </h1>
           </div>
           <div className="relative max-xx:flex max-xx:flex-col max-xx:gap-8">
-            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl border border-orange-200 max-xx:w-full xx:max-w-[220px]  sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
+            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl border border-orange-200 max-xx:w-full xx:max-w-[220px] sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
               <div className="overflow-hidden">
                 <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                   {t("visionT")}
