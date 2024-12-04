@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Example() {
   const { t } = useTranslation();
