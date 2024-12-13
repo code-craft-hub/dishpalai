@@ -57,6 +57,17 @@ const HomePageSlider = () => {
       pTag: <>{t("personalShopperD")}</>,
       gif: "/assets/computerR.gif",
     },
+    {
+      h1Tag: (
+        <>
+          {t("buyS")} <br />
+          <span className="text-[#fe9545]">{t("buyM")}</span> {t("buyE")}
+          {/* text-[#fe9545] */}
+        </>
+      ),
+      pTag: <>{t("buyD")}</>,
+      gif: "/assets/shopbasket.svg",
+    },
   ];
 
   const pagination = {
@@ -101,7 +112,7 @@ const HomePageSlider = () => {
                   </Button>
                 </div>
               </div>
-              <div className="flex items-center justify-center md:w-1/2">
+              <div className="flex items-center justify-center md:w-1/2 ">
                 <div className="">
                   <img
                     src={gif}

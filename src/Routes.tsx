@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 import Home from "./pages/Home";
 import Dashboard from "./dashboard/Dashboard";
@@ -8,30 +8,7 @@ const AppRoutes = () => (
   <Routes>
     <Route
       path="/"
-      element={
-        <Link to="/review" className="w-full h-[100svh] flex ">
-          <div className="mx-auto flex items-center justify-center flex-col">
-            <div className="flex justify-center items-center flex-">
-              {/* <video
-                autoPlay
-                loop
-                muted
-                className="w-full max-w-4xl h-auto object-cover"
-              >
-                <source src="/assets/robotConstruct.mp4" type="video/mp4" />
-              </video> */}
-              <img src="/assets/constructionR.gif" className="h-[300px] w-auto" alt="" />
-            </div>
-
-            <h1 className="font-bold text-center px-4 fong-syne text-xl md:text-5xl">
-              Dishpal AI is under construction. 
-            </h1>
-            <p className="text-lg mt-2 text-center">Click any where on the screen to go to the review website</p>
-          </div>
-        </Link>
-      }
-    />
-    <Route path="/review" element={<Home />} />
+      element={<Home />} />
     <Route
       path="/dashboard"
       element={
