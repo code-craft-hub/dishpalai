@@ -26,7 +26,7 @@ export default function Example() {
     };
   }, []);
   const navigation = [
-    { name: t("home"), href: "why", current: true },
+    { name: t("home"), href: "home", current: true },
     { name: t("aboutUs"), href: "about", current: false },
     { name: t("services"), href: "question", current: false },
   ];
