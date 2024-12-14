@@ -45,7 +45,7 @@ export default function Navbar() {
           smooth={true}
           duration={2500}
           offset={-70}
-          to="home"
+          to="toppage"
           className="hover:cursor-pointer hover:scale-105 duration-500 transition-all"
         >
           <img

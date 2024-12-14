@@ -22,7 +22,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
+    <div className="" id="toppage">
       <NavbarComponent />
       <main className="max-w-screen-xl mx-auto p-4">
         <section className="" id="home">
@@ -223,7 +223,9 @@ const Home = () => {
             <div className="flex gap-4 ">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
-                return <Icon key={index} className="size-10 hover:cursor-pointer" />;
+                return (
+                  <Icon key={index} className="size-10 hover:cursor-pointer" />
+                );
               })}
             </div>
             <div className="flex flex-col gap-4 ">
@@ -248,14 +250,13 @@ const Home = () => {
           </div>
           <div className="flex items-center justify-center py-8">
             <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
-              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" /> {" "}
+              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" />{" "}
               <a
                 href="https://www.dishpalinfo.com/"
                 className="hover:underline font-syne"
               >
-              2024  Dishpal Info Website. All Rights Reserved.
+                2024 Dishpal Info Website. All Rights Reserved.
               </a>
-              
             </span>
           </div>
         </section>
