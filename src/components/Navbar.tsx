@@ -15,7 +15,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 850;
+      const scrollThreshold = 550;
       setIsFixed(window.scrollY > scrollThreshold);
     };
 
@@ -81,7 +81,15 @@ export default function Navbar() {
       </div>
       <DisclosurePanel className="flex flex-col p-4">
         {navigation.map((item) => (
-          <Link key={item.name} to={item.href} className="w-full">
+          <Link
+            key={item.name}
+            to={item.href}
+            spy={true}
+            smooth={true}
+            duration={2500}
+            offset={-70}
+            className="w-full"
+          >
             <DisclosureButton
               className={`
                      ${
