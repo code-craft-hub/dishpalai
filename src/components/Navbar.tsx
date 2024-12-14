@@ -40,21 +40,32 @@ export default function Navbar() {
       }`}
     >
       <div className="flex relative justify-between items-center p-4 max-w-screen-xl mx-auto">
-        <div className="">
+        <Link
+          spy={true}
+          smooth={true}
+          duration={2500}
+          offset={-70}
+          to="home"
+          className="hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+        >
           <img
             alt="Your Company"
             src="/assets/logo.png"
-            className="h-20 w-auto md:hidden"
+            className="h-20 w-auto md:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
           <img
             alt="Your Company"
             src="/assets/desktopLogo.png"
-            className="h-20 w-auto hidden md:block"
+            className="h-20 w-auto hidden md:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
-        </div>
+        </Link>
         <div className="max-md:hidden gap-8 flex">
           {navigation.map((item) => (
             <Link
+              spy={true}
+              smooth={true}
+              duration={2500}
+              offset={-70}
               key={item.name}
               to={item.href}
               className={`text-gray-300 hover:border-accent hover:border-b-2 hover:text-white
