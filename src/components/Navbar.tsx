@@ -8,6 +8,7 @@ import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -68,7 +69,7 @@ export default function Navbar() {
               offset={-70}
               key={item.name}
               to={item.href}
-              className={`text-gray-300 hover:border-accent hover:border-b-2 hover:text-white
+              className={`text-primary hover:border-accent hover:border-b-2 hover:text-accent
                       px-3 py-2 text-sm font-medium hover:font-bold hover:cursor-pointer`}
             >
               {item.name}
@@ -76,6 +77,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center justify-center gap-2">
+          <ModeToggle />
           <LanguageSelect />
           <DisclosureButton className="md:hidden">
             <span className="sr-only">Open main menu</span>
@@ -90,7 +92,7 @@ export default function Navbar() {
           </DisclosureButton>
         </div>
       </div>
-      <DisclosurePanel className="flex flex-col p-4">
+      <DisclosurePanel className="flex flex-col p-4 shadow-2xl backdrop-blur-3xl mx-4 rounded-xl">
         {navigation.map((item) => (
           <Link
             key={item.name}
@@ -105,8 +107,8 @@ export default function Navbar() {
               className={`
                      ${
                        item.current
-                         ? " text-white"
-                         : "text-gray-300 hover:bg-accent hover:text-white"
+                         ? " text-primary"
+                         : "text-primary hover:bg-accent hover:text-primary"
                      } rounded-md px-3 py-2 text-sm font-medium w-full text-start`}
             >
               {item.name}

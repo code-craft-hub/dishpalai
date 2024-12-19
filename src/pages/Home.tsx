@@ -203,7 +203,7 @@ const Home = () => {
         </section>
       </main>
       <section className="xx:pt-16">
-        <div className="bg-white/30 max-md:py-4 flex flex-wrap justify-center items-center md:h-[138px]">
+        <div className="dark:bg-white/30 bg-black max-md:py-4 flex flex-wrap justify-center items-center md:h-[138px]">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
@@ -217,7 +217,7 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <main className="bg-[#212529]">
+      <main className="dark:bg-[#212529]">
         <section className="max-w-screen-lg mx-auto ">
           <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
             <div className="flex gap-4 ">
@@ -232,7 +232,7 @@ const Home = () => {
               <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne">
                 {t("available")}
               </h1>
-              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 p-4 invertinsetphism rounded-full ">
+              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 p-4 shadow-2xl  dark:invertinsetphism rounded-full ">
                 {appDonwload?.map(({ icon, title }: any, index) => {
                   const Icon = icon;
                   return (
