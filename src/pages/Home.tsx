@@ -232,7 +232,7 @@ const Home = () => {
               <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne">
                 {t("available")}
               </h1>
-              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 p-4 shadow-2xl  dark:invertinsetphism rounded-full ">
+              <div className="flex flex-wrap items-center bg-black dark:bg-transparent justify-center gap-4 md:gap-8 p-4 shadow-2xl  dark:invertinsetphism rounded-full ">
                 {appDonwload?.map(({ icon, title }: any, index) => {
                   const Icon = icon;
                   return (
@@ -240,8 +240,8 @@ const Home = () => {
                       key={index}
                       className="items-center justify-center flex gap-2  hover:cursor-pointer"
                     >
-                      <Icon className="size-6" />
-                      <p className="font-syne">{title}</p>
+                      <Icon className="size-6 text-white"  />
+                      <p className="font-syne text-white">{title}</p>
                     </div>
                   );
                 })}

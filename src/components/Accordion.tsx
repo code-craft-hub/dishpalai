@@ -48,7 +48,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="max-w-screen-sm lg:max-w-screen-2xl mx-auto  flex flex-col text-white  shadow-lg gap-4">
+    <div className="max-w-screen-sm lg:max-w-screen-2xl mx-auto  flex flex-col text-white gap-4">
       {accordionData.map(({ id, question, answer }) => (
         <div
           key={id}
