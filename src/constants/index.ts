@@ -5,6 +5,8 @@ import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { FaUbuntu } from "react-icons/fa6";
 
+// first commit from my new laptop Elitebook G5
+
 export const clientImages = [
     {
       img: "/assets/aau.png",
