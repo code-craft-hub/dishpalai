@@ -80,19 +80,24 @@
 }
 
 .swiper-pagination-bullet {
-  width: 10px !important;
-  height: 10px !important;
-  background-color: gray !important;
+  width: 11px !important;
+  height: 11px !important;
+  background-color: #707070 !important;
   color: transparent !important;
-  border-radius: 10px !important;
-  transition: background-color 0.3s ease;
+  border-radius: 50% !important; 
+  transition: all 0.3s ease; 
   cursor: pointer;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #fe9545 !important;
   color: transparent !important;
+  transform: scale(1.3); 
 }
+
 
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
 {
