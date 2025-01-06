@@ -240,7 +240,7 @@ const HomePageSlider = () => {
                   {h1Tag}
                 </h1>
                 <p className="font-syne capitalize">{pTag}</p>
-                <Button className="w-full lg:w-fit">
+                <Button className="w-full md:w-fit">
                   <a
                     href="https://forms.gle/MKruJpmf2w1AM9ZUA"
                     rel="noopener noreferer"
