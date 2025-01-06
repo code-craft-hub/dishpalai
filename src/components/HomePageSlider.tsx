@@ -94,6 +94,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("helpingYouD")}</>,
       gif: "/assets/phone.gif",
+      gifD: "/assets/phone.gif",
     },
     {
       h1Tag: (
@@ -104,6 +105,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("ecoChampionD")}</>,
       gif: "/assets/newspaper.svg",
+      gifD: "/assets/newspaper.svg",
     },
     {
       h1Tag: (
@@ -114,6 +116,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("opportunityD")}</>,
       gif: "/assets/sale.svg",
+      gifD: "/assets/sale.svg",
     },
 
     {
@@ -127,6 +130,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("personalShopperD")}</>,
       gif: "/assets/computerR.gif",
+      gifD: "/assets/newaithinkinwhitebigger.gif",
     },
     {
       h1Tag: (
@@ -139,6 +143,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("buyD")}</>,
       gif: "/assets/shopbasket.svg",
+      gifD: "/assets/shopbasket.svg",
     },
     {
       h1Tag: (
@@ -152,6 +157,7 @@ const HomePageSlider = () => {
       ),
       pTag: <>{t("neverD")}</>,
       gif: "/assets/nevermiss.png",
+      gifD: "/assets/nevermiss.png",
     },
   ];
 
@@ -230,7 +236,7 @@ const HomePageSlider = () => {
           pagination={pagination}
           modules={[Autoplay, Pagination]}
         >
-          {mobilePageText?.map(({ h1Tag, pTag, gif }, index) => (
+          {mobilePageText?.map(({ h1Tag, pTag, gif,gifD }, index) => (
             <SwiperSlide
               key={index}
               className="!flex !flex-row items-center justify-center gap-4 sx:gap-8"
@@ -251,7 +257,10 @@ const HomePageSlider = () => {
                   </a>
                 </Button>
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 dark:hidden">
+                <img src={gifD} alt="" />
+              </div>
+              <div className="w-1/2 hidden dark:flex">
                 <img src={gif} alt="" />
               </div>
             </SwiperSlide>
