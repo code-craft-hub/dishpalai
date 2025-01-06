@@ -272,9 +272,9 @@ const HomePageSlider = () => {
               </div>
             </SwiperSlide>
           ))}
-      <h1 className="mb-4 mt-8 font-syne dark:text-white/20 text-center text-gray-200">
-        Web App is still under Development
-      </h1>
+          <h1 className="mb-4 mt-8 font-syne dark:text-white text-center text-black">
+            Web App is still under Development
+          </h1>
         </Swiper>
       </div>
     </div>
