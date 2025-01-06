@@ -89,17 +89,17 @@ const Home = () => {
 
         {/* Mobile */}
         <section className="mb-32 flex flex-col md:hidden items-center justify-center p-4 sm:p-8">
-          <p className="font-syne font-bold text-xl sm:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
+          <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("quickSurvey")}
           </p>
-          <div className="flex items-center flex-col sm:flex-row gap-16">
-            <p className="mt-2 sm:w-1/2  font-syne">{t("surveyMobile")}</p>
+          <div className="flex items-center flex-row gap-4 md:gap-16">
+            <p className="mt-2 w-1/2  font-syne">{t("surveyMobile")}</p>
 
-            <div className=" sm:w-1/2 justify-center flex ">
+            <div className="w-1/2 justify-center flex shrink-0">
               <img
                 alt="ladyHoldingPhone"
                 src="/assets/bigPhoneWithPeople.png"
-                className="w-full h-full"
+                className="w-full h-full "
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ const Home = () => {
         </section>
       </main>
       <section className="xx:pt-16">
-        <div className="dark:bg-white/30 bg-black max-md:py-4 flex flex-wrap justify-center items-center md:h-[138px]">
+        <div className="dark:bg-white/30 bg-black max-md:py-4 flex justify-center items-center md:h-[138px]">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
@@ -212,7 +212,7 @@ const Home = () => {
               href={href}
               className="w-1/2 sm:w-1/2 md:w-1/5 flex justify-center items-center"
             >
-              <img src={img} className="" alt={href} />
+              <img src={img} className={`${(index ===2 || index === 1) && "max-sm:w-10"}`} alt={href} />
             </a>
           ))}
         </div>
