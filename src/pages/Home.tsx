@@ -216,7 +216,7 @@ const Home = () => {
             >
               <img
                 src={img}
-                className={`${(index === 2 || index === 1) && "max-sm:w-10"}`}
+                className={`${(index === 0 || index === 1) && "max-sm:w-10"}`}
                 alt={href}
               />
             </a>

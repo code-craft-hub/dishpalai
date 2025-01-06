@@ -246,7 +246,7 @@ const HomePageSlider = () => {
           {mobilePageText?.map(({ h1Tag, pTag, gif, gifD }, index) => (
             <SwiperSlide
               key={index}
-              className="!flex !flex-row items-center justify-center gap-4 sx:gap-8 sm:gap-16"
+              className="!flex !flex-row items-center justify-center gap-4 sx:gap-8 sm:gap-16 md:px-8"
             >
               <div className="w-1/2 flex flex-col gap-4">
                 <h1 className="font-syne text-xl font-semibold sx:text-2xl sm:text-3xl lg:text-5xl capitalize">
