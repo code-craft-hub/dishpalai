@@ -7,6 +7,8 @@ import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
 
+//cross checking repo
+
 const Home = () => {
   const { t } = useTranslation();
 
