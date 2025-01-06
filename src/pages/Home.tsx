@@ -7,18 +7,17 @@ import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
 
-
 const Home = () => {
   const { t } = useTranslation();
 
   const missionVision = [
     {
-      title: t("visionT"),
-      des: t("visionD"),
-    },
-    {
       title: t("missionT"),
       des: t("missionD"),
+    },
+    {
+      title: t("visionT"),
+      des: t("visionD"),
     },
   ];
 
@@ -212,12 +211,16 @@ const Home = () => {
               href={href}
               className="w-1/2 sm:w-1/2 md:w-1/5 flex justify-center items-center"
             >
-              <img src={img} className={`${(index ===2 || index === 1) && "max-sm:w-10"}`} alt={href} />
+              <img
+                src={img}
+                className={`${(index === 2 || index === 1) && "max-sm:w-10"}`}
+                alt={href}
+              />
             </a>
           ))}
         </div>
       </section>
-      <main className="dark:bg-[#212529]">
+      <main className="md:dark:bg-[#212529]">
         <section className="max-w-screen-lg mx-auto ">
           <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
             <div className="flex gap-4 ">
@@ -240,7 +243,7 @@ const Home = () => {
                       key={index}
                       className="items-center justify-center flex gap-2  hover:cursor-pointer"
                     >
-                      <Icon className="size-6 text-white"  />
+                      <Icon className="size-6 text-white" />
                       <p className="font-syne text-white">{title}</p>
                     </div>
                   );

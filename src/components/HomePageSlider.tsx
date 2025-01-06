@@ -236,10 +236,10 @@ const HomePageSlider = () => {
               className="!flex !flex-row items-center justify-center gap-4 sx:gap-8"
             >
               <div className="w-1/2 flex flex-col gap-4">
-                <h1 className="font-syne text-xl capitalize font-semibold sx:text-2xl sm:text-3xl lg:text-5xl">
+                <h1 className="font-syne text-xl font-semibold sx:text-2xl sm:text-3xl lg:text-5xl capitalize">
                   {h1Tag}
                 </h1>
-                <p className="">{pTag}</p>
+                <p className="font-syne capitalize">{pTag}</p>
                 <Button className="w-full lg:w-fit">
                   <a
                     href="https://forms.gle/MKruJpmf2w1AM9ZUA"

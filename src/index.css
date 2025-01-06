@@ -65,7 +65,7 @@
     @apply border-border;
   }
   body {
-    @apply !p-0 bg-background text-foreground h-full dark:bg-bg font-inter 2xl:bg-no-repeat 2xl:bg-cover;
+    @apply !p-0 bg-background text-foreground h-full md:dark:bg-bg dark:bg-[#131313] font-inter 2xl:bg-no-repeat 2xl:bg-cover;
   }
 }
 
