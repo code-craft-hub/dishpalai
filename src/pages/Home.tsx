@@ -1,7 +1,7 @@
 import SliderComponent from "@/components/SliderComponent";
 import { clientImages, socials, appDonwload } from "@/constants";
 import { Button } from "@/components/ui/button";
-import { Typewriter } from "react-simple-typewriter";
+// import { Typewriter } from "react-simple-typewriter";
 import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
@@ -38,7 +38,7 @@ const Home = () => {
           <h1 className="mt-2 text-xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
-          <p className="my-6 leading-[18px]  text-center max-w-xl mx-auto text-md">
+          <p className="my-6 leading-[24px]  text-center max-w-xl mx-auto text-md">
             {t("whyChooseD1")}
             {/* <span className="text-[#fe9545] mx-1">Dishpal.ai's</span> */}
           </p>
@@ -56,14 +56,15 @@ const Home = () => {
               {t("0Seconds")}
             </p> */}
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl xl:text-nowrap min-h-16 ">
-              <Typewriter
+              {t("0Seconds")}
+              {/* <Typewriter
                 words={[t("0Seconds")]}
                 loop={2}
                 // cursor
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-              />
+              /> */}
             </p>
             <Button className="mt-8 font-syne">
               <a
@@ -89,10 +90,12 @@ const Home = () => {
         {/* Mobile */}
         <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
-            {t("quickSurvey")}
+            {t("take6")} {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2  font-syne">{t("surveyMobile")}</p>
+            <p className="mt-2 w-1/2 capitalize font-syne">
+              {t("surveyMobile")}
+            </p>
 
             <div className="w-1/2 justify-center flex shrink-0">
               <img
@@ -223,7 +226,7 @@ const Home = () => {
       <main className="md:dark:bg-[#212529]">
         <section className="max-w-screen-lg mx-auto ">
           <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
-            <div className="flex gap-4 ">
+            <div className="flex gap-4 order-2 md:order-1">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
                 return (
@@ -231,11 +234,11 @@ const Home = () => {
                 );
               })}
             </div>
-            <div className="flex flex-col gap-4 ">
-              <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne">
+            <div className="flex flex-col gap-4 order-1 md:order-2 ">
+              <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne max-md:text-center">
                 {t("available")}
               </h1>
-              <div className="flex flex-wrap items-center bg-black dark:bg-transparent justify-center gap-4 md:gap-8 p-4 shadow-2xl  dark:invertinsetphism rounded-full ">
+              <div className="flex flex-wrap items-center bg-black dark:bg-[#212529] justify-center gap-4 md:gap-8 p-4 dark:shadow-2xl  dark:invertinsetphism rounded-full ">
                 {appDonwload?.map(({ icon, title }: any, index) => {
                   const Icon = icon;
                   return (

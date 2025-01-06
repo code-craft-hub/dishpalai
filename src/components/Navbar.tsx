@@ -51,12 +51,12 @@ export default function Navbar() {
           duration={2500}
           offset={-70}
           to="toppage"
-          className="hover:cursor-pointer hover:scale-105 duration-500 transition-all order-2 md:order-1 md:absolute md:left-4 md:top-0"
+          className="hover:cursor-pointer py-2 hover:scale-105 duration-500 transition-all order-2 md:order-1 md:absolute md:left-4 md:top-0"
         >
           <img
             alt="Your Company"
-            src="/assets/logo.png"
-            className="h-20 w-auto md:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+            src="/assets/mobileLogo.png"
+            className="h-12 w-auto md:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
           <img
             alt="Your Company"
