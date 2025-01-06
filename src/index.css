@@ -82,7 +82,7 @@
 .swiper-pagination-bullet {
   width: 10px !important;
   height: 10px !important;
-  background-color: white !important;
+  background-color: #ffa057 !important;
   color: transparent !important;
   border-radius: 10px !important;
   transition: background-color 0.3s ease;

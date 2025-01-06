@@ -42,7 +42,7 @@ const SliderComponent = () => {
     },
   ];
   return (
-    <div>
+    <div className="mt-10">
       <>
         <Swiper
           loop

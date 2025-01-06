@@ -40,14 +40,16 @@ export default function Navbar() {
           : ""
       }`}
     >
-      <div className="flex relative justify-between items-center p-4 max-w-screen-xl mx-auto">
+      <div className={`${isFixed
+          ? "h-20 shadow-2xl backdrop-blur-3xl z-50"
+          : ""} flex relative justify-between items-center px-4 max-w-screen-xl mx-auto`}>
         <Link
           spy={true}
           smooth={true}
           duration={2500}
           offset={-70}
           to="toppage"
-          className="hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+          className="hover:cursor-pointer hover:scale-105 duration-500 transition-all order-2 md:order-1 md:absolute md:left-4 md:top-0"
         >
           <img
             alt="Your Company"
@@ -60,7 +62,7 @@ export default function Navbar() {
             className="h-20 w-auto hidden md:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
         </Link>
-        <div className="max-md:hidden gap-8 flex">
+        <div className="max-md:hidden gap-8 flex md:absolute md:-translate-x-1/2 left-1/2 top-5 ">
           {navigation.map((item) => (
             <Link
               spy={true}
@@ -76,18 +78,20 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <ModeToggle />
-          <LanguageSelect />
+        <div className="flex items-center justify-center gap-2 md:absolute right-2 top-4">
+          <div className="hidden md:flex items-center justify-center gap-4">
+            <ModeToggle />
+            <LanguageSelect />
+          </div>
           <DisclosureButton className="md:hidden">
             <span className="sr-only">Open main menu</span>
             <Bars3Icon
               aria-hidden="true"
-              className="block size-6 group-data-[open]:hidden"
+              className="block text-[#fe9545] size-8 group-data-[open]:hidden"
             />
             <XMarkIcon
               aria-hidden="true"
-              className="hidden size-6 group-data-[open]:block"
+              className="hidden text-[#fe9545] size-8 group-data-[open]:block"
             />
           </DisclosureButton>
         </div>
@@ -115,6 +119,11 @@ export default function Navbar() {
             </DisclosureButton>
           </Link>
         ))}
+
+        <div className="flex flex-row justify-between w-full ">
+          <LanguageSelect />
+          <ModeToggle />
+        </div>
       </DisclosurePanel>
     </Disclosure>
   );

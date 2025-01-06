@@ -17,7 +17,7 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">Dishpal AI: {t("discounted")}</p>
+          <p className="xl:text-nowrap">Dishpal AI: {t("discounted")}</p>
           <span className="text-[#fe9545] ml-1">{t("discountWord")}</span>{" "}
           {t("finder")}
         </>

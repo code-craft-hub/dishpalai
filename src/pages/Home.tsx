@@ -25,12 +25,12 @@ const Home = () => {
   return (
     <div className="" id="toppage">
       <NavbarComponent />
-      <main className="max-w-screen-xl mx-auto p-4">
+      <main className="max-w-screen-xl mx-auto p-4 md:mt-16">
         <section className="" id="home">
           <HomePageSlider />
         </section>
         <section className="my-16 md:px-8 ">
-          <h1 className="text-lg font-bold font-syne text-white/50 text-center">
+          <h1 className=" font-syne dark:text-white/50 text-center">
             Web App is still under Development
           </h1>
         </section>
@@ -39,7 +39,7 @@ const Home = () => {
           <h1 className="mt-2 text-xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
-          <p className="mt-6 leading-[18px]  text-center max-w-xl mx-auto text-md">
+          <p className="my-6 leading-[18px]  text-center max-w-xl mx-auto text-md">
             {t("whyChooseD1")}
             {/* <span className="text-[#fe9545] mx-1">Dishpal.ai's</span> */}
           </p>
@@ -89,7 +89,7 @@ const Home = () => {
 
         {/* Mobile */}
         <section className="mb-32 flex flex-col md:hidden items-center justify-center p-4 sm:p-8">
-          <p className="font-syne font-bold text-xl sm:text-5xl py-8 text-[#fe9545] text-center">
+          <p className="font-syne font-bold text-xl sm:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("quickSurvey")}
           </p>
           <div className="flex items-center flex-col sm:flex-row gap-16">
