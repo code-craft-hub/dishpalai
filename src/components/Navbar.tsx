@@ -40,9 +40,11 @@ export default function Navbar() {
           : ""
       }`}
     >
-      <div className={`${isFixed
-          ? "h-20 shadow-2xl backdrop-blur-3xl z-50"
-          : ""} flex relative justify-between items-center px-4 max-w-screen-xl mx-auto`}>
+      <div
+        className={`${
+          isFixed ? "h-20 shadow-2xl backdrop-blur-3xl z-50" : ""
+        } flex relative justify-between items-center px-4 max-w-screen-xl mx-auto`}
+      >
         <Link
           spy={true}
           smooth={true}
@@ -122,7 +124,9 @@ export default function Navbar() {
 
         <div className="flex flex-row justify-between w-full ">
           <LanguageSelect />
-          <ModeToggle />
+          <DisclosureButton as="div">
+            <ModeToggle />
+          </DisclosureButton>
         </div>
       </DisclosurePanel>
     </Disclosure>

@@ -85,8 +85,8 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">Dishpal AI: {t("discounted")}</p>
-          <p className="text-nowrap">
+          <p className="text-nowrap lg:text-balance">Dishpal AI: {t("discounted")}</p>
+          <p className="text-nowrap lg:text-balance">
             <span className="text-[#fe9545]">{t("discountWord")}</span>{" "}
             {t("finder")}
           </p>
@@ -98,8 +98,8 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">{t("ecoChampionT")}</p>
-          <p className="text-[#fe9545] text-nowrap">Eco-Champion</p>
+          <p className="text-nowrap lg:text-balance">{t("ecoChampionT")}</p>
+          <p className="text-[#fe9545] text-nowrap lg:text-balance">Eco-Champion</p>
         </>
       ),
       pTag: <>{t("ecoChampionD")}</>,
@@ -108,7 +108,7 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">{t("opportunityT")}</p>
+          <p className="text-nowrap lg:text-balance">{t("opportunityT")}</p>
           <span className="text-[#fe9545]"> {t("saved")}</span>
         </>
       ),
@@ -119,8 +119,8 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">{t("personalShopperT")} </p>
-          <p className="text-nowrap">
+          <p className="text-nowrap lg:text-balance">{t("personalShopperT")} </p>
+          <p className="text-nowrap lg:text-balance">
             <span className="text-[#fe9545] capitalize">Personal</span> Shopper
           </p>
         </>
@@ -131,10 +131,10 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">
+          <p className="text-nowrap lg:text-balance">
             {t("buyS")} <span className="text-[#fe9545] capitalize">{t("buyM")}</span>
           </p>
-          <p className="text-nowrap">{t("buyE")}</p>
+          <p className="text-nowrap lg:text-balance">{t("buyE")}</p>
         </>
       ),
       pTag: <>{t("buyD")}</>,
@@ -143,8 +143,8 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap">{t("neveraT")}</p>
-          <p className="text-nowrap">
+          <p className="text-nowrap lg:text-balance">{t("neveraT")}</p>
+          <p className="text-nowrap lg:text-balance">
             {t("neverbT")}{" "}
             <span className="text-[#fe9545] capitalize">{t("neverSave")}</span>
           </p>
