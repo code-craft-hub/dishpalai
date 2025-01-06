@@ -122,7 +122,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-xl lg:text-5xl  font-semibold font-syne tracking-tight capitalize text-[#fe9545] text-center sm:text-start">
+          <h1 className="my-8 lg:my-16 text-xl md:text-3xl lg:text-5xl  font-semibold font-syne tracking-tight capitalize text-[#fe9545] text-center lg:text-start">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
