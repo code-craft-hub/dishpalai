@@ -28,13 +28,13 @@ const Home = () => {
         <section className="" id="home">
           <HomePageSlider />
         </section>
-        <section className="my-16 md:px-8 ">
+        {/* <section className="my-16 md:px-8 ">
           <h1 className=" font-syne dark:text-white/5 text-center text-gray-100">
             Web App is still under Development
           </h1>
-        </section>
+        </section> */}
 
-        <section className="pb-32 md:px-8" id="why">
+        <section className="py-32 md:px-8" id="why">
           <h1 className="mt-2 text-xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>

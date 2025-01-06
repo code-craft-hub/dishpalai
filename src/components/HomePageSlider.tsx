@@ -85,7 +85,9 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap lg:text-balance">Dishpal AI: {t("discounted")}</p>
+          <p className="text-nowrap lg:text-balance">
+            Dishpal AI: {t("discounted")}
+          </p>
           <p className="text-nowrap lg:text-balance">
             <span className="text-[#fe9545]">{t("discountWord")}</span>{" "}
             {t("finder")}
@@ -100,7 +102,9 @@ const HomePageSlider = () => {
       h1Tag: (
         <>
           <p className="text-nowrap lg:text-balance">{t("ecoChampionT")}</p>
-          <p className="text-[#fe9545] text-nowrap lg:text-balance">Eco-Champion</p>
+          <p className="text-[#fe9545] text-nowrap lg:text-balance">
+            Eco-Champion
+          </p>
         </>
       ),
       pTag: <>{t("ecoChampionD")}</>,
@@ -122,7 +126,9 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          <p className="text-nowrap lg:text-balance">{t("personalShopperT")} </p>
+          <p className="text-nowrap lg:text-balance">
+            {t("personalShopperT")}{" "}
+          </p>
           <p className="text-nowrap lg:text-balance">
             <span className="text-[#fe9545] capitalize">Personal</span> Shopper
           </p>
@@ -136,7 +142,8 @@ const HomePageSlider = () => {
       h1Tag: (
         <>
           <p className="text-nowrap lg:text-balance">
-            {t("buyS")} <span className="text-[#fe9545] capitalize">{t("buyM")}</span>
+            {t("buyS")}{" "}
+            <span className="text-[#fe9545] capitalize">{t("buyM")}</span>
           </p>
           <p className="text-nowrap lg:text-balance">{t("buyE")}</p>
         </>
@@ -236,7 +243,7 @@ const HomePageSlider = () => {
           pagination={pagination}
           modules={[Autoplay, Pagination]}
         >
-          {mobilePageText?.map(({ h1Tag, pTag, gif,gifD }, index) => (
+          {mobilePageText?.map(({ h1Tag, pTag, gif, gifD }, index) => (
             <SwiperSlide
               key={index}
               className="!flex !flex-row items-center justify-center gap-4 sx:gap-8 sm:gap-16"
@@ -265,6 +272,9 @@ const HomePageSlider = () => {
               </div>
             </SwiperSlide>
           ))}
+      <h1 className="mb-4 mt-8 font-syne dark:text-white/20 text-center text-gray-200">
+        Web App is still under Development
+      </h1>
         </Swiper>
       </div>
     </div>
