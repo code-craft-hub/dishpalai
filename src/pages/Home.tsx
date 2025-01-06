@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="" id="toppage">
       <NavbarComponent />
-      <main className="max-w-screen-xl mx-auto p-4 md:mt-16">
+      <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 md:mt-16">
         <section className="" id="home">
           <HomePageSlider />
         </section>
@@ -88,7 +88,7 @@ const Home = () => {
         </section>
 
         {/* Mobile */}
-        <section className="mb-32 flex flex-col md:hidden items-center justify-center p-4 sm:p-8">
+        <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("quickSurvey")}
           </p>
