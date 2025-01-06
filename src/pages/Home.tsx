@@ -7,7 +7,6 @@ import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
 
-//cross checking repo
 
 const Home = () => {
   const { t } = useTranslation();
@@ -37,10 +36,10 @@ const Home = () => {
         </section>
 
         <section className="pb-32 md:px-8" id="why">
-          <h1 className="mt-2 text-xl lg:text-5xl text-center font-bold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="mt-2 text-xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
-          <p className="mt-6 font-syne leading-[18px]  text-center max-w-xl mx-auto text-md">
+          <p className="mt-6 leading-[18px]  text-center max-w-xl mx-auto text-md">
             {t("whyChooseD1")}
             {/* <span className="text-[#fe9545] mx-1">Dishpal.ai's</span> */}
           </p>
@@ -61,14 +60,13 @@ const Home = () => {
               <Typewriter
                 words={[t("0Seconds")]}
                 loop={2}
-                cursor
-                cursorStyle="_"
+                // cursor
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
               />
             </p>
-            <Button className="mt-8">
+            <Button className="mt-8 font-syne">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
                 rel="noopener noreferer"
@@ -122,7 +120,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-16 text-xl lg:text-5xl  font-bold font-syne tracking-tight capitalize text-[#fe9545] text-center sm:text-start">
+          <h1 className="my-16 text-xl lg:text-5xl  font-semibold font-syne tracking-tight capitalize text-[#fe9545] text-center sm:text-start">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
@@ -130,7 +128,7 @@ const Home = () => {
         </section>
         <section className="pb-32 md:px-8  w-full hidden lg:block" id="about">
           <div className=" md:pl-[5%] ">
-            <h1 className="mt-16 text-3xl md:text-5xl font-bold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+            <h1 className="mt-16 text-3xl md:text-5xl font-semibold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
             </h1>
           </div>
@@ -153,7 +151,7 @@ const Home = () => {
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-white max-md:max-w-[500px] rounded-3xl h-80 p-8 justify-center items-center flex"
+                className="bg-[#F9F9F9] dark:bg-white max-md:max-w-[500px] rounded-3xl h-80 p-8 justify-center items-center flex shadow-xl"
               >
                 <div className="overflow-hidden">
                   <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6">

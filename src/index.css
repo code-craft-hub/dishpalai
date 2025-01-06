@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,7 +65,7 @@
     @apply border-border;
   }
   body {
-    @apply !p-0 bg-background text-foreground h-full dark:bg-bg font-syne 2xl:bg-no-repeat 2xl:bg-cover;
+    @apply !p-0 bg-background text-foreground h-full dark:bg-bg font-inter 2xl:bg-no-repeat 2xl:bg-cover;
   }
 }
 

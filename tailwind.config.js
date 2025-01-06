@@ -34,6 +34,7 @@ module.exports = {
       },
       fontFamily: {
         syne: '"Syne", serif',
+        inter: '"Inter", serif',
       },
       borderRadius: {
         lg: "var(--radius)",

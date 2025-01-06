@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
 //@ts-ignore
-import 'swiper/css';
+import "swiper/css";
 //@ts-ignore
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 import "../styles.css";
 
 import { Button } from "@/components/ui/button";
@@ -17,9 +17,9 @@ const HomePageSlider = () => {
     {
       h1Tag: (
         <>
-          Dishpal AI: <br />
-          {t("discounted")}{" "}
-          <span className="text-[#fe9545] ml-1">{t("finder")}</span> 
+          <p className="text-nowrap">Dishpal AI: {t("discounted")}</p>
+          <span className="text-[#fe9545] ml-1">{t("discountWord")}</span>{" "}
+          {t("finder")}
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
@@ -29,7 +29,7 @@ const HomePageSlider = () => {
       h1Tag: (
         <>
           {t("ecoChampionT")} <br />
-          <span className="text-[#fe9545]">Eco</span>-Champion{" "}
+          <span className="text-[#fe9545]">Eco-Champion</span>{" "}
         </>
       ),
       pTag: <>{t("ecoChampionD")}</>,
@@ -68,12 +68,23 @@ const HomePageSlider = () => {
       pTag: <>{t("buyD")}</>,
       gif: "/assets/shopbasket.svg",
     },
+    {
+      h1Tag: (
+        <>
+          {t("neverT")} <br />
+          <span className="text-[#fe9545]">{t("neverSave")}</span> 
+          {/* text-[#fe9545] */}
+        </>
+      ),
+      pTag: <>{t("neverD")}</>,
+      gif: "/assets/nevermiss.png",
+    },
   ];
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index:number,className:any) {
-      return '<span class="' + className + '">'+ index +'</span>';
+    renderBullet: function (index: number, className: any) {
+      return '<span class="' + className + '">' + index + "</span>";
     },
   };
   return (
@@ -95,10 +106,10 @@ const HomePageSlider = () => {
             <div className="flex flex-col gap-12 md:gap-8 md:flex-row p-1">
               <div className=" flex flex-col items-center justify-center overflow-hidden p-4 md:p-8 md:w-1/2">
                 <div className="md:w-full">
-                  <h1 className="font-bold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap">
+                  <h1 className="font-semibold font-syne text-start text-3xl md:text-5xl md:w-full  text-wrap capitalize">
                     {h1Tag}
                   </h1>
-                  <p className="font-syne text-md text-start md:w-full max-w-sm  text-wrap mt-4">
+                  <p className="font-syne text-md text-start md:w-full mt-4 capitalize">
                     {pTag}
                   </p>
                   <Button className="mt-8 ">
@@ -106,6 +117,7 @@ const HomePageSlider = () => {
                       href="https://forms.gle/MKruJpmf2w1AM9ZUA"
                       rel="noopener noreferer"
                       target="_blank"
+                      className="capitalize"
                     >
                       {t("signUp")}
                     </a>
