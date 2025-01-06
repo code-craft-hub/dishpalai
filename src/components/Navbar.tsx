@@ -61,7 +61,7 @@ export default function Navbar() {
           <img
             alt="Your Company"
             src="/assets/desktopLogo.png"
-            className="h-20 w-auto hidden md:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+            className="h-14 w-auto hidden md:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
         </Link>
         <div className="max-md:hidden gap-8 flex md:absolute md:-translate-x-1/2 left-1/2 top-5 ">
