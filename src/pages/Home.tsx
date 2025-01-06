@@ -29,7 +29,7 @@ const Home = () => {
           <HomePageSlider />
         </section>
         <section className="my-16 md:px-8 ">
-          <h1 className=" font-syne dark:text-white/50 text-center">
+          <h1 className=" font-syne dark:text-white/5 text-center text-gray-100">
             Web App is still under Development
           </h1>
         </section>
@@ -256,7 +256,9 @@ const Home = () => {
           </div>
           <div className="flex items-center justify-center py-8">
             <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
-              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" />{" "}
+              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" />
+              <img src="/assets/copywhite.png" className="mr-1 md:mr-2 dark:hidden" alt="" />
+              {" "}
               <a
                 href="https://www.dishpalinfo.com/"
                 className="hover:underline font-syne"

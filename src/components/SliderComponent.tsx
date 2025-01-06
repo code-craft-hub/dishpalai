@@ -70,7 +70,7 @@ const SliderComponent = () => {
         >
           {whyChooseUs.map(({ title, des }, index) => (
             <SwiperSlide
-              className="!flex bg-gradient-to-t drop-shadow-xl from-[#fe9545] darK:via-white to-white  dark:to-white p-4 md:p-8 lg:px-12 md:!w-[350px] !h-[350px] dark:!border-[1px] !border-[#fe9545] rounded-3xl !items-center !justify-center"
+              className="!flex bg-gradient-to-t  from-[#fe9545] darK:via-white to-white  dark:to-white p-4 md:p-8 lg:px-12 md:!w-[350px] !h-[350px]  rounded-3xl !items-center !justify-center"
               key={index}
             >
               <div className="w-full">
