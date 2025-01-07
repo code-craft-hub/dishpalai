@@ -38,7 +38,7 @@ const Home = () => {
           <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
-          <p className="my-2 lg:my-6 text-[12px] sm:text-sm md:text-xl text-center max-w-xl mx-auto">
+          <p className="my-2 lg:my-6 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-center max-w-xl mx-auto">
             {t("whyChooseD1")}
           </p>
 
@@ -77,11 +77,11 @@ const Home = () => {
 
         {/* Mobile */}
         <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
-          <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
+          <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("take6")} {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2 capitalize font-syne text-[13px]  ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
+            <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
               {t("surveyMobile")}
             </p>
 
@@ -110,7 +110,7 @@ const Home = () => {
           id="question"
           className="pb-32 md:px-8 max-w-screen-lg mx-auto"
         >
-          <h1 className="my-8 lg:my-16 text-xl md:text-3xl lg:text-5xl  font-semibold font-syne tracking-tight capitalize text-[#fe9545] text-center lg:text-start">
+          <h1 className="my-8 lg:my-16 text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl font-semibold font-syne tracking-tight capitalize text-[#fe9545] text-center lg:text-start">
             {t("faqT")}
           </h1>
           {/* Accordion Component */}
@@ -118,7 +118,7 @@ const Home = () => {
         </section>
         <section className="pb-32 md:px-8  w-full hidden lg:block" id="about">
           <div className=" md:pl-[5%] ">
-            <h1 className="mt-16 text-3xl md:text-5xl font-semibold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+            <h1 className="mt-16 text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl font-semibold max-md:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
             </h1>
           </div>
@@ -155,7 +155,7 @@ const Home = () => {
         </section>
         <section className="pb-32 md:px-8  w-full lg:hidden" id="about">
           <div className=" md:pl-[5%] ">
-            <h1 className="my-16 text-3xl md:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize text-[#fe9545]">
+            <h1 className="my-10 text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize text-[#fe9545]">
               {t("aboutUs")}
             </h1>
           </div>
@@ -206,7 +206,9 @@ const Home = () => {
                 src={img}
                 className={`${
                   index === 0 || index === 1 ? "max-sm:w-8" : "max-sm:!w-20"
-                } ${index === 0 || index === 1 ? "sm:w-[90px]" : "sm:w-[200px]"} `}
+                } ${
+                  index === 0 || index === 1 ? "sm:w-[90px]" : "sm:w-[200px]"
+                } `}
                 alt={href}
               />
             </a>

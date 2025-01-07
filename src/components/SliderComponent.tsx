@@ -77,7 +77,7 @@ const SliderComponent = () => {
                 <h1 className="font-syne text-black font-bold text-center text-lg md:text-3xl text-wrap overflow-hidden ">
                   {title}
                 </h1>
-                <p className="mt-4 text-[12px] sm:text-sm md:text-xl text-black text-wrap overflow-hidden text-center ">{des}</p>
+                <p className="mt-4 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-black text-wrap overflow-hidden text-center ">{des}</p>
               </div>
             </SwiperSlide>
           ))}
