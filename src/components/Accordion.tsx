@@ -58,7 +58,7 @@ const Accordion = () => {
             onClick={() => toggleAccordion(id)}
             className="flex justify-between items-center w-full p-4 text-left focus:outline-none"
           >
-            <span className="text-[16px] md:text-2xl font-syne font-medium text-black">{question}</span>
+            <span className="text-[16px] md:!text-lg font-syne font-medium text-black">{question}</span>
             <motion.span
               initial={{ rotate: 0 }}
               animate={{ rotate: openId === id ? 180 : 0 }}
