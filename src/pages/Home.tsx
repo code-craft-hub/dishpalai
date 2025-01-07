@@ -93,7 +93,7 @@ const Home = () => {
             {t("take6")} {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2 capitalize font-syne">
+            <p className="mt-2 w-1/2 capitalize font-syne text-[10px] xxx:text-[12px] ss:text-sm">
               {t("surveyMobile")}
             </p>
 
@@ -174,7 +174,7 @@ const Home = () => {
           <div className="relative max-xx:flex max-xx:flex-col max-xx:gap-8">
             <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl border border-orange-200 max-xx:w-full xx:max-w-[220px] sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
               <div className="overflow-hidden">
-                <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
+                <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                   {t("visionT")}
                 </h1>
                 <p className="text-black text-[12px] sx:text-[14px] sm:text-xl">
@@ -192,7 +192,7 @@ const Home = () => {
               </div>
               <div className="order-1 xx:order-2 bg-white rounded-3xl sm:p-8 p-4 justify-center items-center flex xx:-mt-6 xxx:h-[280px] xxxx:h-60 sx:h-[250px] sxx:h-[240px] xss:h-[210px]  sm:h-[380px] mx:h-[330px] mdx:h-[280px] sx:-mt-[17px] xss:-mt-10 sm:-mt-16 shadow-xl border border-orange-200">
                 <div className="overflow-hidden">
-                  <h1 className="text-sm sx:text-2xl sm:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
+                  <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                     {t("missionT")}
                   </h1>
                   <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg">
