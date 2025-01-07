@@ -9,8 +9,12 @@ import "swiper/css/pagination";
 import "../styles.css";
 import { useTranslation } from "react-i18next";
 
-import { Autoplay,EffectCoverflow } from "swiper/modules";
-
+import {
+  Autoplay,
+  EffectCoverflow,
+  Mousewheel,
+  Keyboard,
+} from "swiper/modules";
 
 const SliderComponent = () => {
   const { t } = useTranslation();
@@ -47,8 +51,12 @@ const SliderComponent = () => {
         <Swiper
           loop
           effect={"coverflow"}
-          grabCursor={true}
           slidesPerView={"auto"}
+          mousewheel={{
+            forceToAxis: true, // Enable scrolling only on the horizontal axis
+            releaseOnEdges: true, // Allow vertical scroll to propagate when at the start/end of Swiper
+          }}
+          keyboard={true}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -59,14 +67,10 @@ const SliderComponent = () => {
           spaceBetween={50}
           centeredSlides={true}
           autoplay={{
-            delay: 3500,
+            delay: 5500,
             disableOnInteraction: false,
           }}
-          modules={[
-            Autoplay,
-             EffectCoverflow
-          ]}
-
+          modules={[Autoplay, EffectCoverflow, Mousewheel, Keyboard]}
         >
           {whyChooseUs.map(({ title, des }, index) => (
             <SwiperSlide
@@ -77,7 +81,9 @@ const SliderComponent = () => {
                 <h1 className="font-syne text-black font-bold text-center text-lg md:text-3xl text-wrap overflow-hidden ">
                   {title}
                 </h1>
-                <p className="mt-4 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-black text-wrap overflow-hidden text-center ">{des}</p>
+                <p className="mt-4 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-black text-wrap overflow-hidden text-center ">
+                  {des}
+                </p>
               </div>
             </SwiperSlide>
           ))}
