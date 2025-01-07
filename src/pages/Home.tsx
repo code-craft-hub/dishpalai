@@ -40,7 +40,6 @@ const Home = () => {
           </h1>
           <p className="my-2 lg:my-6 text-[12px] sm:text-sm md:text-xl text-center max-w-xl mx-auto">
             {t("whyChooseD1")}
-            
           </p>
 
           <SliderComponent />
@@ -48,25 +47,14 @@ const Home = () => {
 
         {/* Desktop */}
         <section className="pb-32 hidden md:flex flex-col md:flex-row items-center justify-center ">
-          <div className="md:w-1/2 p-4 sm:p-8 w-full">
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
+          <div className="md:w-1/2 pl-4 sm:pl-8 w-full">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl">
               {t("take6")}
             </p>
-            {/* <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap">
               {t("0Seconds")}
-            </p> */}
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-3xl md:text-5xl xl:text-nowrap min-h-16 ">
-              {t("0Seconds")}
-              {/* <Typewriter
-                words={[t("0Seconds")]}
-                loop={2}
-                // cursor
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              /> */}
             </p>
-            <Button className="mt-8 font-syne">
+            <Button className=" font-syne mt-4">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
                 rel="noopener noreferer"
@@ -212,11 +200,13 @@ const Home = () => {
               rel="noopener noreferrer"
               target="_blank"
               href={href}
-              className="w-1/2 sm:w-1/2 md:w-1/5 flex justify-center items-center"
+              className="w-full flex justify-evenly items-center"
             >
               <img
                 src={img}
-                className={`${(index === 0 || index === 1) && "max-sm:w-10"}`}
+                className={`${
+                  index === 0 || index === 1 ? "max-sm:w-8" : "max-sm:!w-20"
+                } ${index === 0 || index === 1 ? "sm:w-[90px]" : "sm:w-[200px]"} `}
                 alt={href}
               />
             </a>
@@ -257,8 +247,11 @@ const Home = () => {
           <div className="flex items-center justify-center py-8">
             <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
               <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" />
-              <img src="/assets/copywhite.png" className="mr-1 md:mr-2 dark:hidden" alt="" />
-              {" "}
+              <img
+                src="/assets/copywhite.png"
+                className="mr-1 md:mr-2 dark:hidden"
+                alt=""
+              />{" "}
               <a
                 href="https://www.dishpalinfo.com/"
                 className="hover:underline font-syne"
