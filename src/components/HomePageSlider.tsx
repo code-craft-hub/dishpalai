@@ -252,7 +252,7 @@ const HomePageSlider = () => {
                 <h1 className="font-syne font-semibold text-[12px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl capitalize">
                   {h1Tag}
                 </h1>
-                <p className="font-syne capitalize text-[12px] sm:text-sm">{pTag}</p>
+                <p className="font-syne capitalize text-[12px] sm:text-sm md:text-xl">{pTag}</p>
                 <Button className="w-full md:w-fit sm:!p-7">
                   <a
                     href="https://forms.gle/MKruJpmf2w1AM9ZUA"
@@ -272,7 +272,7 @@ const HomePageSlider = () => {
               </div>
             </SwiperSlide>
           ))}
-          <h1 className="mb-4 mt-8 font-syne dark:text-white text-center text-black">
+          <h1 className="mb-4 mt-8 font-syne dark:text-white text-center text-black text-[12px] sm:text-sm md:text-xl">
             Web App is still under Development
           </h1>
         </Swiper>

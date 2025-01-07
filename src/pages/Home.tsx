@@ -35,12 +35,12 @@ const Home = () => {
         </section> */}
 
         <section className="py-32 md:px-8" id="why">
-          <h1 className="mt-2 text-xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
+          <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
             {t("whyChooseT")}
           </h1>
-          <p className="my-6 leading-[24px]  text-center max-w-xl mx-auto text-md">
+          <p className="my-2 lg:my-6 text-[12px] sm:text-sm md:text-xl text-center max-w-xl mx-auto">
             {t("whyChooseD1")}
-            {/* <span className="text-[#fe9545] mx-1">Dishpal.ai's</span> */}
+            
           </p>
 
           <SliderComponent />
@@ -93,7 +93,7 @@ const Home = () => {
             {t("take6")} {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2 capitalize font-syne text-[10px] xxx:text-[12px] ss:text-sm">
+            <p className="mt-2 w-1/2 capitalize font-syne text-[13px]  ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
               {t("surveyMobile")}
             </p>
 
@@ -235,7 +235,7 @@ const Home = () => {
               })}
             </div>
             <div className="flex flex-col gap-4 order-1 md:order-2 ">
-              <h1 className=" text-[#fe9545] sm:text-md font-bold font-syne max-md:text-center">
+              <h1 className=" text-[#fe9545] text-sm md:text-xl font-bold font-syne max-md:text-center">
                 {t("available")}
               </h1>
               <div className="flex flex-wrap items-center bg-black dark:bg-[#212529] justify-center gap-4 md:gap-8 p-4 dark:shadow-2xl  dark:invertinsetphism rounded-full ">
