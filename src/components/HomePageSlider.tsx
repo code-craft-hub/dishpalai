@@ -14,20 +14,20 @@ const HomePageSlider = () => {
   const { t } = useTranslation();
 
   const mobilePageText = [
-    // {
-    //   h1Tag: (
-    //     <>
-    //       <p className=" lg:text-balance">Dishpal AI: {t("discounted")}</p>
-    //       <p className="lg:text-balance">
-    //         <span className="text-[#fe9545]">{t("discountWord")}</span>{" "}
-    //         {t("finder")}
-    //       </p>
-    //     </>
-    //   ),
-    //   pTag: <>{t("helpingYouD")}</>,
-    //   gif: "/assets/localdiscount.png",
-    //   gifD: "/assets/localdiscount.png",
-    // },
+    {
+      h1Tag: (
+        <>
+          <p className=" lg:text-balance">Dishpal AI: {t("discounted")}</p>
+          <p className="lg:text-balance">
+            <span className="text-[#fe9545]">{t("discountWord")}</span>{" "}
+            {t("finder")}
+          </p>
+        </>
+      ),
+      pTag: <>{t("helpingYouD")}</>,
+      gif: "/assets/localdiscount.png",
+      gifD: "/assets/localdiscount.png",
+    },
     // {
     //   h1Tag: (
     //     <>
@@ -143,11 +143,11 @@ const HomePageSlider = () => {
                   </a>
                 </Button>
               </div>
-              <div className="w-1/2 dark:hidden">
-                <img src={gifD} alt="" />
+              <div className="w-1/2 dark:hidden flex justify-center items-center">
+                <img src={gifD} alt="" className="lg:max-h-[450px]" />
               </div>
-              <div className="w-1/2 hidden dark:flex">
-                <img src={gif} alt="" />
+              <div className="w-1/2 hidden dark:flex justify-center items-center">
+                <img src={gif} alt="" className="lg:max-h-[450px]" />
               </div>
             </SwiperSlide>
           ))}
