@@ -36,13 +36,13 @@ export default function Navbar() {
       as="nav"
       className={`transition-all duration-300 ${
         isFixed
-          ? "fixed top-0 left-0 w-full shadow-2xl backdrop-blur-3xl z-50"
+          ? "fixed top-0 left-0 w-full shadow-2xl  backdrop-blur-3xl z-50"
           : ""
       }`}
     >
       <div
         className={`${
-          isFixed ? "h-20 shadow-2xl backdrop-blur-3xl z-50" : ""
+          isFixed ? "h-20 z-50" : ""
         } flex relative justify-between items-center px-4 max-w-screen-xl mx-auto`}
       >
         <Link
