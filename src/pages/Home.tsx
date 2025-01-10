@@ -218,7 +218,7 @@ const Home = () => {
       <main className="md:dark:bg-[#212529]">
         <section className="max-w-screen-lg mx-auto ">
           <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
-            <div className="flex gap-4 order-2 md:order-1">
+            <div className="flex gap-4 order-2 sm:order-1">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
                 return (
@@ -226,7 +226,7 @@ const Home = () => {
                 );
               })}
             </div>
-            <div className="flex flex-col gap-4 order-1 md:order-2 ">
+            <div className="flex flex-col gap-4 order-1 sm:order-2 ">
               <h1 className=" text-[#fe9545] text-sm md:text-xl font-bold font-syne max-md:text-center">
                 {t("available")}
               </h1>
