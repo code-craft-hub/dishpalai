@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import { ModeToggle } from "./mode-toggle";
+// import { ModeToggle } from "./mode-toggle";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -82,7 +82,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center justify-center gap-2 md:absolute right-2 top-4">
           <div className="hidden md:flex items-center justify-center gap-4">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <LanguageSelect />
           </div>
           <DisclosureButton className="md:hidden">
@@ -125,7 +125,7 @@ export default function Navbar() {
         <div className="flex flex-row justify-between w-full ">
           <LanguageSelect />
           <DisclosureButton as="div">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </DisclosureButton>
         </div>
       </DisclosurePanel>

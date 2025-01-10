@@ -81,14 +81,14 @@ const Home = () => {
             {t("take6")} {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
+            {/* <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
               {t("surveyMobile")}
-            </p>
+            </p> */}
 
-            <div className="w-1/2 justify-center flex shrink-0">
+            <div className="justify-center flex">
               <img
                 alt="ladyHoldingPhone"
-                src="/assets/bigPhoneWithPeople.png"
+                src="/assets/takesurvey.png"
                 className="w-full h-full "
               />
             </div>

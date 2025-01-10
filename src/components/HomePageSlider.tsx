@@ -25,20 +25,20 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
-      gif: "/assets/phone.gif",
-      gifD: "/assets/phone.gif",
+      gif: "/assets/localdiscount.png",
+      gifD: "/assets/localdiscount.png",
     },
-    {
-      h1Tag: (
-        <>
-          <p className="text-nowrap lg:text-balance">{t("ecoChampionT")}</p>
-          <p className="text-[#fe9545] lg:text-balance">Eco-Champion</p>
-        </>
-      ),
-      pTag: <>{t("ecoChampionD")}</>,
-      gif: "/assets/newspaper.svg",
-      gifD: "/assets/newspaper.svg",
-    },
+    // {
+    //   h1Tag: (
+    //     <>
+    //       <p className="text-nowrap lg:text-balance">{t("ecoChampionT")}</p>
+    //       <p className="text-[#fe9545] lg:text-balance">Eco-Champion</p>
+    //     </>
+    //   ),
+    //   pTag: <>{t("ecoChampionD")}</>,
+    //   gif: "/assets/newspaper.svg",
+    //   gifD: "/assets/newspaper.svg",
+    // },
     {
       h1Tag: (
         <>
@@ -49,8 +49,8 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("opportunityD")}</>,
-      gif: "/assets/sale.svg",
-      gifD: "/assets/sale.svg",
+      gif: "/assets/dontmissout.png",
+      gifD: "/assets/dontmissout.png",
     },
 
     {
@@ -80,20 +80,20 @@ const HomePageSlider = () => {
       gif: "/assets/shopbasket.svg",
       gifD: "/assets/shopbasket.svg",
     },
-    {
-      h1Tag: (
-        <>
-          <p className="lg:text-balance">{t("neveraT")}</p>
-          <p className="lg:text-balance">
-            {t("neverbT")}{" "}
-            <span className="text-[#fe9545] capitalize">{t("neverSave")}</span>
-          </p>
-        </>
-      ),
-      pTag: <>{t("neverD")}</>,
-      gif: "/assets/nevermiss.png",
-      gifD: "/assets/nevermiss.png",
-    },
+    // {
+    //   h1Tag: (
+    //     <>
+    //       <p className="lg:text-balance">{t("neveraT")}</p>
+    //       <p className="lg:text-balance">
+    //         {t("neverbT")}{" "}
+    //         <span className="text-[#fe9545] capitalize">{t("neverSave")}</span>
+    //       </p>
+    //     </>
+    //   ),
+    //   pTag: <>{t("neverD")}</>,
+    //   gif: "/assets/nevermiss.png",
+    //   gifD: "/assets/nevermiss.png",
+    // },
   ];
 
   const pagination = {

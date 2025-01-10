@@ -17,6 +17,11 @@ export function LanguageSelect() {
     i18n.changeLanguage(value);
   };
 
+  React.useEffect(() => {
+    const lang =  localStorage.getItem("i18nextLng");
+    setLang(lang!);
+    }, [lang]);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
