@@ -25,8 +25,8 @@ const HomePageSlider = () => {
         </>
       ),
       pTag: <>{t("helpingYouD")}</>,
-      gif: "/assets/localdiscount.png",
-      gifD: "/assets/localdiscount.png",
+      gif: "/assets/helpingyoufind.png",
+      gifD: "/assets/helpingyoufind.png",
     },
     // {
     //   h1Tag: (
