@@ -19,8 +19,9 @@ export function LanguageSelect() {
 
   React.useEffect(() => {
     const lang =  localStorage.getItem("i18nextLng");
-    setLang(lang!);
+    setLang(lang?.substring(0,2)!);
     }, [lang]);
+
 
   return (
     <DropdownMenu>
@@ -39,7 +40,7 @@ export function LanguageSelect() {
           </>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="!w-8 !min-w-24 shadow-2xl z-50 hover:!bg-transparent hover:scale-105 transition-transform">
+      <DropdownMenuContent className="!w-8 !min-w-24 shadow-2xl z-50  hover:scale-105 transition-transform bg-white">
         <DropdownMenuRadioGroup value={lang} onValueChange={changeLang}>
             <DropdownMenuRadioItem
               value="en"

@@ -21,6 +21,7 @@ module.exports = {
         xss:"601px",
         mx:"872px",
         mdx:"970px",
+        lgx:"1080px"
       },
       backgroundImage: {
         bg: "url('/assets/bg.svg')",

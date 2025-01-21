@@ -6,7 +6,6 @@ import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
-// import Test from "@/components/Test";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -25,14 +24,17 @@ const Home = () => {
   return (
     <div className="" id="toppage">
       <NavbarComponent />
-      <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 mt-16" id="home">
+      <main
+        className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 mt-16"
+        id="home"
+      >
         <HomePageSlider />
       </main>
       <section className="py-32 max-w-screen-2xl mx-auto" id="why">
         <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
           {t("whyChooseT")}
         </h1>
-        <p className="my-2 lg:my-6 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-center max-w-xl mx-auto px-4">
+        <p className="my-2 lg:my-6 text-[13px] ss:text-sm  xss:text-[20px] text-center max-w-xl mx-auto px-4 capitalize">
           {t("whyChooseD1")}
         </p>
 
@@ -128,13 +130,13 @@ const Home = () => {
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-[#F9F9F9] dark:bg-white max-md:max-w-[500px] rounded-3xl h-[340px] p-8 justify-center items-start flex shadow-xl"
+                className="bg-[#F9F9F9] dark:bg-white max-md:max-w-[500px] rounded-3xl h-[450px] lgx:h-[550px] xl:h-[450px] p-8 justify-center items-start flex shadow-xl overflow-hidden"
               >
                 <div className="overflow-hidden">
                   <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6 ">
                     {title}
                   </h1>
-                  <p className="text-black text-center capitalize">{des}</p>
+                  <p className="text-black text-center capitalize lgx:text-xl">{des}</p>
                 </div>
               </div>
             ))}
@@ -149,13 +151,13 @@ const Home = () => {
             </h1>
           </div>
           <div className="relative max-xx:flex max-xx:flex-col max-xx:gap-8">
-            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl max-xx:w-full xx:max-w-[220px] sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
+            <div className="bg-gray-100 xxxx:ml-4 xxx:h-[275px] sx:ml-8 md: mdx:ml-16 rounded-3xl p-4 sm:p-8 justify-start items-start flex shadow-xl max-xx:w-full xx:w-[220px] ss:w-[270px] sx:w-[270px] sm:w-[350px] md:h-[420px] xss:h-[420px] xss:w-[320px] md:w-[400px] mx:w-[450px] mx:h-[300px]">
               <div className="overflow-hidden">
                 <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
-                  {t("visionT")}
+                  {t("missionT")}
                 </h1>
-                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl capitalize">
-                  {t("visionD")}
+                <p className="text-black text-[12px] sx:text-[14px] xss:text-xl mx:text-xl mx:h-[200px] capitalize">
+                  {t("missionD")}
                 </p>
               </div>
             </div>
@@ -167,13 +169,25 @@ const Home = () => {
                   className="object-cover object-top h-full w-full"
                 />
               </div>
-              <div className="order-1 xx:order-2 bg-white rounded-3xl sm:p-8 p-4 justify-center items-center flex xx:-mt-6 xxx:h-[280px] xxxx:h-60 sx:h-[250px] sxx:h-[240px] xss:h-[210px]  sm:h-[380px] mx:h-[330px] mdx:h-[280px] sx:-mt-[17px] xss:-mt-10 sm:-mt-16 shadow-xl ">
-                <div className="overflow-hidden">
+              {/* screens: {
+       xx: "320px",
+       xxx:"369px",
+       xxxx:"415px",
+       ss:"470px",
+       sx:"530px",
+       sxx:"534px",
+       xss:"601px",
+       md:"768px"
+       mx:"872px",
+       mdx:"970px",
+     }, */}
+              <div className="bg-gray-100 order-1 xx:order-2 rounded-3xl sm:p-8 p-4 justify-start items-start flex xx:-mt-4 xx:-ml-8 xxx:h-[275px] xxxx:h-60 sx:h-[280px] sxx:w-[270px] ss:w-[270px] sm:h-[400px] md:h-[420px] sm:w-[350px] md:w-[400px] mdx: sx:-mt-[17px] xss:h-[420px] xss:w-[320px] xss:-mt-8 shadow-xl mx:w-[450px] mx:h-[300px] z-20 ">
+                <div className="overflow-hidden ">
                   <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
-                    {t("missionT")}
+                    {t("visionT")}
                   </h1>
-                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg capitalize">
-                    {t("missionD")}
+                  <p className="text-black text-pretty text-[12px] sx:text-[14px] xss:text-lg mx:text-xl mx:h-[200px] capitalize">
+                    {t("visionD")}
                   </p>
                 </div>
               </div>
