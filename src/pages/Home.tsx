@@ -22,7 +22,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="" id="toppage">
+    <div className="overflow-hidden" id="toppage">
       <NavbarComponent />
       <main
         className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 mt-16"
@@ -43,14 +43,14 @@ const Home = () => {
 
       <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4">
         {/* Desktop */}
-        <section className="pb-32 hidden flex-col md:flex-row items-center justify-center ">
-          <div className="md:w-1/2 pl-4 sm:pl-8 w-full">
+        {/* <section className="pb-32 hidden flex-col md:flex-row items-center justify-center ">
+          <div className="md:w-1/2 pl-4 sm:pl-8 w-full ">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl">
               {t("take6")}
             </p>
-            {/* <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap">
+            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap ">
               {t("0Seconds")}
-            </p> */}
+            </p>
             <Button className=" font-syne mt-4 capitalize">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
@@ -61,8 +61,6 @@ const Home = () => {
               </a>
             </Button>
           </div>
-          {/* bigPhoneWithPeople.png */}
-          {/* ladyHoldingPhone.svg */}
           <div className="md:w-1/2 max-md:mt-16">
             <img
               alt="ladyHoldingPhone"
@@ -70,13 +68,15 @@ const Home = () => {
               className="w-full h-full "
             />
           </div>
-        </section>
+        </section> */}
 
         {/* Mobile */}
         <section className="mb-32 flex flex-col items-center justify-center  sm:p-8">
-          <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
-            {t("take6")} 
-            {/* {t("0Seconds")} */}
+          <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl mt-8 text-[#282828]/80 dark:text-white text-center max-w-[300px] sm:max-w-screen-sm mx-auto">
+            {t("take6")}
+          </p>
+          <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl mb-16 text-[#282828]/80 dark:text-white text-center">
+            {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
             {/* <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
