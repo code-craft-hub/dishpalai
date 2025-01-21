@@ -48,9 +48,9 @@ const Home = () => {
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl">
               {t("take6")}
             </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap">
+            {/* <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap">
               {t("0Seconds")}
-            </p>
+            </p> */}
             <Button className=" font-syne mt-4 capitalize">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
