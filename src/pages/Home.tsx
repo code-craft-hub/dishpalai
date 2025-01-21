@@ -75,7 +75,8 @@ const Home = () => {
         {/* Mobile */}
         <section className="mb-32 flex flex-col items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
-            {t("take6")} {t("0Seconds")}
+            {t("take6")} 
+            {/* {t("0Seconds")} */}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
             {/* <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
