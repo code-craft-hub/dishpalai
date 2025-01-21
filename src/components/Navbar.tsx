@@ -74,7 +74,7 @@ export default function Navbar() {
               key={item.name}
               to={item.href}
               className={`text-primary hover:border-accent hover:border-b-2 hover:text-accent
-                      px-3 py-2 text-sm font-medium hover:font-bold hover:cursor-pointer`}
+                      px-3 py-2 text-sm font-medium hover:font-bold hover:cursor-pointer capitalize`}
             >
               {item.name}
             </Link>
@@ -115,7 +115,7 @@ export default function Navbar() {
                        item.current
                          ? " text-primary"
                          : "text-primary hover:bg-accent hover:text-primary"
-                     } rounded-md px-3 py-2 text-sm font-medium w-full text-start`}
+                     } rounded-md px-3 py-2 text-sm font-medium w-full text-start capitalize`}
             >
               {item.name}
             </DisclosureButton>

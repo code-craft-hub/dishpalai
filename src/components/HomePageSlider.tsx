@@ -116,6 +116,7 @@ const HomePageSlider = () => {
           autoplay={{
             delay: 5500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           pagination={pagination}
           modules={[Autoplay, Mousewheel, Keyboard,Pagination]}
@@ -151,7 +152,7 @@ const HomePageSlider = () => {
               </div>
             </SwiperSlide>
           ))}
-          <h1 className="mb-4 mt-8 font-syne dark:text-white text-center text-black text-[12px] sm:text-sm md:text-xl">
+          <h1 className="mb-4 mt-8 font-syne capitalize dark:text-white text-center text-black text-[12px] sm:text-sm md:text-xl">
             Web App is still under Development
           </h1>
         </Swiper>

@@ -6,6 +6,7 @@ import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
 import { useTranslation } from "react-i18next";
+// import Test from "@/components/Test";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -24,29 +25,23 @@ const Home = () => {
   return (
     <div className="" id="toppage">
       <NavbarComponent />
-      <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 md:mt-16">
-        <section className="" id="home">
-          <HomePageSlider />
-        </section>
-        {/* <section className="my-16 md:px-8 ">
-          <h1 className=" font-syne dark:text-white/5 text-center text-gray-100">
-            Web App is still under Development
-          </h1>
-        </section> */}
+      <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4 mt-16" id="home">
+        <HomePageSlider />
+      </main>
+      <section className="py-32 max-w-screen-2xl mx-auto" id="why">
+        <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
+          {t("whyChooseT")}
+        </h1>
+        <p className="my-2 lg:my-6 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-center max-w-xl mx-auto px-4">
+          {t("whyChooseD1")}
+        </p>
 
-        <section className="py-32 md:px-8" id="why">
-          <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
-            {t("whyChooseT")}
-          </h1>
-          <p className="my-2 lg:my-6 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] text-center max-w-xl mx-auto">
-            {t("whyChooseD1")}
-          </p>
+        <SliderComponent />
+      </section>
 
-          <SliderComponent />
-        </section>
-
+      <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4">
         {/* Desktop */}
-        <section className="pb-32 hidden md:flex flex-col md:flex-row items-center justify-center ">
+        <section className="pb-32 hidden flex-col md:flex-row items-center justify-center ">
           <div className="md:w-1/2 pl-4 sm:pl-8 w-full">
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl">
               {t("take6")}
@@ -54,7 +49,7 @@ const Home = () => {
             <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap">
               {t("0Seconds")}
             </p>
-            <Button className=" font-syne mt-4">
+            <Button className=" font-syne mt-4 capitalize">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
                 rel="noopener noreferer"
@@ -76,7 +71,7 @@ const Home = () => {
         </section>
 
         {/* Mobile */}
-        <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
+        <section className="mb-32 flex flex-col items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("take6")} {t("0Seconds")}
           </p>
@@ -96,7 +91,7 @@ const Home = () => {
           {/* bigPhoneWithPeople.png */}
           {/* ladyHoldingPhone.svg */}
 
-          <Button className="mt-8 w-full max-w-sm">
+          <Button className="mt-8 w-full max-w-sm capitalize">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
               rel="noopener noreferer"
@@ -129,30 +124,24 @@ const Home = () => {
                 alt=""
                 className="object-cover object-top h-full w-auto "
               />
-              {/* <video
-                autoPlay
-                loop
-                muted
-                className="object-cover object-top h-full w-auto "
-              >
-                <source src="/assets/robotThinking.mp4" type="video/mp4" />
-              </video> */}
             </div>
             {missionVision?.map(({ title, des }, index) => (
               <div
                 key={index}
-                className="bg-[#F9F9F9] dark:bg-white max-md:max-w-[500px] rounded-3xl h-80 p-8 justify-center items-center flex shadow-xl"
+                className="bg-[#F9F9F9] dark:bg-white max-md:max-w-[500px] rounded-3xl h-[340px] p-8 justify-center items-start flex shadow-xl"
               >
                 <div className="overflow-hidden">
-                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6">
+                  <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6 ">
                     {title}
                   </h1>
-                  <p className="text-black">{des}</p>
+                  <p className="text-black text-center capitalize">{des}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
+
+        {/* <Test /> */}
         <section className="pb-32 md:px-8  w-full lg:hidden" id="about">
           <div className=" md:pl-[5%] ">
             <h1 className="my-10 text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl font-bold max-lg:text-center font-syne tracking-tight capitalize text-[#fe9545]">
@@ -160,12 +149,12 @@ const Home = () => {
             </h1>
           </div>
           <div className="relative max-xx:flex max-xx:flex-col max-xx:gap-8">
-            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl border border-orange-200 max-xx:w-full xx:max-w-[220px] sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
+            <div className="bg-white xxxx:ml-4 ss:ml-10 sx:ml-24 sm:ml-10 md:ml-16 mdx:ml-32 rounded-3xl p-4 sm:p-8 justify-center items-center flex shadow-xl max-xx:w-full xx:max-w-[220px] sx:max-w-[250px] xss:max-w-[300px] sm:max-w-[400px] ">
               <div className="overflow-hidden">
                 <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                   {t("visionT")}
                 </h1>
-                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl">
+                <p className="text-black text-[12px] sx:text-[14px] sm:text-xl capitalize">
                   {t("visionD")}
                 </p>
               </div>
@@ -178,12 +167,12 @@ const Home = () => {
                   className="object-cover object-top h-full w-full"
                 />
               </div>
-              <div className="order-1 xx:order-2 bg-white rounded-3xl sm:p-8 p-4 justify-center items-center flex xx:-mt-6 xxx:h-[280px] xxxx:h-60 sx:h-[250px] sxx:h-[240px] xss:h-[210px]  sm:h-[380px] mx:h-[330px] mdx:h-[280px] sx:-mt-[17px] xss:-mt-10 sm:-mt-16 shadow-xl border border-orange-200">
+              <div className="order-1 xx:order-2 bg-white rounded-3xl sm:p-8 p-4 justify-center items-center flex xx:-mt-6 xxx:h-[280px] xxxx:h-60 sx:h-[250px] sxx:h-[240px] xss:h-[210px]  sm:h-[380px] mx:h-[330px] mdx:h-[280px] sx:-mt-[17px] xss:-mt-10 sm:-mt-16 shadow-xl ">
                 <div className="overflow-hidden">
                   <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
                     {t("missionT")}
                   </h1>
-                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg">
+                  <p className="text-black text-pretty text-[12px] sx:text-[14px] sm:text-lg capitalize">
                     {t("missionD")}
                   </p>
                 </div>
@@ -192,8 +181,8 @@ const Home = () => {
           </div>
         </section>
       </main>
-      <section className="xx:pt-16">
-        <div className="dark:bg-white/30 bg-black max-md:py-4 flex justify-center items-center md:h-[138px]">
+      <section className="xx:mt-16 dark:bg-white/30 bg-black">
+        <div className="max-w-screen-2xl mx-auto max-md:py-4 flex justify-center items-center md:h-[138px]">
           {clientImages?.map(({ href, img }, index) => (
             <a
               key={index}
@@ -216,18 +205,21 @@ const Home = () => {
         </div>
       </section>
       <main className="md:dark:bg-[#212529]">
-        <section className="max-w-screen-lg mx-auto ">
+        <section className="max-w-screen-xl mx-auto ">
           <div className="flex flex-col sm:flex-row gap-16 justify-between items-center p-4 sm:p-8 py-16 md:pt-32">
             <div className="flex gap-4 order-2 sm:order-1">
               {socials?.map(({ icon }: any, index) => {
                 const Icon = icon;
                 return (
-                  <Icon key={index} className="size-10 hover:cursor-pointer" />
+                  <Icon
+                    key={index}
+                    className="size-10 md:size-12 hover:cursor-pointer"
+                  />
                 );
               })}
             </div>
             <div className="flex flex-col gap-4 order-1 sm:order-2 ">
-              <h1 className=" text-[#fe9545] text-sm md:text-xl font-bold font-syne max-md:text-center">
+              <h1 className=" text-[#fe9545] text-sm capitalize md:text-lg font-bold font-syne max-md:text-center">
                 {t("available")}
               </h1>
               <div className="flex flex-wrap items-center bg-black dark:bg-[#212529] justify-center gap-4 md:gap-8 p-4 dark:shadow-2xl  dark:invertinsetphism rounded-full ">
@@ -246,21 +238,16 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center py-8">
-            <span className="text-sm text-gray-500 sm:text-center flex  dark:text-gray-400 font-syne md:space-x-2">
-              <img src="/assets/copy.png" className="mr-1 md:mr-2" alt="" />
-              <img
-                src="/assets/copywhite.png"
-                className="mr-1 md:mr-2 dark:hidden"
-                alt=""
-              />{" "}
+          <div className="flex items-center justify-center py-8 ">
+            <div className="text-sm text-gray-500 sm:text-center flex  items-center dark:text-gray-400 font-syne space-x-4 md:space-x-6">
+              <img src="/assets/copywhite.svg" className="dark:hidden" alt="" />{" "}
               <a
                 href="https://www.dishpalinfo.com/"
                 className="hover:underline font-syne"
               >
-                2024 Dishpal Info Website. All Rights Reserved.
+                2024 Dishpal Info Website All Rights Reserved.
               </a>
-            </span>
+            </div>
           </div>
         </section>
       </main>
