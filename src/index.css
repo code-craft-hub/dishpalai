@@ -30,6 +30,22 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+     /* figma color */
+     --charcoal-gray: #444343;
+     --black: #000000;
+     --white-smoke: #F5F5F5;
+     --white: #FFFFFF;
+     --dark-gray: #737373;
+     --eerie-black: #1D1D1D;
+     --raisin-black: #202020;
+     --charleston-green: #252525;
+     --dark-charcoal: #272727;
+     --vivid-orange: #FF9747;
+     --cart-green: #0DBB1E;
+     --button-green: #0FA958;
+     --price-yellow: #FFD700;
+     --img-bg: #E6E6E6;
+     --muted-text: #908787;
   }
   .dark {
     --background: 0, 0%, 18%;
@@ -69,7 +85,7 @@
     @apply border-border;
   }
   body {
-    @apply !p-0 bg-background text-foreground h-full md:dark:bg-bg dark:bg-[#131313] font-inter 2xl:bg-no-repeat 2xl:bg-cover;
+    @apply !p-0 bg-background text-foreground h-full font-inter 2xl:bg-no-repeat 2xl:bg-cover;
   }
 }
 

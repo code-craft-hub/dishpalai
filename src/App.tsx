@@ -1,10 +1,9 @@
-import { ThemeProvider } from "@/components/theme-provider";
-const App = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme" >
-      {children}
-    </ThemeProvider>
-  );
-};
+import AppRoutes from "./routes/AppRoutes"
 
-export default App;
+const App = () => {
+  return (
+    <AppRoutes />
+  )
+}
+
+export default App

@@ -8,11 +8,15 @@ import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-// import { ModeToggle } from "./mode-toggle";
+import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/authContext";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [isFixed, setIsFixed] = useState(false);
+  const { user, isLoading } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +35,8 @@ export default function Navbar() {
     { name: t("aboutUs"), href: "why", current: false },
     { name: t("services"), href: "question", current: false },
   ];
+  if (isLoading) return null;
+
   return (
     <Disclosure
       as="nav"
@@ -38,7 +44,7 @@ export default function Navbar() {
         isFixed
           ? "fixed top-0 left-0 w-full shadow-2xl  backdrop-blur-3xl z-50"
           : ""
-      }`}
+      } `}
     >
       <div
         className={`${
@@ -51,20 +57,20 @@ export default function Navbar() {
           duration={2500}
           offset={-70}
           to="toppage"
-          className="hover:cursor-pointer py-2 hover:scale-105 duration-500 transition-all order-2 md:order-1 md:absolute md:left-4 md:top-0"
+          className="hover:cursor-pointer py-2 hover:scale-105 duration-500 transition-all order-2 lg:order-1 lg:absolute lg:left-4 lg:top-0"
         >
           <img
             alt="Your Company"
             src="/assets/mobileLogo.png"
-            className="h-12 w-auto md:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+            className="h-12 w-auto lg:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
           <img
             alt="Your Company"
             src="/assets/desktopLogo.png"
-            className="h-14 w-auto hidden md:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
+            className="h-14 w-auto hidden lg:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
         </Link>
-        <div className="max-md:hidden gap-8 flex md:absolute md:-translate-x-1/2 left-1/2 top-5 ">
+        <div className="max-lg:hidden gap-8 flex lg:absolute lg:-translate-x-1/2 left-1/2 top-5 ">
           {navigation.map((item) => (
             <Link
               spy={true}
@@ -80,12 +86,28 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-2 md:absolute right-2 top-4">
-          <div className="hidden md:flex items-center justify-center gap-4">
-            {/* <ModeToggle /> */}
+        <div className="flex items-center justify-center gap-2 lg:absolute right-2 top-4">
+          <div className="hidden lg:flex items-center justify-center gap-4">
+            {!isLoading && user ? (
+              <Button
+                variant={"vivid"}
+                className="font-syne !rounded-md px-6 hover:text-black transition-all"
+                onClick={() => navigate("/dashboard")}
+              >
+                Dashboard
+              </Button>
+            ) : (
+              <Button
+                variant={"vivid"}
+                className="font-syne !rounded-md px-6 hover:text-black transition-all"
+                onClick={() => navigate("/auth/login")}
+              >
+                Login
+              </Button>
+            )}
             <LanguageSelect />
           </div>
-          <DisclosureButton className="md:hidden">
+          <DisclosureButton className="lg:hidden">
             <span className="sr-only">Open main menu</span>
             <Bars3Icon
               aria-hidden="true"
@@ -98,7 +120,7 @@ export default function Navbar() {
           </DisclosureButton>
         </div>
       </div>
-      <DisclosurePanel className="flex flex-col p-4 shadow-2xl backdrop-blur-3xl mx-4 rounded-xl">
+      <DisclosurePanel className="flex flex-col p-4 space-y-2 shadow-2xl backdrop-blur-3xl mx-4 rounded-xl">
         {navigation.map((item) => (
           <Link
             key={item.name}
@@ -121,13 +143,26 @@ export default function Navbar() {
             </DisclosureButton>
           </Link>
         ))}
-
         <div className="flex flex-row justify-between w-full ">
-          <LanguageSelect />
-          <DisclosureButton as="div">
-            {/* <ModeToggle /> */}
-          </DisclosureButton>
+          <LanguageSelect mobile={true} />
         </div>
+        {!isLoading && user ? (
+          <Button
+            variant={"vivid"}
+            className="font-syne !rounded-md px-6 hover:text-black transition-all"
+            onClick={() => navigate("/dashboard")}
+          >
+            Dashboard
+          </Button>
+        ) : (
+          <Button
+            variant={"vivid"}
+            className="font-syne !rounded-md px-6 hover:text-black transition-all"
+            onClick={() => navigate("/auth/login")}
+          >
+            Login
+          </Button>
+        )}
       </DisclosurePanel>
     </Disclosure>
   );

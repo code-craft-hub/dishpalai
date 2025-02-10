@@ -119,7 +119,7 @@ const HomePageSlider = () => {
             pauseOnMouseEnter: true,
           }}
           pagination={pagination}
-          modules={[Autoplay, Mousewheel, Keyboard,Pagination]}
+          modules={[Autoplay, Mousewheel, Keyboard, Pagination]}
         >
           {mobilePageText?.map(({ h1Tag, pTag, gif, gifD }, index) => (
             <SwiperSlide
@@ -133,7 +133,7 @@ const HomePageSlider = () => {
                 <p className="font-syne capitalize text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px]">
                   {pTag}
                 </p>
-                <Button className="w-full md:w-fit sm:!p-7">
+                <Button variant={"vivid"} className="w-full md:w-fit sm:!p-7">
                   <a
                     href="https://forms.gle/MKruJpmf2w1AM9ZUA"
                     rel="noopener noreferer"

@@ -13,18 +13,18 @@ module.exports = {
     extend: {
       screens: {
         xx: "320px",
-        xxx:"369px",
-        xxxx:"415px",
-        ss:"470px",
-        sx:"530px",
-        sxx:"534px",
-        xss:"601px",
-        mx:"872px",
-        mdx:"970px",
-        lgx:"1080px"
+        xxx: "369px",
+        xxxx: "415px",
+        ss: "470px",
+        sx: "530px",
+        sxx: "534px",
+        xss: "601px",
+        mx: "872px",
+        mdx: "970px",
+        lgx: "1080px",
       },
       backgroundImage: {
-        bg: "url('/assets/bg.svg')",
+        bg3xl: "url('/assets/3xlbgImg.jpg')",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -83,6 +83,13 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        charcoalGray: "var(--charcoal-gray)",
+        vividOrange: "var(--vivid-orange)",
+        cartGreen: "var(--cart-green)",
+        buttonGreen: "var(--button-green)",
+        buttonYellow: "var(--price-yellow)",
+        imgBg: "var(--img-bg)",
+        mutedText: "var(--muted-text)",
       },
       keyframes: {
         "accordion-down": {
