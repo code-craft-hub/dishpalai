@@ -51,8 +51,8 @@ const SecondaryNavbar = ({
           </DropdownMenuTrigger>
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
-              <DropdownMenuItem key={index} className="hover:!bg-slate-100 p-0">
-                <Link to={href} className="gap-5 flex items-center w-full p-2 rounded-md hover:shadow-md">
+              <DropdownMenuItem key={index} className="hover:!bg-slate-100 p-0 rounded-md hover:shadow-md">
+                <Link to={href} className="gap-5 flex items-center w-full p-2">
                   <img src={img} alt="" />
                   {title}
                 </Link>

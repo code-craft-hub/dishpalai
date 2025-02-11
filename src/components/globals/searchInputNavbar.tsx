@@ -34,8 +34,8 @@ const SearchInputNavbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
-              <DropdownMenuItem key={index} className="hover:!bg-slate-100 ">
-                <Link to={href} className="gap-5 flex items-center w-full hover:shadow-md">
+              <DropdownMenuItem key={index} className="hover:!bg-slate-100 hover:shadow-md">
+                <Link to={href} className="gap-5 flex items-center w-full ">
                   <img src={img} alt="" className="" />
                   {title}
                 </Link>
