@@ -1,4 +1,3 @@
-import MenuBarComponent from "@/components/globals/MenuBarComponent";
 import SecondaryNavbar from "@/components/globals/secondaryNavbar";
 import { Button } from "@/components/ui/button";
 
@@ -8,7 +7,6 @@ const Together = () => {
       <div className="bg-bg3xl bg-cover">
         <div className="flex flex-col h-full min-h-screen max-w-screen-xl px-4 sm:px-8 mx-auto">
           <SecondaryNavbar />
-          <MenuBarComponent />
           <div className="space-y-8 py-8">
             <div className="">
               <h1 className="font-syne font-bold text-3xl text-center">

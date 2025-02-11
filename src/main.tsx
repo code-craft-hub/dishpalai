@@ -8,6 +8,7 @@ import ReactQueryClientProvider from "./providers/queryclientProvider.tsx";
 import GooogleProvider from "./providers/googleProvider.tsx";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "./context/authContext.tsx";
+import { Toaster } from 'sonner'
 
 createRoot(document.getElementById("root")!).render(
   <ReactQueryClientProvider>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
           <GooogleProvider>
             <ToastContainer />
+            <Toaster richColors  />
             <App />
           </GooogleProvider>
         </ThemeProvider>

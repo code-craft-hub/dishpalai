@@ -2,10 +2,8 @@ import SearchInputNavbar from "@/components/globals/searchInputNavbar";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/authContext";
 
-
-const SettingsPage =  () => {
-  const {user} = useAuth();
-  console.log(user)
+const SettingsPage = () => {
+  const { user } = useAuth();
   return (
     <div className="">
       <div className="bg-bg3xl bg-cover">
@@ -15,9 +13,7 @@ const SettingsPage =  () => {
             <aside className="space-y-8 w-full sm:max-w-64 md:shrink-0 flex flex-col items-center">
               <div className="rounded-xl overflow-hidden size-60">
                 <img
-                  src={
-                    "/images/settingsLadyPlaceholderImg.png"
-                  }
+                  src={"/images/settingsLadyPlaceholderImg.png"}
                   alt="notification"
                   className=""
                 />
@@ -132,10 +128,8 @@ const CardComponent = ({
         </div>
       ))}
       <div className="absolute right-4 bottom-4 flex gap-2 font-syne font-bold">
-        <span className="max-sm:hidden">
-          Edit
-        </span>
-         <img src="/images/edit.svg" alt="" className="size-6 " />
+        <span className="max-sm:hidden">Edit</span>
+        <img src="/images/edit.svg" alt="" className="size-6 " />
       </div>
     </div>
   );

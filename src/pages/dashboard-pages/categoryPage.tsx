@@ -17,18 +17,12 @@ const CategoryPage = () => {
     <div className="">
       <div className="bg-bg3xl bg-cover">
         <div className="flex flex-col h-full min-h-screen max-w-screen-xl px-4 sm:px-8 mx-auto">
-
           <SearchInputNavbar />
           <>
-           
             <div className="py-8 grid grid-cols-2 sxx:grid-cols-4 sm:grid-cols-4  md:ml-auto sm:mr-7">
               {imgs.map((item, index) => (
                 <div key={index}>
-                  <img
-                    src={item}
-                    alt=""
-                    className="h-full w-full max-h-64"
-                  />
+                  <img src={item} alt="" className="h-full w-full max-h-64" />
                 </div>
               ))}
             </div>

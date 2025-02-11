@@ -14,7 +14,6 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import MenuBarComponent from "@/components/globals/MenuBarComponent";
 
 import SecondaryNavbar from "@/components/globals/secondaryNavbar";
 const DiscountPage = () => {
@@ -26,9 +25,7 @@ const DiscountPage = () => {
         <div className="flex flex-col max-w-screen-2xl mx-auto px-4 sm:px-8">
           <SecondaryNavbar />
           <>
-            <div className="flex justify-between">
-              <MenuBarComponent />
-              <div className=" max-sm:mx-4 ">
+             <div className="sm:ml-auto mt-4 max-sm:mx-4 ">
                 <Menubar className="rounded-none bg-vividOrange w-40">
                   <MenubarMenu>
                     <MenubarTrigger className="w-full flex font-syne items-center rounded-none text-white focus:bg-transparent focus:text-white data-[state=open]:bg-transparent data-[state=open]:text-white">
@@ -43,7 +40,6 @@ const DiscountPage = () => {
                     </MenubarContent>
                   </MenubarMenu>
                 </Menubar>
-              </div>
             </div>
             <div className="flex mx-auto my-12 max-sm:px-4 w-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4  gap-4 justify-center w-full">
@@ -78,8 +74,8 @@ const DiscountPage = () => {
                           2 hours left on deal
                         </p>
                         <div className="flex items-center justify-center gap-2">
-                          <IoLocationSharp className="text-vividOrange size-5 shrink-0" />
-                          <p className="text-[14px] text-nowrap">
+                          <IoLocationSharp className="text-vividOrange size-4 shrink-0" />
+                          <p className="text-[11px] text-nowrap">
                             shopping store name (2 miles away)
                           </p>
                         </div>

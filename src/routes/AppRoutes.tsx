@@ -12,9 +12,12 @@ import PlanPage from "@/pages/dashboard-pages/planPage";
 import HistoryPage from "@/pages/dashboard-pages/historyPage";
 import SettingsPage from "@/pages/dashboard-pages/settingsPage";
 import DashboardPage from "@/pages/dashboard-pages/dashboard";
+import ScrollToTop from "@/hooks/ScrollToTop";
 
 const AppRoutes = () => {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
 
@@ -33,6 +36,7 @@ const AppRoutes = () => {
         <Route path="settings" element={<SettingsPage />} />
       </Route>
     </Routes>
+    </>
   );
 };
 

@@ -71,7 +71,7 @@ export const cardNavLinks = [
     img: "/images/discount.svg",
   },
   {
-    title: "Share",
+    title: "Price",
     href: "/dashboard/price",
     img: "/images/share.svg",
   },

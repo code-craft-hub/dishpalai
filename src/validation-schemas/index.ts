@@ -55,10 +55,10 @@ export const RegisterSchema = z.object({
 });
 
 export const signUpSchema = z.object({
-  firstname: z.string().min(2).max(50),
-  lastname: z.string().min(2).max(50),
+  firstname: z.string().min(2,{message: "Enter a valid firstname"}).max(50),
+  lastname: z.string().min(2,{message: "Enter a valid lastname"}).max(50),
   email: z.string().email({ message: "Enter a valid email" }),
-  password: z.string().min(2).max(50),
+  password: z.string().min(8,{message: "Enter minimum of 8 characters"}).max(50),
   terms: z.boolean().default(false).optional(),
 });
 export const reviewSchema = z.object({
@@ -71,6 +71,6 @@ export const reviewSchema = z.object({
 
 export const signInSchema = z.object({
   email: z.string().email({ message: "Enter a valid email" }),
-  password: z.string().min(2).max(50),
+  password: z.string().min(8,{message: "Enter minimum of 8 characters"}).max(50),
   rememberMe: z.boolean().default(false).optional(),
 });

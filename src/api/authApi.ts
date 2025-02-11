@@ -4,15 +4,14 @@ import { TokenResponse } from "@react-oauth/google";
 import axios from "axios";
 
 export const loginService = async (credentials: loginCredentials) => {
-  const response = await axiosInstance.post(
-    "/api/authentication/v1/login/",
-    credentials
-  );
-  return response.data;
   try {
+    const response = await axiosInstance.post(
+      "/api/authentication/v1/login/",
+      credentials
+    );
+    return response.data;
   } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
+    throw error.response;
   }
 };
 
@@ -23,11 +22,6 @@ export const register = async (data: RegisterUserData): Promise<any> => {
     data
   );
   return response.data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 export const tokenRefresh = async (refresh: string) => {
@@ -36,11 +30,6 @@ export const tokenRefresh = async (refresh: string) => {
     { refresh }
   );
   return response;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 // GET: Obtain a guest token.
@@ -49,22 +38,12 @@ export const getGuestToken = async () => {
     "/api/authentication/v1/guest-token/"
   );
   return response.data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 // GET: Fetch user information.
 export const getUserInfo = async () => {
   const response = await axiosInstance.get("/api/authentication/v1/user-info/");
   return response.data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 // GET: Fetch user profile.
@@ -73,11 +52,6 @@ export const getUserProfile = async () => {
     "/api/authentication/v1/user-profile/"
   );
   return response.data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 // POST: Additional user registration endpoint.
@@ -87,11 +61,6 @@ export const userRegistration = async (data: any) => {
     data
   );
   return response.data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };
 
 export const axiosGoogleLogin = async (tokenResponse: TokenResponse) => {
@@ -102,9 +71,4 @@ export const axiosGoogleLogin = async (tokenResponse: TokenResponse) => {
     }
   );
   return data;
-  try {
-  } catch (error: any) {
-    console.error(error.data);
-    throw new Error(error);
-  }
 };

@@ -6,12 +6,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cardNavLinks } from "@/constants";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 import { Button } from "../ui/button";
 import { LogOut } from "lucide-react";
 
-const SecondaryNavbar = () => {
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Dispatch, SetStateAction } from "react";
+
+const SecondaryNavbar = ({
+  setTab,
+}: {
+  setTab?: Dispatch<SetStateAction<string>>;
+}) => {
+  const pathname = useLocation().pathname;
+  console.log(pathname === "/dashboard");
   const { user, logout } = useAuth();
   return (
     <div className="flex justify-between items-center py-2">
@@ -42,20 +52,38 @@ const SecondaryNavbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
-              <DropdownMenuItem key={index} className="hover:!bg-slate-100">
-                <Link to={href} className="gap-5 flex items-center w-full">
+              <DropdownMenuItem key={index} className="hover:!bg-slate-100 p-0">
+                <Link to={href} className="gap-5 flex items-center w-full hover:!bg-slate-100 p-2 rounded-md">
                   <img src={img} alt="" />
                   {title}
                 </Link>
               </DropdownMenuItem>
             ))}
-          <Button
-            className="text-vividOrange hover:text-white mt-4 w-full"
-            variant={"outline"}
-            onClick={() => logout()}
-          >
-            Sign Out <LogOut className="ml-2" />
-          </Button>
+            {pathname === "/dashboard" && (
+              <div className="rounded-md p-2 hover:cursor-pointer hover:bg-gray-100">
+                <div className="flex items-center space-x-2 ">
+                  <Switch
+                    id="card"
+                    className="data-[state=checked]:bg-vividOrange"
+                    onCheckedChange={(value) => {
+                      if (value) return setTab && setTab("card");
+                      return setTab && setTab("input");
+                    }}
+                  />
+                  <Label htmlFor="card" className="font-normal">
+                    Grid View
+                  </Label>
+                </div>
+              </div>
+            )}
+
+            <Button
+              className="text-vividOrange hover:text-white mt-4 w-full"
+              variant={"outline"}
+              onClick={() => logout()}
+            >
+              Sign Out <LogOut className="ml-2" />
+            </Button>
           </DropdownMenuContent>
         </DropdownMenu>
       )}

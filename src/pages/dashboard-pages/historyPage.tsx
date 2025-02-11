@@ -1,4 +1,3 @@
-import MenuBarComponent from "@/components/globals/MenuBarComponent";
 import SecondaryNavbar from "@/components/globals/secondaryNavbar";
 
 const HistoryPage = () => {
@@ -7,7 +6,6 @@ const HistoryPage = () => {
       <div className="bg-bg3xl bg-cover">
         <div className="flex flex-col h-full min-h-screen max-w-screen-xl px-4 sm:px-8 mx-auto">
           <SecondaryNavbar />
-          <MenuBarComponent />
           <div className="space-y-8 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div className="bg-white p-4 sm:p-8 font-syne relative overflow-hidden">
@@ -74,24 +72,29 @@ const HistoryPage = () => {
               <div className="font-syne">
                 <div className="h1 font-bold">Transaction Status</div>
                 <p className="flex items-center gap-1">
-                  <img src="/images/good.svg" alt="" className="size-3" /> Successful
+                  <img src="/images/good.svg" alt="" className="size-3" />{" "}
+                  Successful
                 </p>
                 <p className="flex items-center gap-1">
-                  <img src="/images/pending.svg" alt="" className="size-3" /> Pending
+                  <img src="/images/pending.svg" alt="" className="size-3" />{" "}
+                  Pending
                 </p>
                 <p className="flex items-center gap-1">
-                  <img src="/images/failed.svg" alt="" className="size-3" /> Failed
+                  <img src="/images/failed.svg" alt="" className="size-3" />{" "}
+                  Failed
                 </p>
                 <p className="flex items-center gap-1">
-                  <img src="/images/good.svg" alt="" className="size-3" /> Successful
+                  <img src="/images/good.svg" alt="" className="size-3" />{" "}
+                  Successful
                 </p>
                 <p className="flex items-center gap-1">
-                  <img src="/images/pending.svg" alt="" className="size-3" /> Pending
+                  <img src="/images/pending.svg" alt="" className="size-3" />{" "}
+                  Pending
                 </p>
                 <p className="flex items-center gap-1">
-                  <img src="/images/failed.svg" alt="" className="size-3" /> Failed
+                  <img src="/images/failed.svg" alt="" className="size-3" />{" "}
+                  Failed
                 </p>
-                
               </div>
             </div>
           </div>

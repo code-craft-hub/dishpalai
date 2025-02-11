@@ -1,19 +1,9 @@
 import SecondaryNavbar from "@/components/globals/secondaryNavbar";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
-import { IoIosMenu } from "react-icons/io";
 import { BsFillSendFill } from "react-icons/bs";
-import { cardNavLinks, imgGrid, options } from "@/constants";
+import { imgGrid, options } from "@/constants";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 const DashboardPage = () => {
   const [tab, setTab] = useState("input");
 
@@ -21,45 +11,8 @@ const DashboardPage = () => {
     <div className="">
       <div className="bg-bg3xl bg-cover">
         <div className="flex flex-col h-full min-h-screen max-w-screen-2xl mx-auto px-4 sm:px-8 ">
-          <SecondaryNavbar />
+          <SecondaryNavbar setTab={setTab} />
           <>
-            <div className="">
-              <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <IoIosMenu className="size-10 text-vividOrange" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
-                  {cardNavLinks?.map(({ title, href, img }, index) => (
-                    <DropdownMenuItem
-                      key={index}
-                      className="hover:!bg-slate-100"
-                    >
-                      <Link to={href} className="gap-5 flex">
-                        <img src={img} alt="" />
-                        {title}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-
-                  <div className="rounded-md p-2 hover:cursor-pointer hover:bg-gray-100">
-                    <div className="flex items-center space-x-2 ">
-                      <Switch
-                        id="card"
-                        className="data-[state=checked]:bg-vividOrange"
-                        onCheckedChange={(value) => {
-                          if (value) return setTab("card");
-                          return setTab("input");
-                        }}
-                      />
-                      <Label htmlFor="card" className="font-normal">
-                        Grid View
-                      </Label>
-                    </div>
-                  </div>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-
             <div className="flex-1 flex items-center justify-center">
               <Tabs
                 value={tab}

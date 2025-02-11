@@ -15,7 +15,6 @@ const PricePage = () => {
       <div className="bg-bg3xl bg-cover">
         <div className="flex flex-col h-full min-h-screen max-w-screen-xl px-4 sm:px-8 mx-auto">
           <SearchInputNavbar />
-
           <div className="space-y-8 py-8">
             <div className="flex gap-4 sm:gap-8 flex-col md:flex-row">
               <div className=" flex justify-center">

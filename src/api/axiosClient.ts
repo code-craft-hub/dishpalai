@@ -70,7 +70,7 @@ api.interceptors.response.use(
       }
     }
 
-    console.warn("AXIOS ERROR:", error.response?.status);
+    console.error("AXIOS ERROR:", error);
     return Promise.reject(error);
   }
 );
