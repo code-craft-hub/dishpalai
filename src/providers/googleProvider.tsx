@@ -6,7 +6,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
   children: React.ReactNode;
 }) => {
   return (
-    <GoogleOAuthProvider clientId="477848504442-ui7a5ckaci6nnqr53smpjaukkpet1op0.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="25081310509-c1csli88rd5u8f6uvdlb8v7bmqli5a51.apps.googleusercontent.com">
       {children}
     </GoogleOAuthProvider>
   );
