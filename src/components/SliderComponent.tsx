@@ -47,7 +47,6 @@ const SliderComponent = () => {
   ];
   return (
     <div className="mt-10">
-     
       <>
         <Swiper
           loop
@@ -76,7 +75,6 @@ const SliderComponent = () => {
             depth: 10,
             modifier: 1,
             slideShadows: false,
-
           }}
           spaceBetween={50}
           centeredSlides={true}
@@ -89,16 +87,18 @@ const SliderComponent = () => {
         >
           {whyChooseUs.map(({ title, des }, index) => (
             <SwiperSlide
-              className="!flex bg-gradient-to-t  from-[#fe9545] darK:via-white to-white  dark:to-white  p-8 lg:px-12  sm:!w-[350px]  !h-[280px] md:!h-[350px] md:!w-[380px] !items-center !justify-center !border-none  rounded-3xl"
+              className="!flex  !border-white  sm:!w-[350px]  !h-[280px] md:!h-[350px] md:!w-[380px]"
               key={index}
             >
-              <div className="w-full">
-                <h1 className="font-syne text-black font-bold text-center text-lg md:text-3xl text-wrap overflow-hidden ">
-                  {title}
-                </h1>
-                <p className="mt-4 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] font-light text-wrap overflow-hidden text-center capitalize font-syne">
-                  {des}
-                </p>
+              <div className="bg-gradient-to-t  from-[#fe9545]  !to-white size-full rounded-3xl items-center flex px-8">
+                <div className="w-full">
+                  <h1 className="font-syne text-black font-bold text-center text-lg md:text-3xl text-wrap overflow-hidden ">
+                    {title}
+                  </h1>
+                  <p className="mt-4 text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] font-light text-wrap overflow-hidden text-center capitalize font-syne">
+                    {des}
+                  </p>
+                </div>
               </div>
             </SwiperSlide>
           ))}
