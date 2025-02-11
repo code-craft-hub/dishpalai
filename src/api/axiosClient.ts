@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { tokenRefresh } from "@/api/authApi";
 import { queryClient } from "@/providers/queryclientProvider";
 
-const apiUrl = import.meta.env.VITE_API_URL ?? "https://dishpal-coupon-backend.vercel.app/api";
+const apiUrl = import.meta.env.VITE_API_URL ?? "https://dishpal-coupon-backend.vercel.app";
 
 const api = axios.create({
   baseURL: apiUrl,
