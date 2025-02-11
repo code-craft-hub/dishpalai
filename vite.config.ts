@@ -10,7 +10,7 @@ export default defineConfig({
     host: true, // Allows network access to the dev server
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:8000", // Redirects API requests to the backend
+        target: "https://dishpal-coupon-backend.vercel.app/", // Redirects API requests to the backend
         changeOrigin: true, // Modifies the origin header for CORS handling
       },
     },
