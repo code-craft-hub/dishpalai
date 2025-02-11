@@ -1,7 +1,6 @@
 import SliderComponent from "@/components/SliderComponent";
 import { clientImages, socials, appDonwload } from "@/constants";
 import { Button } from "@/components/ui/button";
-// import { Typewriter } from "react-simple-typewriter";
 import NavbarComponent from "@/components/Navbar";
 import HomePageSlider from "@/components/HomePageSlider";
 import Accordion from "@/components/Accordion";
@@ -30,6 +29,43 @@ const Home = () => {
       >
         <HomePageSlider />
       </main>
+      <section className="py-32 max-w-screen-2xl mx-auto hidden md:block" id="why">
+        <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545] mb-8">
+          {/* {t("whyChooseT")} */}
+          Discover Discounts With Ease
+        </h1>
+        <div className="flex justify-center ">
+          <div className="">
+            <div className="relative h-full ">
+              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute top-16 2xl:top-44 right-0">
+                1. Search Item
+              </div>
+              <div className="w-56" />
+              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute bottom-24 2xl:bottom-44 right-6">
+                3. Make Payment
+              </div>
+            </div>
+          </div>
+          <div className="shrink-0">
+            <img
+              src="/assets/whatcanIhelpyoufind.png"
+              alt="phone image"
+              className="h-[70svh] "
+            />
+          </div>
+          <div className="">
+            <div className=" relative h-full ">
+              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute top-40 2xl:top-64 left-0">
+              2. Search Product
+              </div>
+              <div className="w-56" />
+              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute bottom-24 left-6">
+              4. Purchase Completed
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-32 max-w-screen-2xl mx-auto" id="why">
         <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
           {t("whyChooseT")}
@@ -42,34 +78,6 @@ const Home = () => {
       </section>
 
       <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4">
-        {/* Desktop */}
-        {/* <section className="pb-32 hidden flex-col md:flex-row items-center justify-center ">
-          <div className="md:w-1/2 pl-4 sm:pl-8 w-full ">
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl">
-              {t("take6")}
-            </p>
-            <p className="mt-2 font-bold font-syne tracking-tight capitalize text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl xl:text-nowrap ">
-              {t("0Seconds")}
-            </p>
-            <Button className=" font-syne mt-4 capitalize">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
-                rel="noopener noreferer"
-                target="_blank"
-              >
-                {t("helpusImproveT")}
-              </a>
-            </Button>
-          </div>
-          <div className="md:w-1/2 max-md:mt-16">
-            <img
-              alt="ladyHoldingPhone"
-              src="/assets/ladyHoldingPhone.svg"
-              className="w-full h-full "
-            />
-          </div>
-        </section> */}
-
         {/* Mobile */}
         <section className="mb-32 flex flex-col items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl mt-8 text-[#282828]/80 dark:text-white text-center max-w-[300px] sm:max-w-screen-sm mx-auto">
@@ -79,10 +87,6 @@ const Home = () => {
             {t("0Seconds")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            {/* <p className="mt-2 w-1/2 capitalize font-syne text-[13px] ss:text-sm sxx:text-[16px] xss:text-[20px] xss:leading-6">
-              {t("surveyMobile")}
-            </p> */}
-
             <div className="justify-center flex">
               <img
                 alt="ladyHoldingPhone"
@@ -91,9 +95,6 @@ const Home = () => {
               />
             </div>
           </div>
-          {/* bigPhoneWithPeople.png */}
-          {/* ladyHoldingPhone.svg */}
-
           <Button className="mt-8 w-full max-w-sm capitalize">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
@@ -137,7 +138,9 @@ const Home = () => {
                   <h1 className="text-3xl md:text-5xl text-center font-bold font-syne tracking-tight text-black capitalize mb-6 ">
                     {title}
                   </h1>
-                  <p className="text-black text-center capitalize lgx:text-xl">{des}</p>
+                  <p className="text-black text-center capitalize lgx:text-xl">
+                    {des}
+                  </p>
                 </div>
               </div>
             ))}
@@ -170,18 +173,6 @@ const Home = () => {
                   className="object-cover object-top h-full w-full"
                 />
               </div>
-              {/* screens: {
-       xx: "320px",
-       xxx:"369px",
-       xxxx:"415px",
-       ss:"470px",
-       sx:"530px",
-       sxx:"534px",
-       xss:"601px",
-       md:"768px"
-       mx:"872px",
-       mdx:"970px",
-     }, */}
               <div className="bg-gray-100 order-1 xx:order-2 rounded-3xl sm:p-8 p-4 justify-start items-start flex xx:-mt-4 xx:-ml-8 xxx:h-[275px] xxxx:h-60 sx:h-[280px] sxx:w-[270px] ss:w-[270px] sm:h-[400px] md:h-[420px] sm:w-[350px] md:w-[400px] mdx: sx:-mt-[17px] xss:h-[420px] xss:w-[320px] xss:-mt-8 shadow-xl mx:w-[450px] mx:h-[300px] z-20 ">
                 <div className="overflow-hidden ">
                   <h1 className="text-sm sx:text-2xl sm:text-3xl lg:text-5xl text-start mb-2 font-bold font-syne tracking-tight text-black capitalize">
