@@ -63,35 +63,6 @@ const SignInPage = () => {
       );
     },
   });
-
-  // const createGoogleUser = async () => {
-  //   console.log("Creating Google User");
-  //   const googleCredentials = {
-  //     email: googleInfo.current.email,
-  //     password: import.meta.env.VITE_GOOGLE_PASS,
-  //     username: googleInfo.current.email?.split("@")[0],
-  //     confirm_password: import.meta.env.VITE_GOOGLE_PASS,
-  //   };
-  //   const { confirm_password, ...restOfLoginCredentials } = googleCredentials;
-  //   toast.promise(
-  //     registerUser(googleCredentials).then(() =>
-  //       loginUser(restOfLoginCredentials).then(() => {
-  //         navigate("/dashboard", { replace: true });
-  //       })
-  //     ),
-  //     {
-  //       loading: `${googleInfo.current.name}, Dishpal AI is creating your account will you in soon.`,
-  //       success: `${googleInfo.current.name}, Here is your dashboard! Explore!`,
-  //       error: `${googleInfo.current.name}, Check your email and password and try again!`,
-  //     }
-  //   );
-  // };
-
-  // if (isError && !hasCreatedGoogleUser.current) {
-  //   hasCreatedGoogleUser.current = true; // Prevent re-calling
-  //   createGoogleUser();
-  // }
-
   const onSubmit = ({ email, password }: z.infer<typeof signInSchema>) => {
     const userInfo = { email, password, username: email?.split("@")[0] };
 

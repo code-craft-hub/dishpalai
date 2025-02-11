@@ -60,7 +60,7 @@ api.interceptors.response.use(
           originalRequest.headers[
             "Authorization"
           ] = `Bearer ${response?.data?.access}`;
-          console.log("COMPLETED TOKEN REFRESHED")
+          // console.log("COMPLETED TOKEN REFRESHED")
           return api(originalRequest);
         }
       } catch (refreshError) {

@@ -97,7 +97,6 @@ const SignUpPage = () => {
 
     toast.promise(
       registerUser(validatedUser).then(() => {
-        console.log(validatedUser);
         navigate("/auth/login", { replace: true, state: { firstname } });
       }),
       {
