@@ -78,8 +78,7 @@ const Home = () => {
       </section>
 
       <main className="max-w-screen-xl mx-auto px-2 xx:px-4 sm:p-4">
-        {/* Mobile */}
-        <section className="mb-32 flex flex-col items-center justify-center  sm:p-8">
+        <section className="mb-32 hidden md:flex flex-col items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-[13px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl mt-8 text-[#282828]/80 dark:text-white text-center max-w-[300px] sm:max-w-screen-sm mx-auto">
             {t("take6")}
           </p>
@@ -96,6 +95,32 @@ const Home = () => {
             </div>
           </div>
           <Button className="mt-8 w-full max-w-sm capitalize">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
+              rel="noopener noreferer"
+              target="_blank"
+            >
+              {t("helpusImproveT")}
+            </a>
+          </Button>
+        </section>
+         {/* Mobile */}
+         <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
+          <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
+            {t("quickSurvey")}
+          </p>
+          <div className="flex items-center flex-row gap-4 md:gap-16">
+            <p className="mt-2 w-1/2 text-[11px] xxxx:text-[16px] font-syne">{t("surveyMobile")}</p>
+
+            <div className="w-1/2 justify-center flex shrink-0">
+              <img
+                alt="ladyHoldingPhone"
+                src="/assets/bigPhoneWithPeople.png"
+                className="w-full h-full "
+              />
+            </div>
+          </div>
+          <Button className="mt-8 w-full max-w-sm">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdIkdLs8DG4GcupB7vbWela5_vWOODO6nU1UXFVA4P9SGirhw/viewform"
               rel="noopener noreferer"
