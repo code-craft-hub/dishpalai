@@ -12,66 +12,106 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { EyeIcon, EyeOff } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Loader } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
 import { signInSchema } from "@/validation-schemas";
 import { Input } from "@/components/ui/input";
-import { axiosGoogleLogin, loginService } from "@/api/authApi";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { loginCredentials } from "@/types";
+import { axiosGoogleLogin } from "@/api/authApi";
 import { useGoogleLogin } from "@react-oauth/google";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
+import { loginUserQuery } from "@/queries/auth-queries";
 
 const SignInPage = () => {
-  const queryClient = useQueryClient();
+  const location = useLocation();
+  const firstname = location.state?.firstname;
+  let googleInfo = useRef({ email: "", name: "" });
   const navigate = useNavigate();
   const [eyeToggle, setEyeToggle] = useState(true);
   // Mutations
-  const { isPending, mutateAsync: loginUser } = useMutation<
-    unknown,
-    Error,
-    loginCredentials
-  >({
-    mutationFn: async (value: loginCredentials) => await loginService(value),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["userInfo"] });
-    },
-    onError: () => {
-      toast.error("Incorrect Email or Password");
-    },
-  });
+
+  const { isPending, mutateAsync: loginUser } = loginUserQuery();
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false,
+      rememberMe: true,
     },
   });
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
-      const { email } = await axiosGoogleLogin(tokenResponse);
+      // name,given_name,family_name,picture,email,email_verified
+      const { email, name } = await axiosGoogleLogin(tokenResponse);
+      googleInfo.current = { email, name };
       const googleCredentials = {
         email,
         password: import.meta.env.VITE_GOOGLE_PASS,
         username: email?.split("@")[0],
       };
-      loginUser(googleCredentials).then(() => {
-        navigate("/dashboard", { replace: true });
-      });
-    },
-    onError: () => {
-      console.error("Login Failed");
+      toast.promise(
+        loginUser(googleCredentials).then(() => {
+          navigate("/dashboard", { replace: true });
+        }),
+        {
+          loading: `${name}, Dishpal AI is logging you into your account now.`,
+          success: `${name}, Here is your dashboard! Explore!`,
+          error: `${name}, Your email is not yet registered! Please visit the sign-up page and click the google button there.`,
+        }
+      );
     },
   });
 
-  function onSubmit({ email, password }: z.infer<typeof signInSchema>) {
-    loginUser({ email, password, username: email?.split("@")[0] });
-  }
+  // const createGoogleUser = async () => {
+  //   console.log("Creating Google User");
+  //   const googleCredentials = {
+  //     email: googleInfo.current.email,
+  //     password: import.meta.env.VITE_GOOGLE_PASS,
+  //     username: googleInfo.current.email?.split("@")[0],
+  //     confirm_password: import.meta.env.VITE_GOOGLE_PASS,
+  //   };
+  //   const { confirm_password, ...restOfLoginCredentials } = googleCredentials;
+  //   toast.promise(
+  //     registerUser(googleCredentials).then(() =>
+  //       loginUser(restOfLoginCredentials).then(() => {
+  //         navigate("/dashboard", { replace: true });
+  //       })
+  //     ),
+  //     {
+  //       loading: `${googleInfo.current.name}, Dishpal AI is creating your account will you in soon.`,
+  //       success: `${googleInfo.current.name}, Here is your dashboard! Explore!`,
+  //       error: `${googleInfo.current.name}, Check your email and password and try again!`,
+  //     }
+  //   );
+  // };
 
+  // if (isError && !hasCreatedGoogleUser.current) {
+  //   hasCreatedGoogleUser.current = true; // Prevent re-calling
+  //   createGoogleUser();
+  // }
+
+  const onSubmit = ({ email, password }: z.infer<typeof signInSchema>) => {
+    const userInfo = { email, password, username: email?.split("@")[0] };
+
+    toast.promise(
+      loginUser(userInfo).then(() => {
+        navigate("/dashboard", { replace: true });
+      }),
+      {
+        loading: `${
+          firstname || userInfo?.username
+        }, Dishpal AI is logging you into your account now.`,
+        success: `${
+          firstname || userInfo?.username
+        }, Here is your dashboard! Explore!`,
+        error: `${
+          firstname || userInfo?.username
+        }, Check your email and password and try again!`,
+      }
+    );
+  };
   return (
     <div className="h-full min-h-screen bg-bg3xl bg-cover grid md:grid-cols-2 max-2xl:py-8 max-sm:p-4  gap-4 max-2xl:p-8">
       <img
@@ -114,7 +154,7 @@ const SignInPage = () => {
             }}
             variant="outline"
             type="button"
-            className="w-full py-6 border-none font-semibold font-syne bg-white"
+            className="w-full py-6 border-none font-semibold hover:bg-slate-50 hover:shadow-xl font-syne bg-white"
           >
             <img
               src={"/images/google1.png"}

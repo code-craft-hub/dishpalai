@@ -3,7 +3,7 @@ import { loginCredentials, RegisterUserData } from "@/types";
 import { TokenResponse } from "@react-oauth/google";
 import axios from "axios";
 
-export const loginService = async (credentials: loginCredentials) => {
+export const loginUserService = async (credentials: loginCredentials) => {
   try {
     const response = await axiosInstance.post(
       "/api/authentication/v1/login/",
@@ -16,7 +16,7 @@ export const loginService = async (credentials: loginCredentials) => {
 };
 
 // POST: Register a new user.
-export const register = async (data: RegisterUserData): Promise<any> => {
+export const registerUserService = async (data: RegisterUserData): Promise<any> => {
   const response = await axiosInstance.post(
     "/api/authentication/v1/register/",
     data

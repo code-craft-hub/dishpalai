@@ -20,10 +20,11 @@ import { Loader } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { signUpSchema } from "@/validation-schemas";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { axiosGoogleLogin, loginService, register } from "@/api/authApi";
-import { toast } from "react-toastify";
-import { loginCredentials, RegisterUserData } from "@/types";
+import { axiosGoogleLogin, loginUserService } from "@/api/authApi";
+import { loginCredentials } from "@/types";
 import { useGoogleLogin } from "@react-oauth/google";
+import { registerUserQuery } from "@/queries/auth-queries";
+import { toast } from "sonner";
 const SignUpPage = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -34,26 +35,14 @@ const SignUpPage = () => {
     Error,
     loginCredentials
   >({
-    mutationFn: async (value: loginCredentials) => await loginService(value),
+    mutationFn: async (value: loginCredentials) =>
+      await loginUserService(value),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["userInfo"] });
     },
   });
 
-  const { isPending, mutateAsync: registerUser } = useMutation<
-    unknown,
-    Error,
-    RegisterUserData
-  >({
-    mutationFn: async (value) => await register(value),
-    onSuccess: () => {
-      toast.success("User created successfully");
-      queryClient.invalidateQueries({ queryKey: ["userInfo"] });
-    },
-    onError: () => {
-      toast.error("Email is already registered");
-    },
-  });
+  const { isPending, mutateAsync: registerUser } = registerUserQuery();
   const form = useForm<z.infer<typeof signUpSchema>>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
@@ -67,7 +56,7 @@ const SignUpPage = () => {
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
-      const { email } = await axiosGoogleLogin(tokenResponse);
+      const { email, name }  = await axiosGoogleLogin(tokenResponse);
       const googleCredentials = {
         email,
         password: import.meta.env.VITE_GOOGLE_PASS,
@@ -75,28 +64,49 @@ const SignUpPage = () => {
         confirm_password: import.meta.env.VITE_GOOGLE_PASS,
       };
       const { confirm_password, ...restOfLoginCredentials } = googleCredentials;
-      registerUser(googleCredentials).then(() =>
-        loginUser(restOfLoginCredentials).then(() => {
-          navigate("/dashboard", { replace: true });
-        })
+      toast.promise(
+        registerUser(googleCredentials).then(() => {
+          loginUser(restOfLoginCredentials).then(() => {
+            navigate("/dashboard", { replace: true });
+          });
+        }),
+        {
+          loading: `${name}, Dishpal AI is creating your account.`,
+          success: `${name}, Here is your dashboard! Explore!`,
+          error: `${name}, Your email is already registered.`,
+        }
       );
+      
     },
     onError: () => {
       console.error("Login Failed");
     },
   });
 
-  function onSubmit({ email, password }: z.infer<typeof signUpSchema>) {
+  const onSubmit = async ({
+    email,
+    password,
+    firstname,
+  }: z.infer<typeof signUpSchema>) => {
     const validatedUser = {
       email,
       username: email?.split("@")[0],
       password,
       confirm_password: password,
     };
-    registerUser(validatedUser).then(() => {
-      navigate("/auth/login", { replace: true });
-    });
-  }
+
+    toast.promise(
+      registerUser(validatedUser).then(() => {
+        console.log(validatedUser);
+        navigate("/auth/login", { replace: true, state: { firstname } });
+      }),
+      {
+        loading: `${firstname}, Dishpal AI is creating your account.`,
+        success: `${firstname}, Dishpal AI created your account successfully! Please login to continue.`,
+        error: `${firstname}, Your email is already registered.`,
+      }
+    );
+  };
 
   return (
     <div className="h-full min-h-screen bg-bg3xl bg-cover grid md:grid-cols-2 gap-4 md:gap-8 max-2xl:p-8 ">

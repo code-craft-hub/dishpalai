@@ -21,7 +21,6 @@ const SecondaryNavbar = ({
   setTab?: Dispatch<SetStateAction<string>>;
 }) => {
   const pathname = useLocation().pathname;
-  console.log(pathname === "/dashboard");
   const { user, logout } = useAuth();
   return (
     <div className="flex justify-between items-center py-2">
@@ -53,14 +52,14 @@ const SecondaryNavbar = ({
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
               <DropdownMenuItem key={index} className="hover:!bg-slate-100 p-0">
-                <Link to={href} className="gap-5 flex items-center w-full hover:!bg-slate-100 p-2 rounded-md">
+                <Link to={href} className="gap-5 flex items-center w-full p-2 rounded-md hover:shadow-md">
                   <img src={img} alt="" />
                   {title}
                 </Link>
               </DropdownMenuItem>
             ))}
             {pathname === "/dashboard" && (
-              <div className="rounded-md p-2 hover:cursor-pointer hover:bg-gray-100">
+              <div className="rounded-md p-2 hover:cursor-pointer  hover:shadow-md hover:!bg-slate-100">
                 <div className="flex items-center space-x-2 ">
                   <Switch
                     id="card"
@@ -78,7 +77,7 @@ const SecondaryNavbar = ({
             )}
 
             <Button
-              className="text-vividOrange hover:text-white mt-4 w-full"
+              className="text-vividOrange mt-4 w-full"
               variant={"outline"}
               onClick={() => logout()}
             >

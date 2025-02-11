@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 import { Button } from "../ui/button";
 import { LogOut } from "lucide-react";
+
 const SearchInputNavbar = () => {
   const { logout } = useAuth();
 
@@ -33,15 +34,15 @@ const SearchInputNavbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
-              <DropdownMenuItem key={index} className="hover:!bg-slate-100">
-                <Link to={href} className="gap-5 flex items-center w-full ">
+              <DropdownMenuItem key={index} className="hover:!bg-slate-100 ">
+                <Link to={href} className="gap-5 flex items-center w-full hover:shadow-md">
                   <img src={img} alt="" className="" />
                   {title}
                 </Link>
               </DropdownMenuItem>
             ))}
             <Button
-              className="text-vividOrange hover:text-white mt-4 w-full"
+              className="!text-vividOrange hover:!text-vividOrange mt-4 w-full"
               variant={"outline"}
               onClick={() => logout()}
             >
