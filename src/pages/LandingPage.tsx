@@ -29,40 +29,41 @@ const Home = () => {
       >
         <HomePageSlider />
       </main>
-      <section className="py-32 max-w-screen-2xl mx-auto hidden md:block" id="why">
-        <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545] mb-8">
+
+     
+      <section
+        className="py-32 max-w-screen-2xl mx-auto"
+        id="why"
+      >
+        <h1 className="mt-2  sm:text-xl md:text-2xl lg:text-4xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545] mb-8">
           {/* {t("whyChooseT")} */}
           Discover Discounts With Ease
         </h1>
         <div className="flex justify-center ">
-          <div className="">
-            <div className="relative h-full ">
-              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute top-16 2xl:top-44 right-0">
-                1. Search Item
-              </div>
-              <div className="w-56" />
-              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute bottom-24 2xl:bottom-44 right-6">
-                3. Make Payment
-              </div>
+          <div className="w-[118px] xxx:grid gap-4 hidden">
+            <div className="bg-vividOrange px-4 rounded-xl font-medium w-fit text-white py-2 text-[10px] size-fit max-w-[250px] row-start-2 justify-self-end">
+              1. Search Item
             </div>
+            <div className="bg-vividOrange px-4 rounded-xl font-medium w-fit text-white py-2 text-[10px] size-fit max-w-[250px] row-start-9">
+              3. Make Payment
+            </div>
+            <div className="row-start-11" />
           </div>
-          <div className="shrink-0">
+          <div className="col-span-5 shrink-0">
             <img
               src="/assets/whatcanIhelpyoufind.png"
               alt="phone image"
-              className="h-[70svh] "
+              className="h-[300px] lg:w-auto lg:h-[500px]"
             />
           </div>
-          <div className="">
-            <div className=" relative h-full ">
-              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute top-40 2xl:top-64 left-0">
+          <div className="w-[118px] xxx:grid gap-4 hidden">
+            <div className="bg-vividOrange px-4 rounded-xl font-medium w-fit text-white py-2 text-[10px] size-fit max-w-[250px] row-start-3">
               2. Search Product
-              </div>
-              <div className="w-56" />
-              <div className="bg-vividOrange p-4 rounded-xl font-medium w-fit text-white text-xl absolute bottom-24 left-6">
-              4. Purchase Completed
-              </div>
             </div>
+            <div className="bg-vividOrange px-4 rounded-xl font-medium  text-white py-2 text-[10px] size-fit w-fit row-start-9">
+              4. Purchase Completed
+            </div>
+            <div className="row-start-11" />
           </div>
         </div>
       </section>
@@ -104,13 +105,15 @@ const Home = () => {
             </a>
           </Button>
         </section>
-         {/* Mobile */}
-         <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
+        {/* Mobile */}
+        <section className="mb-32 flex flex-col md:hidden items-center justify-center  sm:p-8">
           <p className="font-syne font-bold text-xl sm:text-2xl py-8 text-[#282828]/80 dark:text-white text-center">
             {t("quickSurvey")}
           </p>
           <div className="flex items-center flex-row gap-4 md:gap-16">
-            <p className="mt-2 w-1/2 text-[11px] xxxx:text-[16px] font-syne">{t("surveyMobile")}</p>
+            <p className="mt-2 w-1/2 text-[11px] xxxx:text-[16px] font-syne">
+              {t("surveyMobile")}
+            </p>
 
             <div className="w-1/2 justify-center flex shrink-0">
               <img
