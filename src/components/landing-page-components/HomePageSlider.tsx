@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 //@ts-ignore
 import "swiper/css/pagination";
-import "../styles.css";
+import "../../styles.css";
 
 import { Button } from "@/components/ui/button";
 
@@ -28,17 +28,6 @@ const HomePageSlider = () => {
       gif: "/assets/helpingyoufind.png",
       gifD: "/assets/helpingyoufind.png",
     },
-    // {
-    //   h1Tag: (
-    //     <>
-    //       <p className="text-nowrap lg:text-balance">{t("ecoChampionT")}</p>
-    //       <p className="text-[#fe9545] lg:text-balance">Eco-Champion</p>
-    //     </>
-    //   ),
-    //   pTag: <>{t("ecoChampionD")}</>,
-    //   gif: "/assets/newspaper.svg",
-    //   gifD: "/assets/newspaper.svg",
-    // },
     {
       h1Tag: (
         <>
@@ -80,20 +69,6 @@ const HomePageSlider = () => {
       gif: "/assets/shopbasket.svg",
       gifD: "/assets/shopbasket.svg",
     },
-    // {
-    //   h1Tag: (
-    //     <>
-    //       <p className="lg:text-balance">{t("neveraT")}</p>
-    //       <p className="lg:text-balance">
-    //         {t("neverbT")}{" "}
-    //         <span className="text-[#fe9545] capitalize">{t("neverSave")}</span>
-    //       </p>
-    //     </>
-    //   ),
-    //   pTag: <>{t("neverD")}</>,
-    //   gif: "/assets/nevermiss.png",
-    //   gifD: "/assets/nevermiss.png",
-    // },
   ];
 
   const pagination = {
@@ -103,8 +78,7 @@ const HomePageSlider = () => {
     },
   };
   return (
-    <div className="">
-      <div className="">
+      <div className="mb-16 sm:mb-3 px-4">
         <Swiper
           loop
           slidesPerView={1}
@@ -152,11 +126,11 @@ const HomePageSlider = () => {
               </div>
             </SwiperSlide>
           ))}
-          <h1 className="mb-4 mt-8 font-syne capitalize dark:text-white text-center text-black text-[12px] sm:text-sm md:text-xl">
-            Web App is still under Development
-          </h1>
+          <div className="h-16 "/>
+          <div className="mb-4 mt-8 font-syne capitalize dark:text-white text-center text-black text-[12px] sm:text-sm md:text-xl">
+            Web App is still under Development.
+          </div>
         </Swiper>
-      </div>
     </div>
   );
 };

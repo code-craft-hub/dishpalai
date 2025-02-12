@@ -4,11 +4,13 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Skeleton } from "@/components/ui/skeleton"
+
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 
@@ -35,7 +37,15 @@ export default function Navbar() {
     { name: t("aboutUs"), href: "why", current: false },
     { name: t("services"), href: "question", current: false },
   ];
-  if (isLoading) return null;
+  if (isLoading) return <>
+   <div className="flex items-center space-x-4 p-4">
+      <Skeleton className="h-12 w-12 shrink-0" />
+      <div className="space-y-2 w-full">
+        <Skeleton className="h-12 w-full" />
+      </div>
+      <Skeleton className="h-12 w-12 shrink-0" />
+    </div>
+  </>;
 
   return (
     <Disclosure

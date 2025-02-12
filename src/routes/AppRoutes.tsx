@@ -1,4 +1,3 @@
-import Home from "@/pages/LandingPage";
 import SignInPage from "@/pages/authentication-pages/SigninPage";
 import SignUpPage from "@/pages/authentication-pages/SignupPage";
 import { Routes, Route } from "react-router-dom";
@@ -13,13 +12,14 @@ import HistoryPage from "@/pages/dashboard-pages/historyPage";
 import SettingsPage from "@/pages/dashboard-pages/settingsPage";
 import DashboardPage from "@/pages/dashboard-pages/dashboard";
 import ScrollToTop from "@/hooks/ScrollToTop";
+import LandingPage from "@/pages/LandingPage";
 
 const AppRoutes = () => {
   return (
     <>
     <ScrollToTop />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<LandingPage />} />
 
       <Route path="/auth/login" element={<SignInPage />} />
       <Route path="/auth/register" element={<SignUpPage />} />

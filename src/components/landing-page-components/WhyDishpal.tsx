@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 //@ts-ignore
 import "swiper/css/pagination";
 
-import "../styles.css";
+import "../../styles.css";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -16,7 +16,7 @@ import {
   Keyboard,
 } from "swiper/modules";
 
-const SliderComponent = () => {
+const WhyDishpal = () => {
   const { t } = useTranslation();
 
   const whyChooseUs = [
@@ -46,27 +46,22 @@ const SliderComponent = () => {
     },
   ];
   return (
-    <div className="mt-10">
+    <section>
+      <h1 className="mt-2 text-[14px] xx:text-[16px] sm:text-xl md:text-3xl lg:text-5xl text-center font-semibold font-syne tracking-tight capitalize text-[#fe9545]">
+        {t("whyChooseT")}
+      </h1>
+      <p className="my-2 lg:my-6 text-[13px] ss:text-sm  xss:text-[20px] text-center max-w-screen-md mx-auto px-4 capitalize">
+        {t("whyChooseD1")}
+      </p>
+
       <>
         <Swiper
           loop
           effect={"coverflow"}
           slidesPerView={"auto"}
-          // slidesPerView={1}
-          // breakpoints={{
-          //   640: {
-          //     slidesPerView: 1, // Show 2 slides on screens >= 640px
-          //   },
-          //   1024: {
-          //     slidesPerView: 3, // Show 3 slides on screens >= 1024px
-          //   },
-          //   1440: {
-          //     slidesPerView: 3, // Show 4 slides on screens >= 1440px
-          //   },
-          // }}
           mousewheel={{
-            forceToAxis: true, // Enable scrolling only on the horizontal axis
-            releaseOnEdges: true, // Allow vertical scroll to propagate when at the start/end of Swiper
+            forceToAxis: true,
+            releaseOnEdges: true,
           }}
           keyboard={true}
           coverflowEffect={{
@@ -87,7 +82,7 @@ const SliderComponent = () => {
         >
           {whyChooseUs.map(({ title, des }, index) => (
             <SwiperSlide
-              className="!flex  !border-white  sm:!w-[350px]  !h-[280px] md:!h-[350px] md:!w-[380px]"
+              className="!flex  !border-white !w-[290px]  sm:!w-[350px]  !h-[280px] md:!h-[350px] md:!w-[380px]"
               key={index}
             >
               <div className="bg-gradient-to-t  from-[#fe9545]  !to-white size-full rounded-3xl items-center flex px-8">
@@ -104,8 +99,8 @@ const SliderComponent = () => {
           ))}
         </Swiper>
       </>
-    </div>
+    </section>
   );
 };
 
-export default SliderComponent;
+export default WhyDishpal;
