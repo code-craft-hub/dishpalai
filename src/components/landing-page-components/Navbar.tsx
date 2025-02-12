@@ -4,21 +4,21 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Skeleton } from "@/components/ui/skeleton"
+// import { Skeleton } from "@/components/ui/skeleton"
 
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import { Button } from "../ui/button";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/context/authContext";
+// import { Button } from "../ui/button";
+// import { useNavigate } from "react-router-dom";
+// import { useAuth } from "@/context/authContext";
 
 export default function Navbar() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { t } = useTranslation();
   const [isFixed, setIsFixed] = useState(false);
-  const { user, isLoading } = useAuth();
+  // const { user, isLoading } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,15 +37,15 @@ export default function Navbar() {
     { name: t("aboutUs"), href: "why", current: false },
     { name: t("services"), href: "question", current: false },
   ];
-  if (isLoading) return <>
-   <div className="flex items-center space-x-4 p-4">
-      <Skeleton className="h-12 w-12 shrink-0" />
-      <div className="space-y-2 w-full">
-        <Skeleton className="h-12 w-full" />
-      </div>
-      <Skeleton className="h-12 w-12 shrink-0" />
-    </div>
-  </>;
+  // if (isLoading) return <>
+  //  <div className="flex items-center space-x-4 p-4">
+  //     <Skeleton className="h-12 w-12 shrink-0" />
+  //     <div className="space-y-2 w-full">
+  //       <Skeleton className="h-12 w-full" />
+  //     </div>
+  //     <Skeleton className="h-12 w-12 shrink-0" />
+  //   </div>
+  // </>;
 
   return (
     <Disclosure
@@ -98,7 +98,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center justify-center gap-2 lg:absolute right-2 top-4">
           <div className="hidden lg:flex items-center justify-center gap-4">
-            {!isLoading && user ? (
+            {/* {!isLoading && user ? (
               <Button
                 variant={"vivid"}
                 className="font-syne !rounded-md px-6 hover:text-black transition-all"
@@ -114,7 +114,7 @@ export default function Navbar() {
               >
                 Login
               </Button>
-            )}
+            )} */}
             <LanguageSelect />
           </div>
           <DisclosureButton className="lg:hidden">
@@ -156,7 +156,7 @@ export default function Navbar() {
         <div className="flex flex-row justify-between w-full ">
           <LanguageSelect mobile={true} />
         </div>
-        {!isLoading && user ? (
+        {/* {!isLoading && user ? (
           <Button
             variant={"vivid"}
             className="font-syne !rounded-md px-6 hover:text-black transition-all"
@@ -172,7 +172,7 @@ export default function Navbar() {
           >
             Login
           </Button>
-        )}
+        )} */}
       </DisclosurePanel>
     </Disclosure>
   );

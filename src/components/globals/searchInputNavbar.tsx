@@ -21,7 +21,11 @@ const SearchInputNavbar = () => {
       <Logo />
       <SearchInput />
       <div className="flex gap-4 sm:gap-8 items-center justify-center">
-        <img src="/images/notification.svg" alt="notification" className=" max-sm:hidden" />
+        <img
+          src="/images/notification.svg"
+          alt="notification"
+          className=" max-sm:hidden"
+        />
         <FaHeart className="text-red-500 max-sm:hidden" />
 
         <DropdownMenu>
@@ -34,7 +38,10 @@ const SearchInputNavbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="p-4 w-[200px] font-syne ml-8">
             {cardNavLinks?.map(({ title, href, img }, index) => (
-              <DropdownMenuItem key={index} className="hover:!bg-slate-100 hover:shadow-md">
+              <DropdownMenuItem
+                key={index}
+                className="hover:!bg-slate-100 hover:shadow-md"
+              >
                 <Link to={href} className="gap-5 flex items-center w-full ">
                   <img src={img} alt="" className="" />
                   {title}
@@ -42,7 +49,7 @@ const SearchInputNavbar = () => {
               </DropdownMenuItem>
             ))}
             <Button
-              className="!text-vividOrange hover:!text-vividOrange mt-4 w-full"
+              className="text-vividOrange mt-4 w-full"
               variant={"outline"}
               onClick={() => logout()}
             >

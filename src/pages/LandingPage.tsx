@@ -1,6 +1,6 @@
 import NavbarComponent from "@/components/landing-page-components/Navbar";
 import HomePageSlider from "@/components/landing-page-components/HomePageSlider";
-import DiscoverDiscount from "@/components/landing-page-components/DiscoverDiscount";
+// import DiscoverDiscount from "@/components/landing-page-components/DiscoverDiscount";
 import WhyDishpal from "@/components/landing-page-components/WhyDishpal";
 import TakeA60SecondsSurvey from "@/components/landing-page-components/TakeA60SecondsSurvey";
 import FAQ from "@/components/landing-page-components/FAQ";
@@ -14,9 +14,9 @@ const LandingPage = () => {
       <NavbarComponent />
       <section className="max-w-screen-xl mx-auto lg:mt-16">
           <HomePageSlider />
-        <div className="mt-16 sm:mt-32 px-4">
+        {/* <div className="mt-16 sm:mt-32 px-4">
           <DiscoverDiscount />
-        </div>
+        </div> */}
         <div className="my-16 sm:my-32">
           <WhyDishpal />
         </div>
