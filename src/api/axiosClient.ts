@@ -3,7 +3,8 @@ import Cookies from "js-cookie";
 import { tokenRefresh } from "@/api/authApi";
 import { queryClient } from "@/providers/queryclientProvider";
 
-const apiUrl = import.meta.env.VITE_API_URL ?? "https://dishpal-coupon-backend.vercel.app";
+const apiUrl =
+  import.meta.env.VITE_API_URL ?? "https://dishpal-coupon-backend.vercel.app";
 
 const api = axios.create({
   baseURL: apiUrl,
@@ -64,13 +65,13 @@ api.interceptors.response.use(
           return api(originalRequest);
         }
       } catch (refreshError) {
-        console.warn("Token refresh failed:", refreshError);
+        Cookies.remove("access", { path: "/" });
+        Cookies.remove("refresh", { path: "/" });
+        console.warn("Token refresh failed, clearing up now. Try again.");
       } finally {
         isRefreshing = false;
       }
     }
-
-    console.error("AXIOS ERROR:", error);
     return Promise.reject(error);
   }
 );
