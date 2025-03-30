@@ -4,21 +4,15 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-// import { Skeleton } from "@/components/ui/skeleton"
 
 import { Link } from "react-scroll";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-// import { Button } from "../ui/button";
-// import { useNavigate } from "react-router-dom";
-// import { useAuth } from "@/context/authContext";
 
 export default function Navbar() {
-  // const navigate = useNavigate();
   const { t } = useTranslation();
   const [isFixed, setIsFixed] = useState(false);
-  // const { user, isLoading } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,16 +31,6 @@ export default function Navbar() {
     { name: t("aboutUs"), href: "why", current: false },
     { name: t("services"), href: "question", current: false },
   ];
-  // if (isLoading) return <>
-  //  <div className="flex items-center space-x-4 p-4">
-  //     <Skeleton className="h-12 w-12 shrink-0" />
-  //     <div className="space-y-2 w-full">
-  //       <Skeleton className="h-12 w-full" />
-  //     </div>
-  //     <Skeleton className="h-12 w-12 shrink-0" />
-  //   </div>
-  // </>;
-
   return (
     <Disclosure
       as="nav"
@@ -71,12 +55,12 @@ export default function Navbar() {
         >
           <img
             alt="Your Company"
-            src="/assets/mobileLogo.png"
+            src="/assets/logo.png"
             className="h-12 w-auto lg:hidden hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
           <img
             alt="Your Company"
-            src="/assets/desktopLogo.png"
+            src="/assets/logo.png"
             className="h-14 w-auto hidden lg:block hover:cursor-pointer hover:scale-105 duration-500 transition-all"
           />
         </Link>

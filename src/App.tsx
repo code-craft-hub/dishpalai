@@ -1,8 +1,8 @@
-import AppRoutes from "./routes/AppRoutes"
+import LandingPage from "./pages/LandingPage"
 
 const App = () => {
   return (
-    <AppRoutes />
+    <LandingPage />
   )
 }
 
